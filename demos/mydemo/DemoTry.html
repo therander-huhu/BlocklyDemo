@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../blockly_compressed.js"></script>
+    <script src="../../blocks_compressed.js"></script>
+    <script src="../../python_compressed.js"></script>
+    <script src="../../msg/js/en.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-color: #fff;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-weight: normal;
+            font-size: 140%;
+        }
+        table {
+            height: 100%;
+            width: 100%;
+        }
+        #blocklyDiv {
+            height: 100%;
+            background: #fc9;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>
+            <p>
+                <button onclick="showCode()">Show Python</button>
+            </p>
+        </td>
+    </tr>
+    <tr style="height: 100%;">
+        <td>
+            <div id="blocklyDiv"></div>
+        </td>
+    </tr>
+</table>
+
+<xml id="toolbox" style="display: none">
+    <category name="逻辑">
+        <block type="controls_if" name="如果"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+    </category>
+    <category name="循环">
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <block type="math_number">
+                    <field name="NUM">10</field>
+                </block>
+            </value>
+        </block>
+        <block type="controls_whileUntil"></block>
+    </category>
+    <category name="数学">
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+    </category>
+    <category name="文字">
+        <block type="text"></block>
+        <block type="text_length"></block>
+        <block type="text_print"></block>
+    </category>
+    <category name="变量" custom="VARIABLE"></category>
+</xml>
+<xml id="startBlocks" style="display: none">
+    <block type="controls_if" inline="false" x="62" y="10">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+            <block type="logic_compare" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                    <block type="math_arithmetic" inline="true">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                            <block type="math_number">
+                                <field name="NUM">6</field>
+                            </block>
+                        </value>
+                        <value name="B">
+                            <block type="math_number">
+                                <field name="NUM">7</field>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+                <value name="B">
+                    <block type="math_number">
+                        <field name="NUM">42</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <statement name="DO0">
+            <block type="text_print" inline="false">
+                <value name="TEXT">
+                    <block type="text">
+                        <field name="TEXT">Don't panic</field>
+                    </block>
+                </value>
+            </block>
+        </statement>
+        <statement name="ELSE">
+            <block type="text_print" inline="false">
+                <value name="TEXT">
+                    <block type="text">
+                        <field name="TEXT">Panic</field>
+                    </block>
+                </value>
+            </block>
+        </statement>
+    </block>
+</xml>
+<script>
+    var demoWorkspace = Blockly.inject('blocklyDiv',
+            {media: '../../media/', toolbox: document.getElementById('toolbox'), scrollbars:false});
+    Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
+            demoWorkspace);
+
+
+    function showCode() {
+        Blockly.Python.INFINITE_LOOP_TRAP = null;
+        var code = Blockly.Python.workspaceToCode(demoWorkspace);
+        alert(code);
+    }
+
+    function runCode() {
+        window.LoopTrap = 1000;
+        Blockly.Python.INFINITE_LOOP_TRAP =
+                'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+        var code = Blockly.Python.workspaceToCode(demoWorkspace);
+        Blockly.Python.INFINITE_LOOP_TRAP = null;
+        console.log(code)
+    }
+</script>
+</body>
+</html>
