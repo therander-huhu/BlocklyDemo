@@ -7,6 +7,7 @@
     <script src="../../blocks_compressed.js"></script>
     <script src="../../python_compressed.js"></script>
     <script src="../../msg/js/en.js"></script>
+    <link rel="stylesheet" href="DemoTry.css">
     <style>
         html, body {
             height: 100%;
@@ -34,7 +35,7 @@
 </head>
 <body>
 
-<table>
+<table style="border-spacing: 0">
     <tr>
         <td>
             <p>
@@ -80,7 +81,7 @@
     <category name="变量" custom="VARIABLE"></category>
 </xml>
 <xml id="startBlocks" style="display: none">
-    <block type="controls_if" inline="false" x="62" y="10">
+    <block type="controls_if" inline="false" x="67" y="10">
         <mutation else="1"></mutation>
         <value name="IF0">
             <block type="logic_compare" inline="true">
@@ -129,9 +130,23 @@
 </xml>
 <script>
     var demoWorkspace = Blockly.inject('blocklyDiv',
-            {media: '../../media/', toolbox: document.getElementById('toolbox'), scrollbars:false});
+            {
+                media: '../../media/',
+                toolbox: document.getElementById('toolbox'),
+                scrollbars: false,
+                zoom: {
+                    controls: false,
+                    wheel: false,
+                    startScale: 1.5,
+                    maxScale: 3,
+                    minScale: 0.3,
+                    scaleSpeed: 1.2
+                },
+//                css: false
+            });
     Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
             demoWorkspace);
+    console.log(demoWorkspace.Toolbox);
 
 
     function showCode() {

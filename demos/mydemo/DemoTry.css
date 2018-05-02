@@ -1,0 +1,78 @@
+.blocklyToolboxDiv {
+    width: 100px;
+    background-color: #ffffff;
+}
+
+.blocklyToolboxDiv .blocklyTreeRoot{
+    padding: 0;
+}
+
+.blocklyToolboxDiv .blocklyTreeRow {
+    height: auto;
+    padding: 5px 5px 5px 10px !important;
+    margin: 0;
+    position: relative;
+}
+
+.blocklyTreeRow:not(.blocklyTreeSelected):hover {
+    background-color: transparent;
+}
+.blocklyToolboxDiv  .blocklyTreeSelected {
+    background-color: transparent !important;
+}
+
+.blocklyToolboxDiv .blocklyTreeLabel {
+    font-size: 24px;
+    line-height: 48px;
+    position: relative;
+}
+
+.blocklyToolboxDiv .blocklyTreeIcon  {
+     /*display: none !important;*/
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width:10px;
+     background-image: none;
+ }
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(1) .blocklyTreeIcon {
+    background-color: #4dffaf;
+}
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(2) .blocklyTreeIcon {
+     background-color: #25d8ff;
+ }
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(3) .blocklyTreeIcon {
+    background-color: #249fff;
+}
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(4) .blocklyTreeIcon {
+    background-color: #6d3eff;
+}
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(5) .blocklyTreeIcon {
+    background-color: #b247ff;
+}
+
+.blocklyToolboxDiv .blocklyTreeSelected .blocklyTreeIcon {
+    animation:menuItemShow 0.2s;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+.blocklySvg {
+    background-color: #67d6ff;
+}
+
+.blocklyFlyoutBackground {
+    fill: #ffffff
+}
+
+@keyframes menuItemShow
+{
+    from {width:10px;}
+    to {width:100%;}
+}
