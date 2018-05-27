@@ -57,6 +57,10 @@
     background-color: #b247ff;
 }
 
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(6) .blocklyTreeIcon {
+    background-color: #ff293f;
+}
+
 .blocklyToolboxDiv .blocklyTreeSelected .blocklyTreeIcon {
     animation:menuItemShow 0.2s;
     animation-fill-mode: forwards;
