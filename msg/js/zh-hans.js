@@ -223,7 +223,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "如果数字是偶数、奇数、非负整数、正数、负数或如果它可被某数字整除，则返回真或假。";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "为整数";
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://zh.wikipedia.org/wiki/模除";
-/** @export */ Blockly.Msg.MATH_MODULO_TITLE = "取余数自 %1 ÷ %2";
+/** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 的余数";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "返回这两个数字相除后的余数。";
 /** @export */ Blockly.Msg.MATH_MULTIPLICATION_SYMBOL = "×";  // untranslated
 /** @export */ Blockly.Msg.MATH_NUMBER_HELPURL = "https://zh.wikipedia.org/wiki/数";
@@ -253,7 +253,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_RANDOM_INT_TITLE = "从 %1 到 %2 之间的随机整数";
 /** @export */ Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "返回两个指定的范围（含）之间的随机整数。";
 /** @export */ Blockly.Msg.MATH_ROUND_HELPURL = "https://zh.wikipedia.org/wiki/数值修约";
-/** @export */ Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "向下舍入";
+/** @export */ Blockly.Msg.MATH_ROUND_OPERATOR_ROUND = "四舍五入";
 /** @export */ Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDDOWN = "向下舍入";
 /** @export */ Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "向上舍入";
 /** @export */ Blockly.Msg.MATH_ROUND_TOOLTIP = "数字向上或向下舍入。";
