@@ -197,5 +197,5 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         "colour": 230,
         "tooltip": "",
         "helpUrl": ""
-    }
-    ]);
+    },
+]);

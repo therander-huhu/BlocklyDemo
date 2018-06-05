@@ -428,3 +428,16 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.PROCEDURES_HUE = "290";
 /** @export */ Blockly.Msg.COLOUR_HUE = "20";
 /** @export */ Blockly.Msg.VARIABLES_DYNAMIC_HUE = "310";
+/** @export */ Blockly.Msg.ACTION_MOVE_FORWARD = "前进";
+/** @export */ Blockly.Msg.ACTION_MOVE_BACK = "后退";
+/** @export */ Blockly.Msg.ACTION_NAME_M1 = "M1";
+/** @export */ Blockly.Msg.ACTION_NAME_M2 = "M2";
+/** @export */ Blockly.Msg.ACTION_NAME_PORT1 = "端口1";
+/** @export */ Blockly.Msg.ACTION_NAME_PORT2 = "端口2";
+/** @export */ Blockly.Msg.ACTION_NAME_PORT4 = "端口4";
+/** @export */ Blockly.Msg.ACTION_NAME_PORT3 = "端口3";
+/** @export */ Blockly.Msg.ACTION_DIRECTION_CLOCKWISE = "顺时针";
+/** @export */ Blockly.Msg.ACTION_DIRECTION_ANTICLICKWISE = "逆时针";
+/** @export */ Blockly.Msg.ACTION_NAME_SLOT1 = "插槽1";
+/** @export */ Blockly.Msg.ACTION_NAME_SLOT2 = "插槽2";
+
