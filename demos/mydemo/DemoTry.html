@@ -15,6 +15,8 @@
     <script src="blocks/actionBlock.js"></script>
     <script src="python/mathPython.js"></script>
     <script src="python/actionPython.js"></script>
+    <script src="blocks/flowBlock.js"></script>
+    <script src="python/flowPython.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -99,18 +101,7 @@
                 </shadow>
             </value>
         </block>
-        <block type="stop_move">
-            <value name="LEFT_SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
-            </value>
-            <value name="RIGHT_SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
-            </value>
-        </block>
+        <block type="stop_move"></block>
         <block type="d_c_generator_roll_with_speed">
             <value name="SPEED">
                 <shadow type="math_number">
@@ -274,7 +265,15 @@
             </value>
         </block>
         <block type="controls_whileUntil"></block>
-        <block type="controls_if" name="如果"></block>
+        <!--<block type="controls_if" name="如果"></block>-->
+        <block type="flow_controls_if" name="如果"></block>
+        <block type="flow_wait" name="如果">
+            <value name="TIME">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
     </category>
     <!--<category name="文字">-->
         <!--<block type="text"></block>-->

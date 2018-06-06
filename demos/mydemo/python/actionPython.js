@@ -13,7 +13,8 @@ Blockly.Python['move_with_speed'] = function(block) {
             code = 'move_back(' + speed + ')';
             break;
     }
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
 Blockly.Python['move_with_speed_time'] = function(block) {
     // Check if a number is even, odd, prime, whole, positive, or negative
@@ -29,7 +30,8 @@ Blockly.Python['move_with_speed_time'] = function(block) {
             code = 'move_back(' + speed + ')';
             break;
     }
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
 Blockly.Python['move_with_wheel_speed'] = function(block) {
     // Check if a number is even, odd, prime, whole, positive, or negative
@@ -38,12 +40,14 @@ Blockly.Python['move_with_wheel_speed'] = function(block) {
     var r_speed = Blockly.Python.valueToCode(block, 'RIGHT_SPEED', Blockly.Python.ORDER_MULTIPLICATIVE) || 0;
     var code;
     code = 'moveWithWheelSpeed(' + l_speed + ',' + r_speed + ')';
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
 Blockly.Python['stop_move'] = function(block) {
     var code;
     code = 'stopMove()';
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
 Blockly.Python['d_c_generator_roll_with_speed'] = function(block) {
     var speed = Blockly.Python.valueToCode(block, 'SPEED',
@@ -58,14 +62,16 @@ Blockly.Python['d_c_generator_roll_with_speed'] = function(block) {
             code = 'generatorRollWithSpeed(' + 'M2' + ',' + speed + ')';
             break;
     }
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
 Blockly.Python['fan_roll_with_direction'] = function(block) {
     var port_property = block.getFieldValue('PORT');
     var direction_property = block.getFieldValue('DIRECTION');
     var code;
     code = 'fanRollWithDirection(' + port_property + ',' + direction_property + ')';
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
 Blockly.Python['engine_rotate'] = function(block) {
     var port = block.getFieldValue('PORT');
@@ -73,5 +79,6 @@ Blockly.Python['engine_rotate'] = function(block) {
     var rotation = Blockly.Python.valueToCode(block, 'ROTATION', Blockly.Python.ORDER_MULTIPLICATIVE) || 0;
     var code;
     code = 'engineRotate(' + port + ',' + slot + ',' + rotation + ')';
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    code = code + '\n';
+    return code;
 };
