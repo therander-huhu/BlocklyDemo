@@ -82,3 +82,72 @@ Blockly.Python['engine_rotate'] = function(block) {
     code = code + '\n';
     return code;
 };
+
+Blockly.Python['fan_roll_with_speed_direction'] = function(block) {
+    var port_property = block.getFieldValue('PORT');
+    var speed = Blockly.Python.valueToCode(block, "SPEED", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    var direction_property = block.getFieldValue('DIRECTION');
+    var code;
+    code = 'fanRollWithSpeedDirection(' + port_property + ',' + speed + ','+ direction_property + ')';
+    code = code + '\n';
+    return code;
+};
+Blockly.Python['fan_stop_roll'] = function(block) {
+    var port_property = block.getFieldValue('PORT');
+    var code;
+    code = 'fanStopRoll(' + port_property + ')';
+    code = code + '\n';
+    return code;
+};
+Blockly.Python['fan_roll_with_speed_direction_time'] = function(block) {
+    var port_property = block.getFieldValue('PORT');
+    var speed = Blockly.Python.valueToCode(block, "SPEED", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    var direction_property = block.getFieldValue('DIRECTION');
+    var time = Blockly.Python.valueToCode(block, "TIME", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    var code;
+    code = 'fanRollWithSpeedDirection(' + port_property + ',' + speed + ','+ direction_property + ','+ time + ')';
+    code = code + '\n';
+    return code;
+};
+Blockly.Python['play_sound_by_beat'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var beat = block.getFieldValue('BEAT');
+    var code;
+    code = 'playSoundByBeat(' + name + ',' + beat + ')';
+    code = code + '\n';
+    return code;
+};
+Blockly.Python['play_music'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var code;
+    code = 'playMusic(' + name + ')';
+    code = code + '\n';
+    return code;
+};
+
+Blockly.Python['turn_on_light'] = function(block) {
+    var port = block.getFieldValue('PORT');
+    var color = block.getFieldValue('COLOR');
+    var code;
+    code = 'turnOnLight(' + port + ',' + color + ')';
+    code = code + '\n';
+    return code;
+};
+
+Blockly.Python['turn_on_light_time'] = function(block) {
+    var port = block.getFieldValue('PORT');
+    var color = block.getFieldValue('COLOR');
+    var time = Blockly.Python.valueToCode(block, "TIME", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    var code;
+    code = 'turnOnLight(' + port + ',' + color + ',' + time +')';
+    code = code + '\n';
+    return code;
+};
+
+Blockly.Python['turn_off_light'] = function(block) {
+    var port = block.getFieldValue('PORT');
+    var code;
+    code = 'turnOffLight(' + port + ')';
+    code = code + '\n';
+    return code;
+};

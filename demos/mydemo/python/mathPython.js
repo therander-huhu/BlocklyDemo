@@ -1,9 +1,3 @@
-
-Blockly.Python['start_tip'] = function(block) {
-    let code = "ll";
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
-};
-
 Blockly.Python['math_arithmetic_add'] = function(block) {
     var argument0 = Blockly.Python.valueToCode(block, 'A',  Blockly.Python.ORDER_ADDITIVE);
     var argument1 = Blockly.Python.valueToCode(block, 'B', Blockly.Python.ORDER_ADDITIVE);

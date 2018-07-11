@@ -7,11 +7,23 @@
     padding: 0;
 }
 
+.blocklyTreeRoot div[role=group]>div{
+    margin: 1px 0 0 0;
+}
+
 .blocklyToolboxDiv .blocklyTreeRow {
     height: auto;
-    padding: 5px 5px 5px 10px !important;
+    padding: 0 0 0 10px !important;
     margin: 0;
     position: relative;
+}
+
+.blocklyToolboxDiv .blocklyTreeRow span:nth-child(1) {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    border-bottom: 1px #d4d4d4 solid;
 }
 
 .blocklyTreeRow:not(.blocklyTreeSelected):hover {
@@ -38,27 +50,27 @@
  }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(1) .blocklyTreeIcon {
-    background-color: #4dffaf;
+    background-color: #82D26E;
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(2) .blocklyTreeIcon {
-     background-color: #25d8ff;
+     background-color: #5ECAB8;
  }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(3) .blocklyTreeIcon {
-    background-color: #249fff;
+    background-color: #57BEF6;
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(4) .blocklyTreeIcon {
-    background-color: #6d3eff;
+    background-color: #6CA4F5;
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(5) .blocklyTreeIcon {
-    background-color: #b247ff;
+    background-color: #A27BDB;
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(6) .blocklyTreeIcon {
-    background-color: #ff293f;
+    background-color: #D571F6
 }
 
 .blocklyToolboxDiv .blocklyTreeSelected .blocklyTreeIcon {
@@ -68,7 +80,7 @@
 }
 
 .blocklySvg {
-    background-color: #67d6ff;
+    background-color: #C1E6FC;
 }
 
 .blocklyFlyoutBackground {
@@ -79,4 +91,8 @@
 {
     from {width:10px;}
     to {width:100%;}
+}
+
+.blocklyFlyoutButton {
+    fill: #57BEF6;
 }

@@ -1,14 +1,6 @@
 Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
     // Block for colour picker.
     {
-        "type": "start_tip",
-        "message0": "PressButton",
-        "nextStatement": null,
-        "colour": 60,
-        "tooltip": "",
-        "helpUrl": ""
-    },
-    {
         "type": "math_arithmetic_add",
         "message0": "%1 + %2",
         "args0": [
@@ -25,7 +17,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Number",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -46,7 +38,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Number",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -67,7 +59,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Number",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -88,7 +80,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Number",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -109,7 +101,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Boolean",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -130,7 +122,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Boolean",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -152,7 +144,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Boolean",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -173,7 +165,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Boolean",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },
@@ -194,7 +186,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         ],
         "output": "Boolean",
         "inputsInline": true,
-        "colour": 230,
+        "colour": "%{BKY_MATH_HUE}",
         "tooltip": "",
         "helpUrl": ""
     },

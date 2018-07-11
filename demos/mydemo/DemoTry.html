@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="DemoTry.css">
     <script src="../../blockly_compressed.js"></script>
     <script src="../../blocks_compressed.js"></script>
     <script src="../../python_compressed.js"></script>
-    <script src="../../msg/js/en.js"></script>
+    <!--<script src="../../msg/js/en.js"></script>-->
     <script src="../../msg/js/zh-hans.js"></script>
-    <link rel="stylesheet" href="DemoTry.css">
-    <!--<script src="testBlocks.js"></script>-->
-    <!--<script src="testPython.js"></script>-->
+
     <script src="blocks/mathBlock.js"></script>
     <script src="blocks/actionBlock.js"></script>
     <script src="python/mathPython.js"></script>
     <script src="python/actionPython.js"></script>
     <script src="blocks/flowBlock.js"></script>
     <script src="python/flowPython.js"></script>
+    <script src="blocks/functionBlock.js"></script>
+    <script src="python/functionPython.js"></script>
+    <script src="core/function.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -48,7 +50,7 @@
     <tr>
         <td>
             <p>
-                <button onclick="showCode()">Show Python</button>
+                <button id="generateButton">Show Python</button>
             </p>
         </td>
     </tr>
@@ -67,9 +69,40 @@
         <!--<block type="logic_boolean"></block>-->
     <!--</category>-->
     <category name="起始">
-        <block type="start_tip"></block>
+        <block type="start_button"></block>
     </category>
-    <category name="运动">
+    <category name="执行">
+        <block type="fan_roll_with_speed_direction">
+            <value name="SPEED">
+                <shadow type="math_number">
+                    <field name="NUM">100</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="fan_stop_roll"></block>
+        <block type="fan_roll_with_speed_direction_time">
+            <value name="SPEED">
+                <shadow type="math_number">
+                    <field name="NUM">100</field>
+                </shadow>
+            </value>
+            <value name="TIME">
+                <shadow type="math_number">
+                    <field name="NUM">5</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="play_sound_by_beat"></block>
+        <block type="play_music"></block>
+        <block type="turn_on_light"></block>
+        <block type="turn_on_light_time">
+            <value name="TIME">
+                <shadow type="math_number">
+                    <field name="NUM">5</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="turn_off_light"></block>
         <block type="move_with_speed_time">
             <value name="SPEED">
                 <shadow type="math_number">
@@ -117,6 +150,12 @@
                 </shadow>
             </value>
         </block>
+    </category>
+    <category name="变量" custom="VARIABLE">
+        <!--<block type="create_variables"></block>-->
+    </category>
+    <category name="指令" custom="Functions">
+        <!--<block type="new_procedures"></block>-->
     </category>
     <category name="数学">
         <!--<block type="math_arithmetic">-->
@@ -257,6 +296,13 @@
         </block>
     </category>
     <category name="流程">
+        <block type="flow_wait">
+            <value name="TIME">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
         <block type="controls_repeat_ext">
             <value name="TIMES">
                 <block type="math_number">
@@ -264,23 +310,21 @@
                 </block>
             </value>
         </block>
-        <block type="controls_whileUntil"></block>
+        <block type="flow_repeat_forever"></block>
+        <
         <!--<block type="controls_if" name="如果"></block>-->
-        <block type="flow_controls_if" name="如果"></block>
-        <block type="flow_wait" name="如果">
-            <value name="TIME">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
+        <block type="flow_controls_if"></block>
+        <block type="flow_controls_ifelse"></block>
+        <block type="flow_wait_until"></block>
+        <!--<block type="controls_whileUntil"></block>-->
+        <block type="flow_repeat_until"></block>
+        <block type="controls_flow_statements"></block>
     </category>
     <!--<category name="文字">-->
         <!--<block type="text"></block>-->
         <!--<block type="text_length"></block>-->
         <!--<block type="text_print"></block>-->
     <!--</category>-->
-    <category name="变量" custom="VARIABLE"></category>
 </xml>
 <xml id="startBlocks" style="display: none">
     <block type="controls_if" inline="false" x="67" y="10">
@@ -330,41 +374,9 @@
         </statement>
     </block>
 </xml>
+<script src="DemoTry.js"></script>
 <script>
-    var demoWorkspace = Blockly.inject('blocklyDiv',
-            {
-                media: '../../media/',
-                toolbox: document.getElementById('toolbox'),
-                scrollbars: false,
-                zoom: {
-                    controls: false,
-                    wheel: false,
-                    startScale: 1.5,
-                    maxScale: 3,
-                    minScale: 0.3,
-                    scaleSpeed: 1.2
-                },
-//                css: false
-            });
-    Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
-            demoWorkspace);
-    console.log(demoWorkspace.Toolbox);
 
-
-    function showCode() {
-        Blockly.Python.INFINITE_LOOP_TRAP = null;
-        var code = Blockly.Python.workspaceToCode(demoWorkspace);
-        alert(code);
-    }
-
-    function runCode() {
-        window.LoopTrap = 1000;
-        Blockly.Python.INFINITE_LOOP_TRAP =
-                'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
-        var code = Blockly.Python.workspaceToCode(demoWorkspace);
-        Blockly.Python.INFINITE_LOOP_TRAP = null;
-        console.log(code)
-    }
 </script>
 </body>
 </html>
