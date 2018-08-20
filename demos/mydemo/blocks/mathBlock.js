@@ -190,4 +190,21 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         "tooltip": "",
         "helpUrl": ""
     },
+
+      // Block for negation.
+  {
+    "type": "logic_negate",
+    "message0": "%{BKY_LOGIC_NEGATE_TITLE}",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "BOOL",
+        "check": "Boolean"
+      }
+    ],
+    "output": "Boolean",
+    "colour": "%{BKY_MATH_HUE}",
+    "tooltip": "%{BKY_LOGIC_NEGATE_TOOLTIP}",
+    "helpUrl": "%{BKY_LOGIC_NEGATE_HELPURL}"
+  },
 ]);

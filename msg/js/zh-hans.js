@@ -473,11 +473,16 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.ACTION_LIGHT_COLOR_CYAN = "青";
 /** @export */ Blockly.Msg.ACTION_LIGHT_COLOR_BLUE = "蓝";
 /** @export */ Blockly.Msg.ACTION_LIGHT_COLOR_PURPLE = "紫";
-/** @export */ Blockly.Msg.FLOW_HUE = "#D571F6";
-/** @export */ Blockly.Msg.MATH_HUE = "#A27BDB";
 /** @export */ Blockly.Msg.LOGIC_HUE = "230";
-/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";
-/** @export */ Blockly.Msg.VARIABLES_HUE = "#57BEF6";
 /** @export */ Blockly.Msg.START_HUE = "#82D26E";
-/** @export */ Blockly.Msg.FUNCTION_HUE = "#6CA4F5";
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";
+/** @export */ Blockly.Msg.SENSE_HUE = "#57BEF6";
+/** @export */ Blockly.Msg.VARIABLES_HUE = "#6CA4F5";
+/** @export */ Blockly.Msg.FUNCTION_HUE = "#A27BDB";
+/** @export */ Blockly.Msg.MATH_HUE = "#D571F6";
+/** @export */ Blockly.Msg.FLOW_HUE = "#dd9bf3";
+
+
+
+
 
