@@ -339,49 +339,6 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
         "helpUrl": ""
     },
     {
-        "type": "play_sound_by_beat",
-        "message0": "%1 播放音符 %2 ，%3 拍",
-        "args0": [
-            {
-                "type": "field_image",
-                "src": "https://www.gstatic.com/codesite/ph/images/star_on.gif",
-                "width": 15,
-                "height": 15,
-                "alt": "*"
-            },
-            {
-                "type": "field_dropdown",
-                "name": "NAME",
-                "options": [
-                    ["%{BKY_ACTION_SOUND_NAME_A}", "A5"],
-                    ["%{BKY_ACTION_SOUND_NAME_B}", "B5"],
-                    ["%{BKY_ACTION_SOUND_NAME_C}", "C5"],
-                    ["%{BKY_ACTION_SOUND_NAME_D}", "D5"],
-                    ["%{BKY_ACTION_SOUND_NAME_E}", "E5"],
-                    ["%{BKY_ACTION_SOUND_NAME_F}", "F5"],
-                    ["%{BKY_ACTION_SOUND_NAME_G}", "G5"],
-                ]
-            },
-            {
-                "type": "field_dropdown",
-                "name": "BEAT",
-                "options": [
-                    ["%{BKY_ACTION_SOUND_BEAT_ONE_EIGHTH}", "1/8"],
-                    ["%{BKY_ACTION_SOUND_BEAT_ONE_FOURTH}", "4/1"],
-                    ["%{BKY_ACTION_SOUND_BEAT_A_HALF}", "1/2"],
-                    ["%{BKY_ACTION_SOUND_BEAT_ONE}", "1"],
-                    ["%{BKY_ACTION_SOUND_BEAT_DOUBLE}", "2"],
-                ]
-            },
-        ],
-        "inputsInline": true,
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": "%{BKY_ACTION_HUE}",
-        "tooltip": "",
-        "helpUrl": ""
-    },
-    {
         "type": "play_music",
         "message0": "%1 播放音乐 %2",
         "args0": [
@@ -530,6 +487,136 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                     ["%{BKY_ACTION_NAME_PORT4}", "4"],
                     ["%{BKY_ACTION_NAME_PORT5}", "5"],
                     ["%{BKY_ACTION_NAME_PORT6}", "6"],
+                ]
+            },
+        ],
+        "inputsInline": true,
+        "previousStatement": null,
+        "nextStatement": null,
+        "colour": "%{BKY_ACTION_HUE}",
+        "tooltip": "",
+        "helpUrl": ""
+    },
+
+    /////////////////////////
+
+    {
+        "type": "turn_on_on_board_light",
+        "message0": "%1 设置板载LED %2 红色 %3 绿色 %4 蓝色 %5",
+        "args0": [
+            {
+                "type": "field_image",
+                "src": "https://www.gstatic.com/codesite/ph/images/star_on.gif",
+                "width": 15,
+                "height": 15,
+                "alt": "*"
+            },
+            {
+                "type": "field_dropdown",
+                "name": "SELECT",
+                "options": [
+                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "1"],
+                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "2"],
+                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "3"]
+                ]
+            },
+            {
+                "type": "field_dropdown",
+                "name": "COLOR_RED",
+                "options": [
+                    ["0", "0"],
+                    ["20", "20"],
+                    ["60", "60"],
+                    ["150", "150"],
+                    ["255", "255"]
+                ]
+            },
+            {
+                "type": "field_dropdown",
+                "name": "COLOR_GREEN",
+                "options": [
+                    ["0", "0"],
+                    ["20", "20"],
+                    ["60", "60"],
+                    ["150", "150"],
+                    ["255", "255"]
+                ]
+            },
+            {
+                "type": "field_dropdown",
+                "name": "COLOR_BLUE",
+                "options": [
+                    ["0", "0"],
+                    ["20", "20"],
+                    ["60", "60"],
+                    ["150", "150"],
+                    ["255", "255"]
+                ]
+            },
+        ],
+        "inputsInline": true,
+        "previousStatement": null,
+        "nextStatement": null,
+        "colour": "%{BKY_ACTION_HUE}",
+        "tooltip": "",
+        "helpUrl": ""
+    },
+
+    {
+        "type": "play_sound_by_beat",
+        "message0": "%1 播放音调为 %2 ，节拍为 %3",
+        "args0": [
+            {
+                "type": "field_image",
+                "src": "https://www.gstatic.com/codesite/ph/images/star_on.gif",
+                "width": 15,
+                "height": 15,
+                "alt": "*"
+            },
+            {
+                "type": "field_dropdown",
+                "name": "NAME",
+                "options": [
+                    ["%{BKY_ACTION_SOUND_NAME_C1}", "C1"],
+                    ["%{BKY_ACTION_SOUND_NAME_D1}", "D1"],
+                    ["%{BKY_ACTION_SOUND_NAME_E1}", "E1"],
+                    ["%{BKY_ACTION_SOUND_NAME_F1}", "F1"],
+                    ["%{BKY_ACTION_SOUND_NAME_G1}", "G1"],
+                    ["%{BKY_ACTION_SOUND_NAME_A1}", "A1"],
+                    ["%{BKY_ACTION_SOUND_NAME_B1}", "B1"],
+                    ["%{BKY_ACTION_SOUND_NAME_C2}", "C2"],
+                    ["%{BKY_ACTION_SOUND_NAME_D2}", "D2"],
+                    ["%{BKY_ACTION_SOUND_NAME_E2}", "E2"],
+                    ["%{BKY_ACTION_SOUND_NAME_F2}", "F2"],
+                    ["%{BKY_ACTION_SOUND_NAME_G2}", "G2"],
+                    ["%{BKY_ACTION_SOUND_NAME_A2}", "A2"],
+                    ["%{BKY_ACTION_SOUND_NAME_B2}", "B2"],
+                    ["%{BKY_ACTION_SOUND_NAME_C3}", "C3"],
+                    ["%{BKY_ACTION_SOUND_NAME_D3}", "D3"],
+                    ["%{BKY_ACTION_SOUND_NAME_E3}", "E3"],
+                    ["%{BKY_ACTION_SOUND_NAME_F3}", "F3"],
+                    ["%{BKY_ACTION_SOUND_NAME_G3}", "G3"],
+                    ["%{BKY_ACTION_SOUND_NAME_A3}", "A3"],
+                    ["%{BKY_ACTION_SOUND_NAME_B3}", "B3"],
+                    ["%{BKY_ACTION_SOUND_NAME_C4}", "C4"],
+                    ["%{BKY_ACTION_SOUND_NAME_D4}", "D4"],
+                    ["%{BKY_ACTION_SOUND_NAME_E4}", "E4"],
+                    ["%{BKY_ACTION_SOUND_NAME_F4}", "F4"],
+                    ["%{BKY_ACTION_SOUND_NAME_G4}", "G4"],
+                    ["%{BKY_ACTION_SOUND_NAME_A4}", "A4"],
+                    ["%{BKY_ACTION_SOUND_NAME_B4}", "B4"],
+                    ["%{BKY_ACTION_SOUND_NAME_C5}", "C5"],
+                ]
+            },
+            {
+                "type": "field_dropdown",
+                "name": "BEAT",
+                "options": [
+                    ["%{BKY_ACTION_SOUND_BEAT_ONE_EIGHTH}", "1/8"],
+                    ["%{BKY_ACTION_SOUND_BEAT_ONE_FOURTH}", "4/1"],
+                    ["%{BKY_ACTION_SOUND_BEAT_A_HALF}", "1/2"],
+                    ["%{BKY_ACTION_SOUND_BEAT_ONE}", "1"],
+                    ["%{BKY_ACTION_SOUND_BEAT_DOUBLE}", "2"],
                 ]
             },
         ],

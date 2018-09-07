@@ -151,3 +151,16 @@ Blockly.Python['turn_off_light'] = function(block) {
     code = code + '\n';
     return code;
 };
+
+////////////////////////
+
+Blockly.Python['turn_on_on_board_light'] = function(block) {
+    var select = block.getFieldValue('SELECT');
+    var colorR = block.getFieldValue('COLOR_RED');
+    var colorG = block.getFieldValue('COLOR_GREEN');
+    var colorB = block.getFieldValue('COLOR_BLUE');
+    var code;
+    code = 'turnOnLight(' + select + ',' + colorR + ',' + colorG + ',' + colorB + ','  + ')';
+    code = code + '\n';
+    return code;
+};

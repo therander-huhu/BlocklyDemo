@@ -64,16 +64,14 @@
 </table>
 
 <xml id="toolbox" style="display: none">
-    <!--<category name="逻辑">-->
-        <!--<block type="logic_compare"></block>-->
-        <!--<block type="logic_operation"></block>-->
-
-        <!--<block type="logic_boolean"></block>-->
-    <!--</category>-->
     <category name="起始">
         <block type="start_button"></block>
     </category>
-    <category name="执行">
+    <category name="机器人模块">
+        <block type="turn_on_on_board_light"></block>
+        <block type="play_sound_by_beat"></block>
+    </category>
+    <!--<category name="执行">
         <block type="fan_roll_with_speed_direction">
             <value name="SPEED">
                 <shadow type="math_number">
@@ -153,6 +151,7 @@
             </value>
         </block>
     </category>
+    //-->
     <category name="侦测">
         <block type="sense_distance"></block>
         <block type="has_sense_target"></block>
@@ -160,15 +159,10 @@
         <block type="has_sense_sound"></block>
     </category>
     <category name="变量" custom="VARIABLE">
-        <!--<block type="create_variables"></block>-->
     </category>
     <category name="指令" custom="Functions">
-        <!--<block type="new_procedures"></block>-->
     </category>
     <category name="数学">
-        <!--<block type="math_arithmetic">-->
-        <!--</block>-->
-        <!--<block type="math_single"></block>-->
         <block type="math_arithmetic_add">
             <value name="A">
                 <shadow type="math_number">
@@ -319,20 +313,12 @@
             </value>
         </block>
         <block type="flow_repeat_forever"></block>
-        <
-        <!--<block type="controls_if" name="如果"></block>-->
         <block type="flow_controls_if"></block>
         <block type="flow_controls_ifelse"></block>
         <block type="flow_wait_until"></block>
-        <!--<block type="controls_whileUntil"></block>-->
         <block type="flow_repeat_until"></block>
         <block type="controls_flow_statements"></block>
     </category>
-    <!--<category name="文字">-->
-        <!--<block type="text"></block>-->
-        <!--<block type="text_length"></block>-->
-        <!--<block type="text_print"></block>-->
-    <!--</category>-->
 </xml>
 <xml id="startBlocks" style="display: none">
     <block type="controls_if" inline="false" x="67" y="10">
