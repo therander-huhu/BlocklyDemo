@@ -515,9 +515,9 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "SELECT",
                 "options": [
-                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "1"],
-                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "2"],
-                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "3"]
+                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "3"],
+                    ["%{BKY_ACTION_LIGHT_SELECT_LEFT}", "0"],
+                    ["%{BKY_ACTION_LIGHT_SELECT_RIGHT}", "1"]
                 ]
             },
             {
@@ -577,13 +577,6 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "NAME",
                 "options": [
-                    ["%{BKY_ACTION_SOUND_NAME_C1}", "C1"],
-                    ["%{BKY_ACTION_SOUND_NAME_D1}", "D1"],
-                    ["%{BKY_ACTION_SOUND_NAME_E1}", "E1"],
-                    ["%{BKY_ACTION_SOUND_NAME_F1}", "F1"],
-                    ["%{BKY_ACTION_SOUND_NAME_G1}", "G1"],
-                    ["%{BKY_ACTION_SOUND_NAME_A1}", "A1"],
-                    ["%{BKY_ACTION_SOUND_NAME_B1}", "B1"],
                     ["%{BKY_ACTION_SOUND_NAME_C2}", "C2"],
                     ["%{BKY_ACTION_SOUND_NAME_D2}", "D2"],
                     ["%{BKY_ACTION_SOUND_NAME_E2}", "E2"],
@@ -612,9 +605,9 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "BEAT",
                 "options": [
-                    ["%{BKY_ACTION_SOUND_BEAT_ONE_EIGHTH}", "1/8"],
-                    ["%{BKY_ACTION_SOUND_BEAT_ONE_FOURTH}", "4/1"],
-                    ["%{BKY_ACTION_SOUND_BEAT_A_HALF}", "1/2"],
+                    ["%{BKY_ACTION_SOUND_BEAT_ONE_EIGHTH}", "0.125"],
+                    ["%{BKY_ACTION_SOUND_BEAT_ONE_FOURTH}", "0.25"],
+                    ["%{BKY_ACTION_SOUND_BEAT_A_HALF}", "0.5"],
                     ["%{BKY_ACTION_SOUND_BEAT_ONE}", "1"],
                     ["%{BKY_ACTION_SOUND_BEAT_DOUBLE}", "2"],
                 ]

@@ -52,7 +52,7 @@
     <tr>
         <td>
             <p>
-                <button id="generateButton">Show Python</button>
+                <button id="generateButton">运行</button>
             </p>
         </td>
     </tr>
@@ -321,7 +321,9 @@
     </category>
 </xml>
 <xml id="startBlocks" style="display: none">
-    <block type="controls_if" inline="false" x="67" y="10">
+    <block type="turn_on_on_board_light"></block>
+    <block type="play_sound_by_beat"></block>
+    <!-- <block type="controls_if" inline="false" x="67" y="10">
         <mutation else="1"></mutation>
         <value name="IF0">
             <block type="logic_compare" inline="true">
@@ -366,7 +368,7 @@
                 </value>
             </block>
         </statement>
-    </block>
+    </block> -->
 </xml>
 <script src="DemoTry.js"></script>
 <script>
