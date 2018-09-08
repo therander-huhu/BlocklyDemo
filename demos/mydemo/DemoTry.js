@@ -47,7 +47,7 @@ DemoApp.addEventListener = function () {
     function showCode () {
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
-        console.log(code);
+        // console.log(code.indexOf("\t"));
         window.android.writeToDevice(code);
     }
     var generateButton = document.getElementById("generateButton");

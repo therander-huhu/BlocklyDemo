@@ -30,6 +30,7 @@
             background-color: #fff;
             font-family: sans-serif;
             overflow: hidden;
+            position: relative;
         }
         h1 {
             font-weight: normal;
@@ -44,18 +45,20 @@
             background: #fc9;
             text-align: center;
         }
+
+        #generateButton {
+            position: absolute;
+            bottom: 150px;
+            right: 10px;
+            z-index: 100;
+            width: 100px;
+            height: 50px;
+        }
     </style>
 </head>
 <body>
-
+<button id="generateButton">运行</button>
 <table style="border-spacing: 0">
-    <tr>
-        <td>
-            <p>
-                <button id="generateButton">运行</button>
-            </p>
-        </td>
-    </tr>
     <tr style="height: 100%;">
         <td>
             <div id="blocklyDiv"></div>
@@ -321,8 +324,8 @@
     </category>
 </xml>
 <xml id="startBlocks" style="display: none">
-    <block type="turn_on_on_board_light"></block>
-    <block type="play_sound_by_beat"></block>
+    <block type="turn_on_on_board_light" x="67" y="10"></block>
+    <!-- <block type="play_sound_by_beat"></block> -->
     <!-- <block type="controls_if" inline="false" x="67" y="10">
         <mutation else="1"></mutation>
         <value name="IF0">
