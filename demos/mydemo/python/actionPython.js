@@ -1,152 +1,15 @@
-///////动作
-Blockly.Python['move_with_speed'] = function(block) {
-    // Check if a number is even, odd, prime, whole, positive, or negative
-    var speed = Blockly.Python.valueToCode(block, 'SPEED',
-        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var dropdown_property = block.getFieldValue('ACTION');
-    var code;
-    switch (dropdown_property) {
-        case 'FORWARD':
-            code = 'move_forward(' + speed + ')';
-            break;
-        case 'BACK':
-            code = 'move_back(' + speed + ')';
-            break;
-    }
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['move_with_speed_time'] = function(block) {
-    // Check if a number is even, odd, prime, whole, positive, or negative
-    var speed = Blockly.Python.valueToCode(block, 'SPEED',
-        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var dropdown_property = block.getFieldValue('ACTION');
-    var code;
-    switch (dropdown_property) {
-        case 'FORWARD':
-            code = 'move_forward(' + speed + ')';
-            break;
-        case 'BACK':
-            code = 'move_back(' + speed + ')';
-            break;
-    }
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['move_with_wheel_speed'] = function(block) {
-    // Check if a number is even, odd, prime, whole, positive, or negative
-    var l_speed = Blockly.Python.valueToCode(block, 'LEFT_SPEED',
-        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var r_speed = Blockly.Python.valueToCode(block, 'RIGHT_SPEED', Blockly.Python.ORDER_MULTIPLICATIVE) || 0;
-    var code;
-    code = 'moveWithWheelSpeed(' + l_speed + ',' + r_speed + ')';
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['stop_move'] = function(block) {
-    var code;
-    code = 'stopMove()';
-    code = code + '\n';
-    return code;
-};
+// 电机转速
 Blockly.Python['d_c_generator_roll_with_speed'] = function(block) {
-    var speed = Blockly.Python.valueToCode(block, 'SPEED',
-        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var dropdown_property = block.getFieldValue('GENERATOR');
+    var speed = block.getFieldValue('SPEED');
+    var generator = block.getFieldValue('GENERATOR');
     var code;
-    switch (dropdown_property) {
-        case 'M1':
-            code = 'generatorRollWithSpeed(' + 'M1' + ',' + speed + ')';
-            break;
-        case 'M2':
-            code = 'generatorRollWithSpeed(' + 'M2' + ',' + speed + ')';
-            break;
-    }
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['fan_roll_with_direction'] = function(block) {
-    var port_property = block.getFieldValue('PORT');
-    var direction_property = block.getFieldValue('DIRECTION');
-    var code;
-    code = 'fanRollWithDirection(' + port_property + ',' + direction_property + ')';
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['engine_rotate'] = function(block) {
-    var port = block.getFieldValue('PORT');
-    var slot = block.getFieldValue('SLOT');
-    var rotation = Blockly.Python.valueToCode(block, 'ROTATION', Blockly.Python.ORDER_MULTIPLICATIVE) || 0;
-    var code;
-    code = 'engineRotate(' + port + ',' + slot + ',' + rotation + ')';
+
+    code = 'generatorRollWithSpeed(' + generator + ',' + speed + ')';
     code = code + '\n';
     return code;
 };
 
-Blockly.Python['fan_roll_with_speed_direction'] = function(block) {
-    var port_property = block.getFieldValue('PORT');
-    var speed = Blockly.Python.valueToCode(block, "SPEED", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var direction_property = block.getFieldValue('DIRECTION');
-    var code;
-    code = 'fanRollWithSpeedDirection(' + port_property + ',' + speed + ','+ direction_property + ')';
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['fan_stop_roll'] = function(block) {
-    var port_property = block.getFieldValue('PORT');
-    var code;
-    code = 'fanStopRoll(' + port_property + ')';
-    code = code + '\n';
-    return code;
-};
-Blockly.Python['fan_roll_with_speed_direction_time'] = function(block) {
-    var port_property = block.getFieldValue('PORT');
-    var speed = Blockly.Python.valueToCode(block, "SPEED", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var direction_property = block.getFieldValue('DIRECTION');
-    var time = Blockly.Python.valueToCode(block, "TIME", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var code;
-    code = 'fanRollWithSpeedDirection(' + port_property + ',' + speed + ','+ direction_property + ','+ time + ')';
-    code = code + '\n';
-    return code;
-};
-
-Blockly.Python['play_music'] = function(block) {
-    var name = block.getFieldValue('NAME');
-    var code;
-    code = 'playMusic(' + name + ')';
-    code = code + '\n';
-    return code;
-};
-
-Blockly.Python['turn_on_light'] = function(block) {
-    var port = block.getFieldValue('PORT');
-    var color = block.getFieldValue('COLOR');
-    var code;
-    code = 'turnOnLight(' + port + ',' + color + ')';
-    code = code + '\n';
-    return code;
-};
-
-Blockly.Python['turn_on_light_time'] = function(block) {
-    var port = block.getFieldValue('PORT');
-    var color = block.getFieldValue('COLOR');
-    var time = Blockly.Python.valueToCode(block, "TIME", Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var code;
-    code = 'turnOnLight(' + port + ',' + color + ',' + time +')';
-    code = code + '\n';
-    return code;
-};
-
-Blockly.Python['turn_off_light'] = function(block) {
-    var port = block.getFieldValue('PORT');
-    var code;
-    code = 'turnOffLight(' + port + ')';
-    code = code + '\n';
-    return code;
-};
-
-////////////////////////
-
+//板载LED
 Blockly.Python['turn_on_on_board_light'] = function(block) {
     var select = block.getFieldValue('SELECT');
     var colorR = block.getFieldValue('COLOR_RED');
@@ -160,6 +23,7 @@ Blockly.Python['turn_on_on_board_light'] = function(block) {
     return code;
 };
 
+//　播放音调
 Blockly.Python['play_sound_by_beat'] = function(block) {
     var name = block.getFieldValue('NAME');
     var beat = block.getFieldValue('BEAT');
@@ -237,6 +101,83 @@ Blockly.Python['play_sound_by_beat'] = function(block) {
         }
 
         code = 'setBeep(' + beep + ',' + beat + ')';
+    code = code + '\n';
+    return code;
+};
+
+//表情面板显示数字
+Blockly.Python['screen_show_number'] = function(block) {
+    var number = Blockly.Python.valueToCode(block, 'NUMBER',
+        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    var name = block.getFieldValue('NAME');
+    var code;
+    code = 'showNumber('+ name + ',' + number +')'
+    code = code + '\n';
+    return code;
+};
+
+//表情面板显示时间
+Blockly.Python['screen_show_number'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var hour = Blockly.Python.valueToCode(block, 'HOUR',
+        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    var flag = block.getFieldValue('FLAG');
+    var minute = Blockly.Python.valueToCode(block, 'MINUTE',
+        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+        
+    var code;
+    code = 'showTime('+ name + ',' + hour+ ',' + flag+ ',' + minute +')'
+    code = code + '\n';
+    return code;
+};
+
+//表情面板绘画
+Blockly.Python['screen_show_picture'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var number = Blockly.Python.valueToCode(block, 'NUMBER',
+        Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
+    
+    var code;
+    code = 'showPicture('+ name + ',' + number +')'
+    code = code + '\n';
+    return code;
+};
+
+//超声波传感器距离
+Blockly.Python['ultrasonic'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var code;
+    code = 'getUltrasonic('+ name + ')'
+    code = code + '\n';
+    return code;
+};
+
+//音量传感器
+Blockly.Python['volume'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var code;
+    code = 'getVolume('+ name + ')'
+    code = code + '\n';
+    return code;
+};
+
+//巡线传感器
+Blockly.Python['line_patrol'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    var direction = block.getFieldValue('DIRECTION');
+    var color = block.getFieldValue('COLOR');
+    var code;
+    code = 'getLinePatrol('+ name + ',' + direction + ','+ color + ')'
+    code = code + '\n';
+    return code;
+};
+
+//红外遥控器
+Blockly.Python['telecontroller'] = function(block) {
+    var name = block.getFieldValue('NAME');
+    
+    var code;
+    code = 'telecontroller('+ name + ')'
     code = code + '\n';
     return code;
 };

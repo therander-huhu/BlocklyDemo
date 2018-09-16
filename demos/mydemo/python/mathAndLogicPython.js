@@ -26,6 +26,8 @@ Blockly.Python['math_arithmetic_divide'] = function(block) {
     return [code, Blockly.Python.ORDER_MULTIPLICATIVE];
 };
 
+//math_random_int
+
 Blockly.Python['logic_compare_gt'] = function(block) {
     var order = Blockly.Python.ORDER_RELATIONAL;
     var argument0 = Blockly.Python.valueToCode(block, 'A', order);
@@ -65,3 +67,9 @@ Blockly.Python['logic_operation_or'] = function(block) {
     var code = argument0 + "or" +argument1;
     return [code, order];
 };
+
+//logic_negate
+//math_modulo
+//math_round
+//math_trig
+

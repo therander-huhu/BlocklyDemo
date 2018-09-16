@@ -23,7 +23,7 @@ DemoApp.initApplication = function () {
             zoom: {
                 controls: false,
                 wheel: false,
-                startScale: 1.5,
+                startScale: 1.2,
                 maxScale: 3,
                 minScale: 0.3,
                 scaleSpeed: 1.2
@@ -47,7 +47,7 @@ DemoApp.addEventListener = function () {
     function showCode () {
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
-        // console.log(code.indexOf("\t"));
+        // console.log(code);
         window.android.writeToDevice(code);
     }
     var generateButton = document.getElementById("generateButton");

@@ -430,8 +430,6 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_DYNAMIC_HUE = "310";
 /** @export */ Blockly.Msg.ACTION_MOVE_FORWARD = "前进";
 /** @export */ Blockly.Msg.ACTION_MOVE_BACK = "后退";
-/** @export */ Blockly.Msg.ACTION_NAME_M1 = "M1";
-/** @export */ Blockly.Msg.ACTION_NAME_M2 = "M2";
 /** @export */ Blockly.Msg.ACTION_NAME_PORT1 = "端口1";
 /** @export */ Blockly.Msg.ACTION_NAME_PORT2 = "端口2";
 /** @export */ Blockly.Msg.ACTION_NAME_PORT3 = "端口3";
@@ -504,14 +502,20 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.ACTION_LIGHT_COLOR_CYAN = "青";
 /** @export */ Blockly.Msg.ACTION_LIGHT_COLOR_BLUE = "蓝";
 /** @export */ Blockly.Msg.ACTION_LIGHT_COLOR_PURPLE = "紫";
-/** @export */ Blockly.Msg.LOGIC_HUE = "230";
+/** @export */ Blockly.Msg.LOGIC_HUE = "#F08A9F";
 /** @export */ Blockly.Msg.START_HUE = "#82D26E";
-/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";
+
 /** @export */ Blockly.Msg.SENSE_HUE = "#57BEF6";
 /** @export */ Blockly.Msg.VARIABLES_HUE = "#6CA4F5";
 /** @export */ Blockly.Msg.FUNCTION_HUE = "#A27BDB";
-/** @export */ Blockly.Msg.MATH_HUE = "#D571F6";
-/** @export */ Blockly.Msg.FLOW_HUE = "#dd9bf3";
+
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#F08A9F";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#8AD27D";
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";
 
 
 

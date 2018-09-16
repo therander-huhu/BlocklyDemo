@@ -10,17 +10,17 @@
     <!--<script src="../../msg/js/en.js"></script>-->
     <script src="../../msg/js/zh-hans.js"></script>
 
-    <script src="blocks/mathBlock.js"></script>
+    <script src="blocks/mathAndLogicBlock.js"></script>
+    <script src="python/mathAndLogicPython.js"></script>
+
     <script src="blocks/actionBlock.js"></script>
-    <script src="python/mathPython.js"></script>
     <script src="python/actionPython.js"></script>
-    <script src="blocks/flowBlock.js"></script>
-    <script src="python/flowPython.js"></script>
+    
+    <script src="blocks/controlsBlock.js"></script>
+    <script src="python/controlsPython.js"></script>
     <script src="blocks/functionBlock.js"></script>
     <script src="python/functionPython.js"></script>
     <script src="core/function.js"></script>
-    <script src="blocks/senseBlock.js"></script>
-    <script src="python/sensePython.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -67,105 +67,63 @@
 </table>
 
 <xml id="toolbox" style="display: none">
-    <category name="起始">
-        <block type="start_button"></block>
-    </category>
     <category name="机器人模块">
+        <block type="d_c_generator_roll_with_speed"></block>
         <block type="turn_on_on_board_light"></block>
         <block type="play_sound_by_beat"></block>
+        <block type="screen_show_number">
+            <value name="NUMBER">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="screen_show_time">
+            <value name="HOUR">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="MINUTE">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="screen_show_picture">
+            <value name="NUMBER">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="ultrasonic"></block>
+        <block type="volume"></block>
+        <block type="line_patrol"></block>
+        <block type="telecontroller"></block>
     </category>
-    <!--<category name="执行">
-        <block type="fan_roll_with_speed_direction">
-            <value name="SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">100</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="fan_stop_roll"></block>
-        <block type="fan_roll_with_speed_direction_time">
-            <value name="SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">100</field>
-                </shadow>
-            </value>
-            <value name="TIME">
-                <shadow type="math_number">
-                    <field name="NUM">5</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="play_sound_by_beat"></block>
-        <block type="play_music"></block>
-        <block type="turn_on_light"></block>
-        <block type="turn_on_light_time">
-            <value name="TIME">
-                <shadow type="math_number">
-                    <field name="NUM">5</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="turn_off_light"></block>
-        <block type="move_with_speed_time">
-            <value name="SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
-            </value>
+    <category name="控制模块">
+        <block type="controls_wait">
             <value name="TIME">
                 <shadow type="math_number">
                     <field name="NUM">1</field>
                 </shadow>
             </value>
         </block>
-        <block type="move_with_speed">
-            <value name="SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
+        <block type="controls_wait_until"></block>
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <block type="math_number">
+                    <field name="NUM">10</field>
+                </block>
             </value>
         </block>
-        <block type="move_with_wheel_speed">
-            <value name="LEFT_SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
-            </value>
-            <value name="RIGHT_SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="stop_move"></block>
-        <block type="d_c_generator_roll_with_speed">
-            <value name="SPEED">
-                <shadow type="math_number">
-                    <field name="NUM">150</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="fan_roll_with_direction"></block>
-        <block type="engine_rotate">
-            <value name="ROTATION">
-                <shadow type="math_number">
-                    <field name="NUM">90</field>
-                </shadow>
-            </value>
-        </block>
+        <block type="controls_repeat_forever"></block>
+        <block type="controls_repeat_until"></block>
+        <block type="controls_if"></block>
+        <block type="controls_ifelse"></block>
     </category>
-    //-->
-    <category name="侦测">
-        <block type="sense_distance"></block>
-        <block type="has_sense_target"></block>
-        <block type="has_sense_light"></block>
-        <block type="has_sense_sound"></block>
-    </category>
-    <category name="变量" custom="VARIABLE">
-    </category>
-    <category name="指令" custom="Functions">
-    </category>
-    <category name="数学">
+    <category name="数字和逻辑运算">
         <block type="math_arithmetic_add">
             <value name="A">
                 <shadow type="math_number">
@@ -214,46 +172,6 @@
                 </shadow>
             </value>
         </block>
-        <block type="logic_compare_gt">
-            <value name="A">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="B">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="logic_compare_lt">
-            <value name="A">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="B">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="logic_compare_eq">
-            <value name="A">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="B">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_number"></block>
-        <block type="logic_operation_and"></block>
-        <block type="logic_operation_or"></block>
-        <block type="logic_negate"></block>
         <block type="math_random_int">
             <value name="FROM">
                 <shadow type="math_number">
@@ -266,6 +184,45 @@
                 </shadow>
             </value>
         </block>
+        <block type="logic_compare_gt">
+            <value name="A">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="logic_compare_eq">
+                <value name="A">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="B">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+            </block>
+        <block type="logic_compare_lt">
+            <value name="A">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="logic_operation_and"></block>
+        <block type="logic_operation_or"></block>
+        <block type="logic_negate"></block>
         <block type="math_modulo">
             <value name="DIVIDEND">
                 <shadow type="math_number">
@@ -292,39 +249,11 @@
                 </shadow>
             </value>
         </block>
-        <block type="math_number_property">
-            <value name="NUMBER_TO_CHECK">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
     </category>
-    <category name="流程">
-        <block type="flow_wait">
-            <value name="TIME">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="controls_repeat_ext">
-            <value name="TIMES">
-                <block type="math_number">
-                    <field name="NUM">10</field>
-                </block>
-            </value>
-        </block>
-        <block type="flow_repeat_forever"></block>
-        <block type="flow_controls_if"></block>
-        <block type="flow_controls_ifelse"></block>
-        <block type="flow_wait_until"></block>
-        <block type="flow_repeat_until"></block>
-        <block type="controls_flow_statements"></block>
-    </category>
+    <category name="新建指令" custom="Functions"></category>
 </xml>
 <xml id="startBlocks" style="display: none">
-    <block type="turn_on_on_board_light" x="67" y="10"></block>
+    <block type="turn_on_on_board_light" x="200" y="10"></block>
     <!-- <block type="play_sound_by_beat"></block> -->
     <!-- <block type="controls_if" inline="false" x="67" y="10">
         <mutation else="1"></mutation>
