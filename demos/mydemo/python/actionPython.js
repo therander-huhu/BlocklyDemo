@@ -18,7 +18,7 @@ Blockly.Python['turn_on_on_board_light'] = function(block) {
     var code;
 
 
-    code = 'setLed(' + select + ',' + colorR + ',' + colorG + ',' + colorB + ')';
+    code = 'mymodule.setLed(' + select + ',' + colorR + ',' + colorG + ',' + colorB + ')';
     code = code + '\n';
     return code;
 };
@@ -100,7 +100,7 @@ Blockly.Python['play_sound_by_beat'] = function(block) {
             beep = "523";
         }
 
-        code = 'setBeep(' + beep + ',' + beat + ')';
+        code = 'mymodule.setBeep(' + beep + ',' + beat + ')';
     code = code + '\n';
     return code;
 };

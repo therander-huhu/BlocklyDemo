@@ -63,7 +63,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "SELECT",
                 "options": [
-                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "3"],
+                    ["%{BKY_ACTION_LIGHT_SELECT_ALL}", "2"],
                     ["%{BKY_ACTION_LIGHT_SELECT_LEFT}", "0"],
                     ["%{BKY_ACTION_LIGHT_SELECT_RIGHT}", "1"]
                 ]
