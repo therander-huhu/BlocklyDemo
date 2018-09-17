@@ -126,28 +126,27 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "NAME",
                 "options": [
-                    ["%{BKY_ACTION_SOUND_NAME_C2}", "C2"],
-                    ["%{BKY_ACTION_SOUND_NAME_D2}", "D2"],
-                    ["%{BKY_ACTION_SOUND_NAME_E2}", "E2"],
-                    ["%{BKY_ACTION_SOUND_NAME_F2}", "F2"],
-                    ["%{BKY_ACTION_SOUND_NAME_G2}", "G2"],
-                    ["%{BKY_ACTION_SOUND_NAME_A2}", "A2"],
-                    ["%{BKY_ACTION_SOUND_NAME_B2}", "B2"],
-                    ["%{BKY_ACTION_SOUND_NAME_C3}", "C3"],
-                    ["%{BKY_ACTION_SOUND_NAME_D3}", "D3"],
-                    ["%{BKY_ACTION_SOUND_NAME_E3}", "E3"],
-                    ["%{BKY_ACTION_SOUND_NAME_F3}", "F3"],
-                    ["%{BKY_ACTION_SOUND_NAME_G3}", "G3"],
-                    ["%{BKY_ACTION_SOUND_NAME_A3}", "A3"],
-                    ["%{BKY_ACTION_SOUND_NAME_B3}", "B3"],
-                    ["%{BKY_ACTION_SOUND_NAME_C4}", "C4"],
-                    ["%{BKY_ACTION_SOUND_NAME_D4}", "D4"],
-                    ["%{BKY_ACTION_SOUND_NAME_E4}", "E4"],
-                    ["%{BKY_ACTION_SOUND_NAME_F4}", "F4"],
-                    ["%{BKY_ACTION_SOUND_NAME_G4}", "G4"],
-                    ["%{BKY_ACTION_SOUND_NAME_A4}", "A4"],
-                    ["%{BKY_ACTION_SOUND_NAME_B4}", "B4"],
-                    ["%{BKY_ACTION_SOUND_NAME_C5}", "C5"],
+                    ["C1", "C1"],
+                    ["D1", "D1"],
+                    ["E1", "E1"],
+                    ["F1", "F1"],
+                    ["G1", "G1"],
+                    ["A1", "A1"],
+                    ["B1", "B1"],
+                    ["C2", "C2"],
+                    ["D2", "D2"],
+                    ["E2", "E2"],
+                    ["F2", "F2"],
+                    ["G2", "G2"],
+                    ["A2", "A2"],
+                    ["B2", "B2"],
+                    ["C3", "C3"],
+                    ["D3", "D3"],
+                    ["E3", "E3"],
+                    ["F3", "F3"],
+                    ["G3", "G3"],
+                    ["A3", "A3"],
+                    ["B3", "B3"],
                 ]
             },
             {
@@ -212,7 +211,7 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
      //表情面板显示时间
      {
         "type": "screen_show_time",
-        "message0": "%1 表情面板 %2 显示时间 %3 时 %4 %5 分",
+        "message0": "%1 表情面板 %2 显示时间 %3 时 %4 分",
         "args0": [
             {
                 "type": "field_image",
@@ -238,14 +237,6 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
             {
                 "type": "input_value",
                 "name": "HOUR",
-            },
-            {
-                "type": "field_dropdown",
-                "name": "FLAG",
-                "options": [
-                    [":", ":"],
-                    ["", ""],
-                ]
             },
             {
                 "type": "input_value",
@@ -399,8 +390,8 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "DIRECTION",
                 "options": [
-                    ["%{BKY_ACTION_DIRECTION_LEFT}", "1"],
-                    ["%{BKY_ACTION_DIRECTION_RIGHT}", "2"],
+                    ["%{BKY_ACTION_DIRECTION_LEFT}", "0"],
+                    ["%{BKY_ACTION_DIRECTION_RIGHT}", "1"],
 
                 ]
             },
@@ -408,8 +399,8 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "type": "field_dropdown",
                 "name": "COLOR",
                 "options": [
-                    ["%{BKY_ACTION_COLOR_BLACK}", "1"],
-                    ["%{BKY_ACTION_COLOR_WHITE}", "2"],
+                    ["%{BKY_ACTION_COLOR_BLACK}", "0"],
+                    ["%{BKY_ACTION_COLOR_WHITE}", "1"],
 
                 ]
             },
@@ -442,12 +433,14 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                     ["B", "B"],
                     ["C", "C"],
                     ["D", "D"],
+                    ["上", "上"],
                     ["E", "E"],
-                    ["上", "6"],
-                    ["下", "7"],
-                    ["左", "8"],
-                    ["右", "8"],
+                    ["左", "左"],
+                    ["设置", "设置"],
+                    ["右", "右"],
                     ["0", "0"],
+                    ["下", "下"],
+                    ["F", "F"],
                     ["1", "1"],
                     ["2", "2"],
                     ["3", "3"],
@@ -457,7 +450,6 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                     ["7", "7"],
                     ["8", "8"],
                     ["9", "9"],
-                    ["设置", "10"],
                 ]
             },
         ],

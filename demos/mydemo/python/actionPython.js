@@ -4,7 +4,7 @@ Blockly.Python['d_c_generator_roll_with_speed'] = function(block) {
     var generator = block.getFieldValue('GENERATOR');
     var code;
 
-    code = 'generatorRollWithSpeed(' + generator + ',' + speed + ')';
+    code = 'kq.espd(' + generator + ',' + speed + ')';
     code = code + '\n';
     return code;
 };
@@ -18,7 +18,7 @@ Blockly.Python['turn_on_on_board_light'] = function(block) {
     var code;
 
 
-    code = 'mymodule.setLed(' + select + ',' + colorR + ',' + colorG + ',' + colorB + ')';
+    code = 'kq.bld(' + select + ',' + colorR + ',' + colorG + ',' + colorB + ')';
     code = code + '\n';
     return code;
 };
@@ -29,78 +29,31 @@ Blockly.Python['play_sound_by_beat'] = function(block) {
     var beat = block.getFieldValue('BEAT');
     var code;
     let beep;
-
-        if (name == "C2") {
-            beep = "65";
-        }
-        if (name == "D2") {
-            beep = "73";
-        }
-        if (name == "E2") {
-            beep = "82";
-        }
-        if (name == "F2") {
-            beep = "87";
-        }
-        if (name == "G2") {
-            beep = "97";
-        }
-        if (name == "A2") {
-            beep = "110";
-        }
-        if (name == "B2") {
-            beep = "123";
-        }
-
-        if (name == "C3") {
-            beep = "130";
-        }
-        if (name == "D3") {
-            beep = "146";
-        }
-        if (name == "E3") {
-            beep = "164";
-        }
-        if (name == "F3") {
-            beep = "174";
-        }
-        if (name == "G3") {
-            beep = "195";
-        }
-        if (name == "A3") {
-            beep = "220";
-        }
-        if (name == "B3") {
-            beep = "246";
-        }
-
-        if (name == "C4") {
-            beep = "261";
-        }
-        if (name == "D4") {
-            beep = "293";
-        }
-        if (name == "E4") {
-            beep = "329";
-        }
-        if (name == "F4") {
-            beep = "349";
-        }
-        if (name == "G4") {
-            beep = "391";
-        }
-        if (name == "A4") {
-            beep = "440";
-        }
-        if (name == "B4") {
-            beep = "493";
-        }
-
-        if (name == "C5") {
-            beep = "523";
-        }
-
-        code = 'mymodule.setBeep(' + beep + ',' + beat + ')';
+    let config = {
+        C1: "262",
+        D1: "294",
+        E1: "330",
+        F1: "349",
+        G1: "392",
+        A1: "440",
+        B1: "494",
+        C2: "523",
+        D2: "587",
+        E2: "659",
+        F2: "698",
+        G2: "784",
+        A2: "880",
+        B2: "988",
+        C3: "1047",
+        D3: "1175",
+        E3: "1319",
+        F3: "1397",
+        G3: "1568",
+        A3: "1760",
+        B3: "1976"
+    }
+    beep = config[name];
+    code = 'kq.bbp(' + beep + ',' + beat + ')';
     code = code + '\n';
     return code;
 };
@@ -111,22 +64,21 @@ Blockly.Python['screen_show_number'] = function(block) {
         Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
     var name = block.getFieldValue('NAME');
     var code;
-    code = 'showNumber('+ name + ',' + number +')'
+    code = 'kq.ebi('+ name + ',' + number +')'
     code = code + '\n';
     return code;
 };
 
 //表情面板显示时间
-Blockly.Python['screen_show_number'] = function(block) {
+Blockly.Python['screen_show_time'] = function(block) {
     var name = block.getFieldValue('NAME');
     var hour = Blockly.Python.valueToCode(block, 'HOUR',
         Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
-    var flag = block.getFieldValue('FLAG');
     var minute = Blockly.Python.valueToCode(block, 'MINUTE',
         Blockly.Python.ORDER_MULTIPLICATIVE) || '0';
         
     var code;
-    code = 'showTime('+ name + ',' + hour+ ',' + flag+ ',' + minute +')'
+    code = 'kq.ebt('+ name + ',' + hour+ ',' + minute +')'
     code = code + '\n';
     return code;
 };
@@ -147,7 +99,7 @@ Blockly.Python['screen_show_picture'] = function(block) {
 Blockly.Python['ultrasonic'] = function(block) {
     var name = block.getFieldValue('NAME');
     var code;
-    code = 'getUltrasonic('+ name + ')'
+    code = 'kq.eult('+ name + ')'
     code = code + '\n';
     return code;
 };
@@ -156,7 +108,7 @@ Blockly.Python['ultrasonic'] = function(block) {
 Blockly.Python['volume'] = function(block) {
     var name = block.getFieldValue('NAME');
     var code;
-    code = 'getVolume('+ name + ')'
+    code = 'kq.mic('+ name + ')'
     code = code + '\n';
     return code;
 };
@@ -167,7 +119,7 @@ Blockly.Python['line_patrol'] = function(block) {
     var direction = block.getFieldValue('DIRECTION');
     var color = block.getFieldValue('COLOR');
     var code;
-    code = 'getLinePatrol('+ name + ',' + direction + ','+ color + ')'
+    code = 'kq.wbl('+ name + ',' + direction + ','+ color + ')'
     code = code + '\n';
     return code;
 };
@@ -175,9 +127,32 @@ Blockly.Python['line_patrol'] = function(block) {
 //红外遥控器
 Blockly.Python['telecontroller'] = function(block) {
     var name = block.getFieldValue('NAME');
-    
+    let config = {
+        "A": "45",
+        "B": "46",
+        "C": "47",
+        "D": "48",
+        "上": "40",
+        "E": "43",
+        "左": "07",
+        "设置": "15",
+        "右": "09",
+        "0": "16",
+        "下": "19",
+        "F": "0D",
+        "1": "0C",
+        "2": "18",
+        "3": "5E",
+        "4": "08",
+        "5": "1C",
+        "6": "5A",
+        "7": "42",
+        "8": "52",
+        "9": "4A"
+    }
     var code;
-    code = 'telecontroller('+ name + ')'
+    let key = config[name];
+    code = 'kq.erc('+ key + ')'
     code = code + '\n';
     return code;
 };
