@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.da');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Tilføj kommentar";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Kan ikke slette variablen »%1« da den er en del af definitionen af funktionen »%2«";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Skift værdi:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "tæl med %1 fra %2 til %3 med %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Få variablen \"%1\" til at have værdierne fra startværdien til slutværdien, mens der tælles med det angivne interval, og udfør de angivne blokke.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Tilføj en betingelse til denne \"hvis\" blok.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Tilføj en sidste fang-alt betingelse, til denne \"hvis\" blok.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "er et primtal";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Kontrollere, om et tal er lige, ulige, primtal, helt, positivt, negativt, eller om det er deleligt med bestemt tal. Returnere sandt eller falskt.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "er helt";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://da.wikipedia.org/wiki/Modulo";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "resten af %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Returner resten fra at dividere de to tal.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Returnere cosinus af en vinkel (i grader).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Returnere sinus af en vinkel (i grader).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Returnere tangens af en vinkel (i grader).";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Opret farvevariabel ...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Opret nummervariabel ...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Opret strengvariabel ...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Opret variabel ...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Navn til den nye variabel:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Ny variabeltype:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "tillad erklæringer";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "med:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Sætter denne variabel til at være lig med input.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "En variabel med navnet »%1« findes allerede.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "En variabel med navnet »%1« findes allerede for en anden variabel af typen »%2«.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "En variabel med navnet »%1« findes allerede for en anden type: »%2«.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

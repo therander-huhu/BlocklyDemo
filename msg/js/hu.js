@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.hu');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Megjegyzés hozzáadása";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "A(z) „%1” változó nem törölhető, mert része a(z) „%2” függvény definíciójának.";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Érték módosítása:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "számolj %1 értékével %2 és %3 között %4 lépésközzel";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "A(z) '%1' változó felveszi a kezdőérték és a végérték közötti értékeket a meghatározott lépésközzel. Eközben a meghatározott blokkokat hajtja végre.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Feltétel hozzáadása a ha blokkhoz.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Végső feltétel hozzáadása a ha blokkhoz.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "prím";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Ellenőrzi, hogy a szám páros, páratlan, prím, egész, pozitív vagy negatív-e, illetve osztható-e a másodikkal. Igaz, vagy hamis értéket ad eredményül.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "egész";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://hu.wikipedia.org/wiki/Eg%C3%A9szr%C3%A9sz#Als.C3.B3_eg.C3.A9szr.C3.A9sz";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 maradéka";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Az egész osztás maradékát adja eredméynül.";

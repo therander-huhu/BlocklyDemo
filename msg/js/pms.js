@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.pms');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Gionté un coment";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "As peul nen eliminesse la variàbil '%1' përchè a l'é part ëd la definission dla fonsion '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Modifiché ël valor:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "conté con %1 da %2 a %3 për %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Fé an manera che la variàbil \"%1\" a pija ij valor dal nùmer inissial fin-a al nùmer final, an contand për l'antërval ëspessificà, e eseguì ij bloch ëspessificà.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Gionté na condission al blòch si.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Gionté na condission final ch'a cheuj tut al blòch si.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "a l'é prim";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "A contròla si un nùmer a l'é cobi, dëscobi, prim, antreghm positiv, negativ, o s'a l'é divisìbil për un nùmer dàit. A rëspond ver o fàuss.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "a l'é antregh";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "resta ëd %1:%2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "A smon la resta ëd la division dij doi nùmer.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "A smon ël cosen ëd n'àngol an gré (pa an radiant).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "A smon ël sen ëd n'àngol an gré (pa an radiant).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "A smon la tangenta ëd n'àngol an gré (pa an radiant).";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Creé na variàbil ëd color...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Creé na variàbil numérica...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Creé na variàbil dë stringa...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Creé na variàbil...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Nòm ëd la neuva variàbil:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Neuva sòrt ëd variàbil:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "përmëtte le diciairassion";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "con:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Fissé costa variàbil ugual al valor d'imission.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Na variàbil con ël nòm '%1' a esist già.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Na variàbil ciamà '%1' a esist già për n'àutra variàbil ëd sòrt '%2'.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Na variàbil ciamà '%1' a esist già për n'àutra sòrt: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

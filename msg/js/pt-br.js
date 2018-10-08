@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.pt.br');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Adicionar comentário";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Não se pode deletar a variável '%1' porque é parte da definição da função '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Mudar valor:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "contar com %1 de %2 até %3 por %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Faça com que a variável '%1' assuma os valores do número inicial ao número final, contando de acordo com o intervalo especificado e execute os blocos especificados.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Acrescente uma condição para o bloco se.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Acrescente uma condição final para o bloco se.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "é primo";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Verifica se um número é par, ímpar, inteiro, positivo, negativo, ou se é divisível por outro número.  Retorna verdadeiro ou falso.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "é inteiro";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_m%C3%B3dulo";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "resto da divisão de %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Retorna o resto da divisão de dois números.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Retorna o cosseno de um grau (não radiano).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Retorna o seno de um grau (não radiano).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Retorna a tangente de um grau (não radiano).";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Criar variável colorida...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Criar variável numérica...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Criar variável de segmentos de texto...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Criar variável...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Nome da nova variável:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Tipo da nova variável:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "permitir declarações";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "com:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Define esta variável para o valor da entrada.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "A variável chamada '%1' já existe.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Uma variável chamada '%1' já existe para outra variável do tipo '%2'.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Já existe uma variável chamada '%1' para outra do tipo: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

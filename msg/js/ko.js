@@ -6,7 +6,20 @@ goog.provide('Blockly.Msg.ko');
 
 goog.require('Blockly.Msg');
 
-/** @export */ Blockly.Msg.ADD_COMMENT = "메모 추가";
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
+/** @export */ Blockly.Msg.ADD_COMMENT = "주석 추가";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "'%2' 함수 정의의 일부이기 때문에 '%1' 변수를 삭제할 수 없습니다";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "값 바꾸기:";
 /** @export */ Blockly.Msg.CLEAN_UP = "블록 정리";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://ko.wikipedia.org/wiki/For_%EB%A3%A8%ED%94%84";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "으로 계산 %1 %2에서 %4을 이용하여 %3로";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "변수 \"%1\"은 지정된 간격으로 시작 수에서 끝 수까지를 세어 지정된 블록을 수행해야 합니다.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "\"만약\" 블럭에 조건 검사를 추가합니다.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "\"만약\" 블럭의 마지막에, 모든 검사 결과가 거짓인 경우 실행할 부분을 추가합니다.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://ko.wikipedia.org/wiki/%EC%A1%B0%EA%B1%B4%EB%AC%B8";
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "가 소수(prime) 이면";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "어떤 수가 짝 수, 홀 수, 소 수, 정 수, 양 수, 음 수, 나누어 떨어지는 수 인지 검사해 결과값을 돌려줍니다. 참(true) 또는 거짓(false) 값을 돌려줌.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "가 정수이면";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2의 나머지";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "첫 번째 수를 두 번째 수로 나눈, 나머지 값을 돌려줍니다.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "각도의 코사인을 반환합니다. (라디안 아님)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "각도의 사인을 반환합니다. (라디안 아님)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "각도의 탄젠트를 반환합니다. (라디안 아님)";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "색 변수 만들기...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "숫자 변수 만들기....";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "문자열 변수 만들기...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "변수 만들기...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "새 변수 이름:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "새 변수 유형:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "서술 허가";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "사용:";
@@ -315,7 +330,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "매개 변수들";
 /** @export */ Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TOOLTIP = "이 함수를 추가, 삭제, 혹은 재정렬합니다.";
 /** @export */ Blockly.Msg.REDO = "다시 실행";
-/** @export */ Blockly.Msg.REMOVE_COMMENT = "내용 제거";
+/** @export */ Blockly.Msg.REMOVE_COMMENT = "주석 제거";
 /** @export */ Blockly.Msg.RENAME_VARIABLE = "변수 이름 바꾸기:";
 /** @export */ Blockly.Msg.RENAME_VARIABLE_TITLE = "'%1' 변수 이름을 바꾸기:";
 /** @export */ Blockly.Msg.TEXT_APPEND_HELPURL = "https://github.com/google/blockly/wiki/Text#text-modification";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://ko.wikipedia.org/wiki/%EB%B3%80%EC%88%98_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)";
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "변수의 값을 입력한 값으로 변경해 줍니다.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "'%1' 변수는 이미 존재합니다.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "'%1' 변수는 '%2' 유형의 다른 변수에 대해 이미 존재합니다.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "'%1' 변수는 다른 유형에 대해 이미 존재합니다: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

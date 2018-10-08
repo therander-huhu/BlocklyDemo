@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.fi');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Lisää kommentti";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Ei voida poistaa muuttujaa '%1' koska se on osa funktion määritelmää '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Muuta arvoa:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "laske %1 Väli %2-%3 %4:n välein";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Aseta muuttujaan \"%1\" arvot alkuarvosta loppuarvoon annetun askeleen välein ja suorita joka askeleella annettu koodilohko.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Lisää ehto \"jos\" lohkoon.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Lisää lopullinen \"muuten\" lohko \"jos\" lohkoon.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "on alkuluku";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Tarkistaa onko numero parillinen, pariton, alkuluku, kokonaisluku, positiivinen, negatiivinen, tai jos se on jaollinen toisella luvulla. Palauttaa tosi tai epätosi.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "on kokonaisluku";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 jakojäännös";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Palauttaa jakolaskun jakojäännöksen.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Palauttaa asteluvun (ei radiaanin) kosinin.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Palauttaa asteluvun (ei radiaanin) sinin.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Palauttaa asteluvun (ei radiaanin) tangentin.";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Luo värimuuttuja...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Luo numeromuuttuja...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Luo merkkijonomuuttuja...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Luo muuttuja...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Uuden muuttujan nimi:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Uuden muuttujan tyyppi:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "salli kommentit";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "parametrit:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Asettaa muutujan arvoksi annetun syötteen.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Muuttuja nimeltään '%1' jo olemassa.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Muuttuja nimeltä '%1' on jo olemassa toiselle muuttujalle tyypiltään '%2'.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Muuttuja nimeltä '%1' on jo olemassa toiselle tyypille: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

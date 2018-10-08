@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.nl');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Reactie toevoegen";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "De variabele \"%1\" kan niet verwijderd worden omdat die onderdeel uitmaakt van de definitie van de functie \"%2\"";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Waarde wijzigen:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "rekenen met %1 van %2 tot %3 in stappen van %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Laat de variabele \"%1\" de waarden aannemen van het beginnummer tot het laatste nummer, tellende met het opgegeven interval, en met uitvoering van de opgegeven blokken.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Voeg een voorwaarde toe aan het als-blok.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Voeg een laatste, vang-alles conditie toe aan het als-statement.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "is priemgetal";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Test of een getal even, oneven, een priemgetal, geheel, positief of negatief is, of deelbaar is door een bepaald getal. Geeft \"waar\" of \"onwaar\".";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "is geheel getal";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://nl.wikipedia.org/wiki/Modulair_rekenen";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "restgetal van %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Geeft het restgetal van het resultaat van de deling van de twee getallen.";

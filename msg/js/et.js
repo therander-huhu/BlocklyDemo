@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.et');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Lisa kommentaar";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Muuda väärtust:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "loendus muutujaga %1 alates %2 kuni %3, %4 kaupa";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Annab muutujale '%1' väärtused ühest numbrist teiseni, muutes seda intervalli kaupa ja käivitab igal muudatusel ploki sees oleva koodi.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Lisab „kui“ plokile tingimuse.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Lisab „kui“ plokile lõpliku tingimuseta koodiploki.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -83,10 +97,10 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.IOS_PROCEDURES_INPUTS = "INPUTS";  // untranslated
 /** @export */ Blockly.Msg.IOS_VARIABLES_ADD_BUTTON = "Add";  // untranslated
 /** @export */ Blockly.Msg.IOS_VARIABLES_ADD_VARIABLE = "+ Add Variable";  // untranslated
-/** @export */ Blockly.Msg.IOS_VARIABLES_DELETE_BUTTON = "Delete";  // untranslated
-/** @export */ Blockly.Msg.IOS_VARIABLES_EMPTY_NAME_ERROR = "You can't use an empty variable name.";  // untranslated
+/** @export */ Blockly.Msg.IOS_VARIABLES_DELETE_BUTTON = "Kustuta";
+/** @export */ Blockly.Msg.IOS_VARIABLES_EMPTY_NAME_ERROR = "Tühja muutuja nime ei saa kasutada.";
 /** @export */ Blockly.Msg.IOS_VARIABLES_RENAME_BUTTON = "Rename";  // untranslated
-/** @export */ Blockly.Msg.IOS_VARIABLES_VARIABLE_NAME = "Variable name";  // untranslated
+/** @export */ Blockly.Msg.IOS_VARIABLES_VARIABLE_NAME = "Muutuja nimi";
 /** @export */ Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "https://github.com/google/blockly/wiki/Lists#create-empty-list";  // untranslated
 /** @export */ Blockly.Msg.LISTS_CREATE_EMPTY_TITLE = "tühi loend";
 /** @export */ Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP = "Tagastab loendi, mille pikkus on 0 ja milles pole ühtegi elementi.";
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "on algarv";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Kontrollib kas arv on paarisarv, paaritu arv, algarv, täisarv, positiivne, negatiivne või jagub kindla arvuga. Tagastab „tõene“ või „väär“.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "on täisarv";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 jääk";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Tagastab esimese numbri teisega jagamisel tekkiva jäägi.";
@@ -337,7 +352,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.TEXT_CHARAT_TOOLTIP = "Tagastab tekstis määratud asukohal oleva sümboli.";
 /** @export */ Blockly.Msg.TEXT_COUNT_HELPURL = "https://github.com/google/blockly/wiki/Text#counting-substrings";  // untranslated
 /** @export */ Blockly.Msg.TEXT_COUNT_MESSAGE0 = "count %1 in %2";  // untranslated
-/** @export */ Blockly.Msg.TEXT_COUNT_TOOLTIP = "Count how many times some text occurs within some other text.";  // untranslated
+/** @export */ Blockly.Msg.TEXT_COUNT_TOOLTIP = "Loenda, mitu korda mingi tekst esineb teise teksti sees.";
 /** @export */ Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TOOLTIP = "Objekti lisamine tekstile.";
 /** @export */ Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "ühenda";
 /** @export */ Blockly.Msg.TEXT_CREATE_JOIN_TOOLTIP = "Tekstiploki muutmine sektsioonide lisamise, eemaldamise või järjestuse muutmisega.";

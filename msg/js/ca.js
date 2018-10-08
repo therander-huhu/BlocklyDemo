@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.ca');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Afegeix un comentari";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Canvia valor:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "comptar amb %1 des de %2 fins a %3 en increments de %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Fer que la variable \"%1\" prengui els valors des del nombre inicial fins al nombre final, incrementant a cada pas l'interval indicat, i executar els blocs especificats.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Afegeix una condició al bloc 'si'.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Afegeix una condició final, que recull qualsevol altra possibilitat, al bloc 'si'.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "és primer";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Comprova si un nombre és parell, senar, enter, positium negatiu, o si és divisible per un cert nombre. Retorna cert o fals.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "és enter";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://ca.wikipedia.org/wiki/Residu_%28aritm%C3%A8tica%29";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "residu de %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Retorna el residu de dividir els dos nombres.";

@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.cs');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Přidat komentář";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Změnit hodnotu:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "počítat s %1 od %2 do %3 po %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Nechá proměnnou '%1' nabývat hodnot od počátečního do koncového čísla po daném přírůstku a provádí s ní příslušné bloky.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Přidat podmínku do \"pokud\" bloku.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Přidej konečnou podmínku zahrnující ostatní případy do bloku \"pokud\".";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "je prvočíslo";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Kontrola, zda je číslo sudé, liché, prvočíslo, celé, kladné, záporné nebo zda je dělitelné daným číslem. Vrací pravdu nebo nepravdu.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "je celé";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://cs.wikipedia.org/wiki/Modul%C3%A1rn%C3%AD_aritmetika";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "zbytek po dělení %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Vrátí zbytek po dělení dvou čísel.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Vrátí kosinus úhlu ve stupních.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Vrátí sinus úhlu ve stupních.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Vrátí tangens úhlu ve stupních.";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_VARIABLE = "Nová proměnná...";
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Vytvořit barvu proměnné...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Vytvořit číselnou proměnnou...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Vytvořit řetězcovou proměnnou...";
+/** @export */ Blockly.Msg.NEW_VARIABLE = "Vytvořte proměnnou...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Nový název proměnné:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Nový typ proměnné:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "povolit příkazy";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "s:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Nastaví tuto proměnnou, aby se rovnala vstupu.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "A variable named '%1' already exists.";  // untranslated
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "A variable named '%1' already exists for another type: '%2'.";  // untranslated
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Proměnná pojmenovaná jako '%1' již existuje pro jiný typ: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

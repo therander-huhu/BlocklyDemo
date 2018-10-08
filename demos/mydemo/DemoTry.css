@@ -1,29 +1,27 @@
 .blocklyToolboxDiv {
     width: 200px;
-    background-color: #ffffff;
+    background-color: #95e2ec;
 }
 
 .blocklyToolboxDiv .blocklyTreeRoot{
-    padding: 0;
+    padding: 0 5px 0 5px;
 }
 
 .blocklyTreeRoot div[role=group]>div{
-    margin: 1px 0 0 0;
+    margin: 0 0 5px 0;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #5f5d5d;
+    padding-left: 10px;
+
 }
 
 .blocklyToolboxDiv .blocklyTreeRow {
-    height: auto;
+    height: 50px;
     padding: 0 0 0 10px !important;
     margin: 0;
     position: relative;
-}
-
-.blocklyToolboxDiv .blocklyTreeRow span:nth-child(1) {
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    border-bottom: 1px #d4d4d4 solid;
+    text-align: left;
 }
 
 .blocklyTreeRow:not(.blocklyTreeSelected):hover {
@@ -35,37 +33,82 @@
 
 .blocklyToolboxDiv .blocklyTreeLabel {
     font-size: 16px;
-    line-height: 48px;
+    line-height: 50px;
     position: relative;
+    padding-left: 40px;
+    font-weight: bold;
 }
 
-.blocklyToolboxDiv .blocklyTreeIcon  {
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(1) .blocklyTreeLabel {
+    color: #4FC3F7;
+}
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(2) .blocklyTreeLabel {
+    color: #FF839E;
+}
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(3) .blocklyTreeLabel {
+    color: #72D572;
+}
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(4) .blocklyTreeLabel {
+    color: #8AD27D;
+}
+
+.blocklyToolboxDiv div[role="treeitem"] .blocklyTreeSelected .blocklyTreeLabel {
+    color: white;
+}
+
+.blocklyToolboxDiv div[role="treeitem"] span:nth-child(1)  {
      /*display: none !important;*/
      position: absolute;
      top: 0;
      left: 0;
      height: 100%;
-     width:10px;
+     width:7px;
      background-image: none;
  }
 
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(1) span:nth-child(1) {
+    background-color: #4FC3F7;
+}
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(2) span:nth-child(1) {
+     background-color: #FF839E;
+ }
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(3) span:nth-child(1) {
+    background-color: #72D572;
+}
+
+.blocklyToolboxDiv div[role="treeitem"]:nth-child(4) span:nth-child(1) {
+    background-color: #8AD27D;
+}
+
+.blocklyToolboxDiv div[role="treeitem"] .blocklyTreeIcon{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background-position: 0 0;
+    background-size: 30px 30px;
+}
+
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(1) .blocklyTreeIcon {
-    background-color: #5ECAB8;
+    background-image: url(../../media/res/menu_action.png);
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(2) .blocklyTreeIcon {
-     background-color: #F08A9F;
+    background-image: url(../../media/res/menu_control.png);
  }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(3) .blocklyTreeIcon {
-    background-color: #8AD27D;
+    background-image: url(../../media/res/menu_logic.png);
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(4) .blocklyTreeIcon {
-    background-color: #8AD27D;
+    background-image: url(../../media/res/menu_new.png);
 }
 
-.blocklyToolboxDiv .blocklyTreeSelected .blocklyTreeIcon {
+.blocklyToolboxDiv .blocklyTreeSelected span:nth-child(1) {
     animation:menuItemShow 0.2s;
     animation-fill-mode: forwards;
     z-index: 0;
@@ -82,9 +125,243 @@
 @keyframes menuItemShow
 {
     from {width:10px;}
-    to {width:100%;}
+    to {width:100%;border-radius: 0 5px 5px 0}
 }
 
 .blocklyFlyoutButton {
     fill: #57BEF6;
+}
+
+#dialog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    top: 0;
+    display: none;
+    overflow: visible !important;
+    z-index: 100000;
+}
+
+/* #dialogBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: r
+} */
+
+#cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dialog.hide {
+    display: none;
+}
+
+.dialog.show {
+    display: block;
+}
+
+#dialog table {
+    /* border-spacing: 0; */
+    /* border-collapse: collapse; */
+}
+
+#drawingBoard {
+    width: 565px;
+    margin: 0 auto;
+    height: 400px;
+    padding: 10px 50px;
+    background-color: #e1f7ff;
+    border: 5px solid white;
+    border-radius: 10px;
+    position: relative;
+}
+
+#drawingBoard .title {
+    text-align: center;
+    margin: 0;
+}
+
+#drawingBoard table {
+    text-align: center;
+    margin: 0;
+}
+
+#drawingBoard td {
+    width: 30px;
+    height: 30px;
+}
+
+.drawTool {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 50px;
+}
+
+.drawTool button {
+    display: block;
+    width: 50px;
+    height: 25px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e1;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#f8f8f8, #dedede); /* 标准的语法 */
+}
+
+.drawMenu {
+    width: 300px;
+    margin: 50px auto 0;
+}
+
+.drawMenu button {
+    width: 140px;
+    height: 25px;
+    border: 1px solid #e0e0e1;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#f8f8f8, #dedede); /* 标准的语法 */
+}
+
+#drawCancel {
+    float: left;
+}
+
+#drawConfirm {
+    float: right;
+}
+
+#beepSelect {
+    background: #ffffff;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#beepSelect table {
+    
+}
+
+#beepSelect td button {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.logo {
+    margin: 10px auto 0;
+    display: block;
+    width: 170px;
+}
+
+#teleControlSelect {
+    background: #ffffff;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#teleControlSelect button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+}
+
+#teleControlSelect button img {
+    display: block;
+    margin: 0 auto;
+}
+
+#programDialog {
+    width: 400px;
+    margin: 0 auto;
+    height: 400px;
+    padding: 10px 100px;
+    background-color: #e1f7ff;
+    border: 5px solid white;
+    border-radius: 10px;
+    position: relative;
+}
+
+#resetProgram {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #0ab5ff;
+    width: 400px;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    border-radius: 10px;
+    background-color: #6ad2ff;
+}
+
+#addProgram {
+    display: block;
+    width: 400px;
+    height: 60px;
+    border: 5px dotted #000000;
+    margin: 10px auto;
+}
+
+#programList li {
+    border: 5px solid #677172;
+    height: 60px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 60px;
+    position: relative;
+}
+
+#programList li span {
+    padding-left: 10px;
+}
+
+#programList li button {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+}
+
+#programList li button.modify_program {
+    right: 60px;
+}
+
+#programList li button.delete_program {
+    right: 0px;
+}
+
+#programList li button img {
+    vertical-align: middle;
+}
+
+button.close {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../media/res/close.png");
+    background-size: 40px 40px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
 }

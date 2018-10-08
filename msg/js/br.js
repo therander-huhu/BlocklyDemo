@@ -6,8 +6,21 @@ goog.provide('Blockly.Msg.br');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Ouzhpennañ un evezhiadenn";
-/** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Ne ch'aller ket dilemel an argemm \"%1\" dre m'eo lod eus dielfennadur an arc'hwel \"%2\"";
+/** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Ne ch'aller ket dilemel an argemmenn \"%1\" dre m'eo lod eus dielfennadur an arc'hwel \"%2\"";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Kemmañ an dalvoudenn :";
 /** @export */ Blockly.Msg.CLEAN_UP = "Naetaat ar bloc'hoù";
 /** @export */ Blockly.Msg.COLLAPSE_ALL = "Bihanaat ar bloc'hoù";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "kontañ gant %1 eus %2 da %3 dre %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Ober e doare ma kemero an argemmenn \"%1\" an talvoudennoù adalek niverenn an deroù betek niverenn an dibenn, en ur inkremantiñ an esaouenn, ha seveniñ an urzhioù spisaet.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Ouzhpennañ un amplegad d'ar bloc'h ma.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Ouzhpennañ un amplegad dibenn lak-pep-tra d'ar bloc'h ma.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -59,7 +73,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_HELPURL = "https://github.com/google/blockly/wiki/Loops#repeat";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "adober betek";
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "adober keit ha ma";
-/** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Keit ha ma vez faos un dalvoudenn,seveniñ urzhioù zo neuze.";
+/** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "Keit ha ma vez faos un dalvoudenn, seveniñ urzhioù zo neuze.";
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "Keit ha ma vez gwir un dalvoudenn, seveniñ urzhioù zo neuze.";
 /** @export */ Blockly.Msg.DELETE_ALL_BLOCKS = "Diverkañ an holl vloc'hoù %1 ?";
 /** @export */ Blockly.Msg.DELETE_BLOCK = "Dilemel ar bloc'h";
@@ -79,14 +93,14 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.IOS_OK = "Mat eo";
 /** @export */ Blockly.Msg.IOS_PROCEDURES_ADD_INPUT = "+ Ouzhpennañ ur moned";
 /** @export */ Blockly.Msg.IOS_PROCEDURES_ALLOW_STATEMENTS = "Urzhioù aotreet";
-/** @export */ Blockly.Msg.IOS_PROCEDURES_DUPLICATE_INPUTS_ERROR = "An arc'hwel-mañ en eus monedoù eiladet.";
+/** @export */ Blockly.Msg.IOS_PROCEDURES_DUPLICATE_INPUTS_ERROR = "An arc'hwel-mañ en deus monedoù eiladet.";
 /** @export */ Blockly.Msg.IOS_PROCEDURES_INPUTS = "MONEDOÙ";
 /** @export */ Blockly.Msg.IOS_VARIABLES_ADD_BUTTON = "Ouzhpennañ";
-/** @export */ Blockly.Msg.IOS_VARIABLES_ADD_VARIABLE = "+ Ouzhpennañ un argemm";
+/** @export */ Blockly.Msg.IOS_VARIABLES_ADD_VARIABLE = "+ Ouzhpennañ un argemmenn";
 /** @export */ Blockly.Msg.IOS_VARIABLES_DELETE_BUTTON = "Diverkañ";
-/** @export */ Blockly.Msg.IOS_VARIABLES_EMPTY_NAME_ERROR = "Ne c'hallit ket implijout un anv argemm goullo.";
+/** @export */ Blockly.Msg.IOS_VARIABLES_EMPTY_NAME_ERROR = "Ne c'hallit ket implijout un anv argemmenn c'houllo.";
 /** @export */ Blockly.Msg.IOS_VARIABLES_RENAME_BUTTON = "Adenvel";
-/** @export */ Blockly.Msg.IOS_VARIABLES_VARIABLE_NAME = "Anv an argemenn";
+/** @export */ Blockly.Msg.IOS_VARIABLES_VARIABLE_NAME = "Anv an argemmenn";
 /** @export */ Blockly.Msg.LISTS_CREATE_EMPTY_HELPURL = "https://github.com/google/blockly/wiki/Lists#create-empty-list";  // untranslated
 /** @export */ Blockly.Msg.LISTS_CREATE_EMPTY_TITLE = "krouiñ ur roll goullo";
 /** @export */ Blockly.Msg.LISTS_CREATE_EMPTY_TOOLTIP = "Distreiñ ul listenn, 0 a hirder, n'eus enrolladenn ebet enni";
@@ -115,7 +129,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_RANDOM = "Lemel ha distreiñ a ra an elfenn dre zegouezh en ul listenn.";
 /** @export */ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FIRST = "Lemel a ra an elfenn gentañ en ul listenn.";
 /** @export */ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM = "Lemel a ra an elfenn el lec'h meneget en ul listenn.";
-/** @export */ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST = "Distreiñ a ra an elfenn diwezhañ en ul listenn.";
+/** @export */ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST = "Lemel a ra an elfenn diwezhañ en ul listenn.";
 /** @export */ Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM = "Lemel a ra un elfenn dre zegouezh en ul listenn.";
 /** @export */ Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_END = "betek # adalek an dibenn";
 /** @export */ Blockly.Msg.LISTS_GET_SUBLIST_END_FROM_START = "da #";
@@ -207,7 +221,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_POWER = "Distreiñ an niver kentañ lakaet dindan gallouter an eil niver.";
 /** @export */ Blockly.Msg.MATH_CHANGE_HELPURL = "https://en.wikipedia.org/wiki/Programming_idiom#Incrementing_a_counter";
 /** @export */ Blockly.Msg.MATH_CHANGE_TITLE = "kemmañ %1 gant %2";
-/** @export */ Blockly.Msg.MATH_CHANGE_TOOLTIP = "Ouzhpennañ un niver d'an argemm '%1'.";
+/** @export */ Blockly.Msg.MATH_CHANGE_TOOLTIP = "Ouzhpennañ un niver d'an argemmenn '%1'.";
 /** @export */ Blockly.Msg.MATH_CONSTANT_HELPURL = "https://en.wikipedia.org/wiki/Mathematical_constant";
 /** @export */ Blockly.Msg.MATH_CONSTANT_TOOLTIP = "Distreiñ unan eus  digemmennoù red : π (3.141…), e (2.718…), φ (1.618…), sqrt(2) (1.414…), sqrt(½) (0.707…), or ∞ (anvevenn).";
 /** @export */ Blockly.Msg.MATH_CONSTRAIN_HELPURL = "https://en.wikipedia.org/wiki/Clamping_(graphics)";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "zo kentañ";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Gwiriañ m'eo par, anpar, kentañ, muiel, leiel un niverenn pe ma c'haller rannañ anezhi dre un niver roet zo. Distreiñ gwir pe faos.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "zo anterin";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "rest eus %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Distreiñ dilerc'h rannadur an div niver";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Distreiñ kosinuz ur c'horn (ket e radianoù)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Distreiñ sinuz ur c'horn (ket e radianoù)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Distreiñ tangent ur c'horn (ket e radianoù).";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_VARIABLE = "Krouiñ un argemm nevez...";
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Krouiñ un argemmenn liv...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Krouiñ un argemm niver...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Krouiñ un argemmenn chadenn...";
+/** @export */ Blockly.Msg.NEW_VARIABLE = "Krouiñ un argemmenn nevez...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Anv an argemmenn nevez :";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Doare nevez a argemm:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "aotren an disklêriadurioù";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "gant :";
@@ -396,8 +411,8 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_CREATE_GET = "Krouiñ 'kaout %1'";
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Termenañ a ra argemm-mañ evit ma vo par da dalvoudenn ar moned.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Un argemm anvet '%1' zo anezhañ dija.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Un argemenn anvet '%1' zo c'hoazh evit un argemenn all eus ar seurt '%2'.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Un argemmenn anvet '%1' zo anezhi dija.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Un argemenn anvet '%1' zo c'hoazh evit un argemenn all eus ar seurt : '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

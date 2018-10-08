@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.th');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "ใส่คำอธิบาย";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "ไม่สามารถลบตัวแปร '%1' ได้เนื่องจากเป็นส่วนหนึ่งของนิยามของฟังก์ชัน '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "เปลี่ยนค่า:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "นับด้วย %1 จาก %2 จนถึง %3 เปลี่ยนค่าทีละ %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "ตัวแปร '%1' จะเริ่มจากจำนวนเริ่มต้น ไปจนถึงจำนวนสุดท้าย ตามระยะที่กำหนด และ ทำบล็อกที่กำหนดไว้";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "กำหนดเงื่อนไขของบล็อก \"ถ้า\"";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "เพิ่มสิ่งสุดท้าย ที่จะตรวจจับความเป็นไปได้ทั้งหมดของบล็อก \"ถ้า\"";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -143,8 +157,8 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.LISTS_REPEAT_TITLE = "สร้างรายการที่มีไอเท็ม %1 จำนวน %2";
 /** @export */ Blockly.Msg.LISTS_REPEAT_TOOLTIP = "สร้างรายการที่ประกอบด้วยค่าตามที่ระบุในจำนวนตามที่ต้องการ";
 /** @export */ Blockly.Msg.LISTS_REVERSE_HELPURL = "https://github.com/google/blockly/wiki/Lists#reversing-a-list";  // untranslated
-/** @export */ Blockly.Msg.LISTS_REVERSE_MESSAGE0 = "reverse %1";  // untranslated
-/** @export */ Blockly.Msg.LISTS_REVERSE_TOOLTIP = "Reverse a copy of a list.";  // untranslated
+/** @export */ Blockly.Msg.LISTS_REVERSE_MESSAGE0 = "เรียง %1 แบบย้อนกลับ";
+/** @export */ Blockly.Msg.LISTS_REVERSE_TOOLTIP = "เรียงลำดับสำเนาของรายชื่อแบบย้อนกลับ";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_HELPURL = "https://github.com/google/blockly/wiki/Lists#in-list--set";  // untranslated
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_INPUT_TO = "เป็น";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_INSERT = "แทรกที่";
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "เป็นจำนวนเฉพาะ";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "ตรวจว่าตัวเลขเป็นจำนวนคู่ จำนวนคี่ จำนวนเฉพาะ จำนวนเต็ม เลขบวก เลขติดลบ หรือหารด้วยเลขที่กำหนดลงตัวหรือไม่ คืนค่าเป็นจริงหรือเท็จ";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "เป็นเลขจำนวนเต็ม";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "เศษของ %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "คืนค่าเศษที่ได้จากการหารของตัวเลขทั้งสองจำนวน";
@@ -281,18 +296,18 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "คืนค่า cosine ขององศา (ไม่ใช่เรเดียน)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "คืนค่า sine ขององศา (ไม่ใช่เรเดียน)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "คืนค่า tangent ขององศา (ไม่ใช่เรเดียน)";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "สร้างตัวแปรสี";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "สร้างตัวแปรจำนวน";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "สร้างตัวแปร string";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "สร้างตัวแปร...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "ชื่อตัวแปรใหม่:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "ชนิดตัวแปรใหม่";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "ข้อความที่ใช้ได้";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "ด้วย:";
-/** @export */ Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "https://en.wikipedia.org/wiki/Procedure_(computer_science)";
+/** @export */ Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "https://th.wikipedia.org/wiki/ซับรู้ทีน";
 /** @export */ Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP = "เรียกใช้ฟังก์ชันที่สร้างโดยผู้ใช้ \"%1\"";
-/** @export */ Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "https://en.wikipedia.org/wiki/Procedure_(computer_science)";
+/** @export */ Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "https://th.wikipedia.org/wiki/ซับรูทีน";
 /** @export */ Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP = "เรียกใช้ฟังก์ชันที่สร้างโดยผู้ใช้ \"%1\" และใช้ผลลัพธ์ของมัน";
 /** @export */ Blockly.Msg.PROCEDURES_CALL_BEFORE_PARAMS = "ด้วย:";
 /** @export */ Blockly.Msg.PROCEDURES_CREATE_DO = "สร้าง \"%1\"";
@@ -377,8 +392,8 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.TEXT_REPLACE_MESSAGE0 = "แทนที่ %1 ด้วย %2 ใน %3";
 /** @export */ Blockly.Msg.TEXT_REPLACE_TOOLTIP = "แทนที่ข้อความแรกทั้งหมดที่พบในข้อความที่สอง";
 /** @export */ Blockly.Msg.TEXT_REVERSE_HELPURL = "https://github.com/google/blockly/wiki/Text#reversing-text";  // untranslated
-/** @export */ Blockly.Msg.TEXT_REVERSE_MESSAGE0 = "reverse %1";  // untranslated
-/** @export */ Blockly.Msg.TEXT_REVERSE_TOOLTIP = "Reverses the order of the characters in the text.";  // untranslated
+/** @export */ Blockly.Msg.TEXT_REVERSE_MESSAGE0 = "เรียง %1 แบบย้อนกลับ";
+/** @export */ Blockly.Msg.TEXT_REVERSE_TOOLTIP = "เรียงตัวอักษรทั้งหมดของข้อความแบบย้อนกลับ";
 /** @export */ Blockly.Msg.TEXT_TEXT_HELPURL = "https://th.wikipedia.org/wiki/สายอักขระ";
 /** @export */ Blockly.Msg.TEXT_TEXT_TOOLTIP = "ตัวหนังสือ คำ หรือข้อความ";
 /** @export */ Blockly.Msg.TEXT_TRIM_HELPURL = "https://github.com/google/blockly/wiki/Text#trimming-removing-spaces";  // untranslated
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "กำหนดให้ตัวแปรนี้เท่ากับการป้อนข้อมูล";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "มีตัวแปรชื่อ '%1' อยู่แล้ว";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "ตัวแปรชื่อ '%1' มีอยู่แล้วสำหรับตัวแปรอื่นของชนิด '%2'";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "ตัวแปรชื่อ '%1' มีอยู่แล้วสำหรับตัวแปรอื่นของชนิด: '%2'";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

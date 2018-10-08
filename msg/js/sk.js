@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.sk');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Pridať komentár";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Nie je možné zmazať premennú „%1“, pretože je súčasťou definície funkcie „%2“";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Zmeniť hodnotu:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "počítať s %1 od %2 do %3 o %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Nechá premennú '%1' nadobúdať hodnoty od začiatočného čísla po konečné s daným medzikrokom a vykoná zadané bloky.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Pridať podmienku k \"ak\" bloku.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Pridať poslednú záchytnú podmienku k \"ak\" bloku.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "je prvočíslo";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Skontroluj či je číslo párne, nepárne, celé, kladné, záporné alebo deliteľné určitým číslom. Vráť hodnotu pravda alebo nepravda.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "je celé číslo";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "zvyšok po delení %1 + %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Vráť zvyšok po delení jedného čísla druhým.";

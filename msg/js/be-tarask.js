@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.be.tarask');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Дадаць камэнтар";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Немагчыма выдаліць зьменную «%1», таму што яна зьяўляецца часткай вызначэньня функцыі «%2»";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Зьмяніць значэньне:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "лічыць з %1 ад %2 да %3 па %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Прысвойвае зьменнай \"%1\" значэньні ад пачатковага да канчатковага значэньня, улічваючы зададзены крок, і выконвае абраныя блёкі.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Дадаць умову да блёку «калі».";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Дадаць заключную ўмову для ўсіх астатніх варыянтаў блёку «калі».";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "простая";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Правярае, ці зьяўляецца лік парным, няпарным, простым, станоўчым, адмоўным, ці ён дзеліцца на пэўны лік без астатку. Вяртае значэньне ісьціна або няпраўда.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "цэлая";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "рэшта дзяленьня %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Вяртае рэшту дзяленьня двух лікаў.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Вяртае косынус кута ў градусах.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Вяртае сынус кута ў градусах.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Вяртае тангэнс кута ў градусах.";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Стварыць зьменную колеру…";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Стварыць лікавую зьменную…";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Стварыць радковую зьменную…";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Стварыць зьменную…";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Імя новай зьменнай:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Новы тып зьменнай:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "дазволіць зацьвярджэньне";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "з:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Надаць гэтай зьменнай значэньне ўстаўкі.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Зьменная з назвай «%1» ужо існуе.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Зьменная з назвай «%1» ужо існуе зь іншым тыпам «%2».";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Зьменная з назвай «%1» ужо існуе зь іншым тыпам: «%2».";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

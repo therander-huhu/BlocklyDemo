@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.hi');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "टिप्पणी छोड़ें";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "चर '%1' को नहीं हटा सकता क्योंकि यह फ़ंक्शन '%2' की परिभाषा का हिस्सा है";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "मान परिवर्तित करें:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "%1 से %2 से %3 तक %4 के साथ गिनती करें";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "क्या चर '%1' प्रारंभ संख्या से अंत संख्या तक मानों को लेता है, निर्दिष्ट अंतराल के अनुसार गिनती करता है, और निर्दिष्ट रुकावटों को करता है।";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "एक शर्त जोड़ें यदि ब्लॉक है।";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "यदि ब्लॉक है तो इसके लिए एक अंतिम, कैच-सभी स्थिति जोड़ें।";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "अभाज्य है";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "जांचें कि क्या कोई संख्या एक सम, विषम, मुख्य, संपूर्ण, सकारात्मक, नकारात्मक है या यदि वह निश्चित संख्या से विभाजित है। वास्तविक या गलत रिटर्न देता है।";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "पूर्णांक है";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 का शेषफल";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "दो संख्याओं के भाग का शेषफल रिटर्न करें।";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "डिग्री का कोसाइन रिटर्न करें (रेडियन नही)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "डिग्री का साइन रिटर्न करें (रेडियन नही)";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "डिग्री का टैन्जन्ट रिटर्न करें (रेडियन नही)";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "रंग चर बनाएँ...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "संख्या चर बनायें...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "लड़ी चर बनायें...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "चर बनाएँ...";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "नए चर का नाम:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "नए चर का नाम:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "बयानों की अनुमति दें";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = ": के साथ";

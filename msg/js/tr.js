@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.tr');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Yorum Ekle";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "'%1' değişkeni, '%2' fonksiyonunun tanımının bir parçası olduğu için silinemez";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Değeri değiştir:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "ile sayılır %1 %2 den %3 ye, her adımda %4 değişim";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Başlangıç sayısından bitiş sayısına kadar belirtilen aralık ve belirtilen engeller ile devam eden değerler alan '%1' değişkeni oluştur.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "If bloğuna bir koşul ekleyin.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "If bloğuna kalan durumları \"yakalayan\" bir son ekle.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "asal";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Bir sayinin çift mi tek mi , tam mı, asal mı , pozitif mi, negatif mi, veya tam bir  sayıyla bölünebilirliğini kontrol et.'True' veya 'False' değerini döndür.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "Bütün olduğunu";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 nin kalanı";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "İki sayının bölümünden kalanı döndür.";

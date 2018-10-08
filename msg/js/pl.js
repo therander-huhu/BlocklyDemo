@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.pl');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Dodaj Komentarz";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Nie można usunąć zmiennej '%1', ponieważ jest częścią definicji funkcji '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Zmień wartość:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "licz z %1 od %2 do %3 co %4 (wartość kroku)";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Zmiennej '%1' przypisuje wartości z podanego zakresu z podanym interwałem i wykonuje zadane bloki.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Dodaj warunek do klocka „jeśli”.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Dodaj ostatni zawsze prawdziwy warunek do klocka „jeśli”.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "jest liczbą pierwszą";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Sprawdź, czy liczba jest parzysta, nieparzysta, pierwsza, całkowita, dodatnia, ujemna, lub czy jest podzielna przez podaną liczbę. Zwraca wartość \"prawda\" lub \"fałsz\".";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "jest liczbą całkowitą";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://pl.wikipedia.org/wiki/Modulo";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "reszta z dzielenia %1 przez %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Zwróć resztę z dzielenia dwóch liczb przez siebie.";

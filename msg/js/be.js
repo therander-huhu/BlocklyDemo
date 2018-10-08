@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.be');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Дадаць каментарый";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Немагчыма выдаліць пераменную '%1', паколькі яна з'яўляецца часткай вызначэння функцыі '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Змяніць значэння:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "лічыць з %1 ад %2 да %3 праз %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Наяўная пераменная '%1' прымае значэнні ад пачатковага да канчатковага, улічваючы зададзены інтэрвал, і выконваюцца названыя блокі.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Дадайце ўмову да блоку 'калі'";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Дадаць канчатковую, ўсёабдымную ўмову ў блок 'калі'.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "простае";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Правярае, ці з'яўляецца лік цотным, няцотным, простым, цэлым, станоўчым, адмоўным ці яно кратнае пэўнаму ліку. Вяртае значэнне ісціна або хлусня.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "цэлае";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://be.wikipedia.org/wiki/Дзяленне_з_астаткам";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "астатак ад %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Вяртае астатак ад дзялення двух лікаў.";

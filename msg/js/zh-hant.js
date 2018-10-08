@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.zh.hant');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "加入註解";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "無法刪除變數「%1」，因為這是功能「%2」定義的一部份內容";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "修改值：";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "循環計數 %1 從 %2 到 %3 間隔數 %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "從起始數到結尾數中取出變數「%1」的值，按指定的時間間隔，執行指定的區塊。";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "添加條件到「如果」積木。";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "加入一個最終、所有條件都執行的部份到「如果」區塊中。";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "是質數";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "如果數字是偶數，奇數，非負整數，正數、 負數，或如果它是可被某數字整除，則返回 true 或 false。";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "是非負整數";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://zh.wikipedia.org/wiki/模除";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 除以 %2 的餘數";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "回傳兩個數字相除的餘數。";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "返回指定角度的餘弦值(非弧度）。";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "返回指定角度的正弦值(非弧度）。";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "返回指定角度的正切值(非弧度）。";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "建立顏色變數...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "建立數字變數...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "建立字串變數...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "建立變數…";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "新變數名稱：";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "新變數類型：";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "允許陳述式";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "與：";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "設定此變數，好和輸入結果相等。";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "已存在變數「%1」。";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "用於其它「%2」類型的變數裡已存在名為「%1」的變數。";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "已存在名為「%1」且用於其它類型「%2」的變數。";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

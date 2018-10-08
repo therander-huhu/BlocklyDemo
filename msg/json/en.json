@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2018-03-06 15:07:55.902880",
+		"lastupdated": "2018-10-04 15:24:45.778090",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -396,5 +396,20 @@
 	"PROCEDURES_CREATE_DO": "Create '%1'",
 	"PROCEDURES_IFRETURN_TOOLTIP": "If a value is true, then return a second value.",
 	"PROCEDURES_IFRETURN_HELPURL": "http://c2.com/cgi/wiki?GuardClause",
-	"PROCEDURES_IFRETURN_WARNING": "Warning: This block may be used only within a function definition."
+	"PROCEDURES_IFRETURN_WARNING": "Warning: This block may be used only within a function definition.",
+	"ACTION_LIGHT_SELECT_ALL": "全部",
+	"ACTION_LIGHT_SELECT_LEFT": "左",
+	"ACTION_LIGHT_SELECT_RIGHT": "右",
+	"ACTION_SOUND_BEAT_ONE_EIGHTH": "八分之一",
+	"ACTION_SOUND_BEAT_ONE_FOURTH": "四分之一",
+	"ACTION_SOUND_BEAT_A_HALF": "二分之一",
+	"ACTION_SOUND_BEAT_ONE": "整拍",
+	"ACTION_SOUND_BEAT_DOUBLE": "双拍",
+	"ACTION_DIRECTION_LEFT": "左边",
+	"ACTION_DIRECTION_RIGHT": "右边",
+	"ACTION_COLOR_BLACK": "黑色",
+	"ACTION_COLOR_WHITE": "白色",
+	"ACTION_HUE": "#5ECAB8",
+	"CONTROLS_HUE": "#FF839E",
+	"MATH_LOGIC_HUE": "#72D572"
 }

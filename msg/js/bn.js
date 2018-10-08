@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.bn');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "মন্তব্য যোগ করুন";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "'%1' চলক অপসারণ করা যাবে না কারণ এটি '%2' কার্যপ্রণালীর সংজ্ঞার অংশ";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "মান পরিবর্তন করুন:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "গণনা কর %1 %4 দিয়ে %2 থেকে %3";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "চলক %1 প্রস্তুত করুন, শুরু থেকে শেষ পর্যন্ত সংখ্যা গ্রহন করতে যা নির্দেশিত বিরতি গণনা করছে এবং নির্দেশিত ব্লক সমূহ সম্পন্ন করতে।";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "যদি নামক ব্লক এ একটি শর্ত যোগ করুন।";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Add a final, catch-all condition to the if block.";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "মৌলিক সংখ্যা";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Check if a number is an even, odd, prime, whole, positive, negative, or if it is divisible by certain number. Returns true or false.";  // untranslated
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "is whole";  // untranslated
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 এর ভাগশেষ";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Return the remainder from dividing the two numbers.";  // untranslated

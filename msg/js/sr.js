@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.sr');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Додај коментар";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Не могу да обришем варијаблу ’%1’ јер је део дефиниције функције ’%2’";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Промени вредност:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "преброј са %1 од %2 до %3 од %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Имај промењиву \"%1\" узми вредности од почетног броја до задњег броја, бројећи по одређеном интервалу, и изврши одређене блокове.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Додајте услов блоку „ако“.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Додај коначни, catch-all  (ухвати све) услове иф блока.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "је прост";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Провјерава да ли је број паран, непаран, прост, цио, позитиван, негативан, или да ли је делјив са одређеним бројем. Враћа тачно или нетачно.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "је цео";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://sr.wikipedia.org/wiki/Конгруенција";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "подсетник од %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Враћа подсетник од дељења два броја.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Враћа косинус степена (не радијан).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Враћа синус степена (не радијан).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Враћа тангенс степена (не радијан).";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Направи варијаблу боје...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Направи бројевну бројевну...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Направи стринг варијаблу...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Направи променљиву…";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Име нове променљиве:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Нови тип варијабле:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "дозволити изреке";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "са:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Поставља променљиву тако да буде једнака улазу.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Променљива под именом '%1' већ постоји.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Варијабла по имену '%1' већ постоји за другу варијаблу типа '%2'.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Варијабла по имену '%1' већ постоји за други тип: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

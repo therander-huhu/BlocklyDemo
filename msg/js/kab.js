@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.kab');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Rnu awennit";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Ur izmir ara ad yekkes amutti '%1' acku yedda di tbadut n twuri '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Beddel azal:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "siḍen akked %1 seg %2 ar %3 s %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Mudd i umutti '%1' azalen seg umḍan n tazwara arama d umḍan n tagara, stmerna n usurif yettunefken, sakin selkem tiaḍin yettunefken.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Rni tawtilt i yiḥder ma.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Rnu tawtilt taneggarut i yiḥder ma igebren akk tinaḍin.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "d amenzu";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Senqed ma yella amḍan d ayugan, d aryugan, d amenzu, d ummid, d ufrar, d uzdir, neɣ d ybṭay ɣef kra n umḍan. Ad d-yerr idettu neɣ ucciḍ.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "d ummid";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "tasagert n %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Ad d-yerr tasagert n beṭṭu n sin n imḍanen.";

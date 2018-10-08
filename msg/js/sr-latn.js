@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.sr.latn');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Dodaj komentar";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Ne mogu da obrišem varijablu ’%1’ jer je deo definicije funkcije ’%2’";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Promeni vrednost:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "prebroj sa %1 od %2 do %3 od %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Imaj promenjivu \"%1\" uzmi vrednosti od početnog broja do zadnjeg broja, brojeći po određenom intervalu, i izvrši određene blokove.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Dodajte uslov bloku „ako“.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Dodaj konačni, catch-all  (uhvati sve) uslove if bloka.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "je prost";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Provjerava da li je broj paran, neparan, prost, cio, pozitivan, negativan, ili da li je deljiv sa određenim brojem. Vraća tačno ili netačno.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "je ceo";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://sr.wikipedia.org/wiki/Kongruencija";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "podsetnik od %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Vraća podsetnik od deljenja dva broja.";

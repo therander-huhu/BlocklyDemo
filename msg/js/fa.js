@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.fa');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "افزودن نظر";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "متغیر '%1' را نمی‌توان پاک کرد، زیرا جزیی از تعریف متغیر '%2' می‌باشد";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "تغییر مقدار:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "با تعداد %1 از %2 به %3 با گام‌های %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "متغیر %1 را در مقادیر شروع‌شده از عدد انتهای  به عدد انتهایی را دارد، با فواصل مشخص‌شده می‌شمارد و این بلوک مشخص‌شده را انجام می‌دهد.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "افزودن یک شرط به بلوک اگر.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "اضافه کردن نهایی، گرفتن همهٔ شرایط به بلوک اگر.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -148,7 +162,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_HELPURL = "https://github.com/google/blockly/wiki/Lists#in-list--set";  // untranslated
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_INPUT_TO = "به عنوان";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_INSERT = "درج در";
-/** @export */ Blockly.Msg.LISTS_SET_INDEX_SET = "مجموعه";
+/** @export */ Blockly.Msg.LISTS_SET_INDEX_SET = "اعمال";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = "موردی به ته فهرست اضافه می‌کند.";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM = "موردی در موقعیت مشخص‌شده در یک فهرست اضافه می‌کند.";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_LAST = "موردی به ته فهرست الحاق می‌کند.";
@@ -222,8 +236,9 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "عدد اول است";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "بررسی می‌کند که آیا یک عدد زوج، فرد، اول، کامل، مثبت، منفی یا بخش‌پذیر عدد خاصی باشد را بررسی می‌کند. درست یا نادرست باز می‌گرداند.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "کامل است";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://fa.wikipedia.org/wiki/%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA_%D9%BE%DB%8C%D9%85%D8%A7%D9%86%D9%87";
-/** @export */ Blockly.Msg.MATH_MODULO_TITLE = "باقی‌ماندهٔ %1 + %2";
+/** @export */ Blockly.Msg.MATH_MODULO_TITLE = "باقی‌ماندهٔ %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "باقی‌ماندهٔ تقسیم دو عدد را بر می‌گرداند.";
 /** @export */ Blockly.Msg.MATH_MULTIPLICATION_SYMBOL = "×";  // untranslated
 /** @export */ Blockly.Msg.MATH_NUMBER_HELPURL = "https://fa.wikipedia.org/wiki/%D8%B9%D8%AF%D8%AF";

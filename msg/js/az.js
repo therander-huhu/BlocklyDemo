@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.az');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Şərh əlavə et";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Qiyməti dəyiş:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "say: %1 %2 ilə başlayıb, %3 qiymətinə kimi %4 qədər dəyiş";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "\"%1\" dəyişəni başlanğıc ədəddən son ədədə qədər göstərilən aralıqla qiymətlər aldıqca göstərilən blokları yerinə yetir.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "\"Əgər\" blokuna bir şərt əlavə et.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "\"Əgər\" blokuna qalan bütün halları əhatə edəb son bir şərt əlavə et.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "sadədir";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Bir ədədin cüt, tək, sadə, tam, müsbət, mənfi olmasını və ya müəyyən bir ədədə bölünməsini yoxlayır. \"Doğru\" və ya \"yalan\" qiymətini qaytarır.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "tamdır";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "%1 ÷ %2 bölməsinin qalığı";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "İki ədədin nisbətindən alınan qalığı qaytarır.";

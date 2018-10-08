@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.sl');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Dodaj komentar";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Spremeni vrednost:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "štej s/z %1 od %2 do %3 s korakom %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Vrednost spremenljivke '%1' se spreminja od začetnega števila do končnega števila, z določenim korakom. Pri tem se izvedejo določene kocke.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Dodaj pogoj »če« kocki.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Dodaj končni pogoj »če« kocki.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";
@@ -80,7 +94,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.IOS_PROCEDURES_ADD_INPUT = "+ Add Input";  // untranslated
 /** @export */ Blockly.Msg.IOS_PROCEDURES_ALLOW_STATEMENTS = "Allow statements";  // untranslated
 /** @export */ Blockly.Msg.IOS_PROCEDURES_DUPLICATE_INPUTS_ERROR = "This function has duplicate inputs.";  // untranslated
-/** @export */ Blockly.Msg.IOS_PROCEDURES_INPUTS = "INPUTS";  // untranslated
+/** @export */ Blockly.Msg.IOS_PROCEDURES_INPUTS = "VHODI";
 /** @export */ Blockly.Msg.IOS_VARIABLES_ADD_BUTTON = "Dodaj";
 /** @export */ Blockly.Msg.IOS_VARIABLES_ADD_VARIABLE = "+ Dodaj spremenljivko";
 /** @export */ Blockly.Msg.IOS_VARIABLES_DELETE_BUTTON = "Izbriši";
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "je praštevilo";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Preveri, če je število sodo, liho, praštevilo, celo, pozitivno, negativno ali, če je deljivo z določenim številom. Vrne resnično ali neresnično.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "je celo";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "ostanek pri %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Vrne ostanek pri deljenju dveh števil.";

@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.eu');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Iruzkina gehitu";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Ezin da '%1' aldagaia ezabatu '%2' funtzioaren definizioaren zati delako.";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Aldatu balioa:";
@@ -28,7 +41,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.html";  // untranslated
 /** @export */ Blockly.Msg.COLOUR_RGB_RED = "gorria";
 /** @export */ Blockly.Msg.COLOUR_RGB_TITLE = "colour with";
-/** @export */ Blockly.Msg.COLOUR_RGB_TOOLTIP = " Sortu kolorea zehaztutako gorriz, berdearekin eta urdinekin. Balio guztiak 0 eta 100 artean egon behar dira.";
+/** @export */ Blockly.Msg.COLOUR_RGB_TOOLTIP = "Sortu kolorea zehaztutako gorriz, berdearekin eta urdinekin. Balio guztiak 0 eta 100 artean egon behar dira.";
 /** @export */ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_HELPURL = "https://github.com/google/blockly/wiki/Loops#loop-termination-blocks";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK = "begizta eten";
 /** @export */ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE = "jarraitu hurrengo begizta iterazioarekin";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "%1 zenbatu %2-tik %3-ra %4-ra";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 aldagaiak hasierako zenbakiaren eta amaierako zenbakirako balioak hartzen ditu, zehaztutako tartea zenbatzen du eta zehaztutako blokeak egin.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Add a condition to the if block.";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Add a final, catch-all condition to the if block.";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "zenbaki lehena da";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Check if a number is an even, odd, prime, whole, positive, negative, or if it is divisible by certain number. Returns true or false.";  // untranslated
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "zenbaki osoa da";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "remainder of %1 ÷ %2";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Return the remainder from dividing the two numbers.";  // untranslated

@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.ba');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Фекер өҫтәргә";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Мәғәнәне үҙгәртегеҙ:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "count with %1 from %2 to %3 by %4";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Үҙгәреүсәнгә башынан аҙағына тиклем тәғәйен аҙым менән %1 мәғәнәне бирә һәм күрһәтелгән командаларҙы үтәй.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "\"Әгәр\" блогына шарт өҫтәй";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Бер шарт та дөрөҫ булмаған осраҡҡа йомғаҡлау ярҙамсы блогын өҫтәргә.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "ябай";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Һандың йоп, таҡ, ябай, бөтөн, ыңғай, кире йәки билдәле һанға ҡарата ниндәй булыуын тикшерә. Дөрөҫ йә ялған мәғәнәһен күрһәтә.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "бөтөн";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://ba.wikipedia.org/wiki/Ҡалдыҡ_менән_бүлеү";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "ҡалдыҡ %1 : %2 араһында";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Ике һанды бүлеү ҡалдығын күрһәтә.";

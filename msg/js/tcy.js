@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.tcy');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "ಟಿಪ್ಪಣಿ ಸೇರ್ಸಲೆ";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "ಮೌಲ್ಯೊನು ಬದಲ್ ಮಲ್ಪು";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "%2 ಡ್ದ್ %3 ಮುಟ %4 ಸರ್ತಿ %1 ದ ಒಟ್ಟುಗು ಗೆನ್ಪು";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "ನಿರ್ದಿಸ್ಟೊ ಮದ್ಯಂತರೊದ ಮೂಲಕೊ ದೆತೊಂದು '%1' ವ್ಯತ್ಯಯೊಡ್ ಸುರುತ್ತ ಅಂಕೆಡ್ದ್ ಕಡೆತ್ತ ಅಂಕೆ ಮುಟ್ಟದ ಮೌಲ್ಯೊನು ದೆತ್ತೊನಾವ್ ಬೊಕ್ಕ ನಿಗಂಟ್ ಮಲ್ತಿನ ತಡೆಕ್ಲೆನ್ ಮಲ್ಪು";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "'ಒಂಜಿ ವೇಲೆ' ತಡೆಕ್ಕ್ ಒಂಜಿ ಶರ್ತನ್ ಸೇರಾವ್";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "'ಒಂಜಿ ವೇಲೆ' ತಡೆಕ್ಕ್ ಒಂಜಿ ಕಡೆತ್ತ ಮಾತೆನ್ಲಾ-ಪತ್ತ್ (catch-all) ಶರ್ತನ್ ಸೇರಾವ್";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "ಅವಿಭಾಜ್ಯ ಸಂಖ್ಯೆ";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "ಒಂಜಿ ಸಂಖ್ಯೆ ಸಮನಾ, ಬೆಸನಾ, ಅವಿಭಾಜ್ಯನಾ, ಪೂರ್ಣನಾ, ಧನನಾ, ಋಣನಾ, ಅತ್ತಂಡ ಅವೆನ್ ಬೇತೆ ಒಂಜಿ ನಿರ್ದಿಷ್ಟ ಸಂಖ್ಯೆಡ್ದ್ ಭಾಗಿಪೊಲಿಯಾ ಪಂದ್ ಪರೀಕ್ಷೆ ಮಲ್ಪು. ನಿಜ ಅತ್ತಂಡ ಸುಲ್ಲುನು ಪಿರಕೊರ್ಪುಂಡು.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "ಪೂರ್ಣ ಸಂಖ್ಯೆ";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/ಮೋಡ್ಯುಲೊ_ಒಪರೇಶನ್";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = " %1 ÷ %2 ತ ಶೇಷ";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "ರಡ್ಡ್ ಸಂಖ್ಯೆಲೆನ್ ಭಾಗ ಮಲ್ತ್‌ದ್ ಶೇಷೊನು ಪಿರಕೊರು.";

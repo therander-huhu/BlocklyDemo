@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.el');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Πρόσθεσε Το Σχόλιο";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Δεν μπορώ να διαγράψω την μεταβλητή '%1' διότι είναι μέρος του ορισμού της λειτουργίας '%2'";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Άλλαξε την τιμή:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "Blockly";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "μέτρησε με %1 από το %2 έως το %3 ανά %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Η μεταβλητή «%1» παίρνει τιμές ξεκινώντας από τον αριθμό έναρξης μέχρι τον αριθμό τέλους αυξάνοντας κάθε φορά με το καθορισμένο βήμα και εκτελώντας το καθορισμένο μπλοκ.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Πρόσθετει μια κατάσταση/συνθήκη στο μπλοκ «εάν».";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Προσθέτει μια τελική κατάσταση/συνθήκη, που πιάνει όλες τις άλλες περιπτώσεις, στο μπλοκ «εάν».";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "είναι πρώτος";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Ελέγχει αν ένας αριθμός είναι άρτιος, περιττός, πρώτος, ακέραιος, θετικός, αρνητικός, ή αν είναι διαιρετός από έναν ορισμένο αριθμό. Επιστρέφει αληθής ή ψευδής.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "είναι ακέραιος";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "υπόλοιπο της %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Επιστρέφει το υπόλοιπο της διαίρεσης των δύο αριθμών.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Επιστρέφει το συνημίτονο ενός βαθμού (όχι ακτινίου).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Επιστρέφει το ημίτονο ενός βαθμού (όχι ακτινίου).";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Επιστρέφει την εφαπτομένη ενός βαθμού (όχι ακτινίου).";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Δημιουργία μεταβλητής χρώματος...";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Δημιουργία μεταβλητής αριθμού...";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Δημιουργία μεταβλητή συμβολοσειράς...";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Δημιουργείστε μεταβλητή";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Νέο όνομα μεταβλητής:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Νέος τύπος μεταβλητής:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "να επιτρέπονται οι δηλώσεις";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "με:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Ορίζει αυτή τη μεταβλητή να είναι ίση με την είσοδο.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Η μεταβλητή με το όνομα \"%1\" υπάρχει ήδη";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Μια μεταβλητή με όνομα '%1' υπάρχει πάντα για μια άλλη μεταβλητή τύπου '%2'.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Μια μεταβλητή με όνομα '%1' υπάρχει πάντα για έναν άλλο τύπο: '%2'.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

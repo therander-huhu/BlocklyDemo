@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.de');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Kommentar hinzufügen";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Die Variable „%1“ kann nicht gelöscht werden, da sie Teil der Definition der Funktion „%2“ ist.";
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Wert ändern:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://de.wikipedia.org/wiki/For-Schleife";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "zähle %1 von %2 bis %3 in Schritten von %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Zählt die Variable \"%1\" von einem Startwert bis zu einem Endwert und führt für jeden Wert eine Anweisung aus.";
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Eine weitere Bedingung hinzufügen.";
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Eine sonst-Bedingung hinzufügen. Führt eine Anweisung aus, falls keine Bedingung zutrifft.";
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "ist eine Primzahl";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Überprüft ob eine Zahl gerade, ungerade, eine Primzahl, ganzzahlig, positiv, negativ oder durch eine zweite Zahl teilbar ist.  Gibt wahr oder unwahr zurück.";
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "ist eine ganze Zahl";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://de.wikipedia.org/wiki/Modulo";
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "Rest von %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Der Rest nach einer Division.";
@@ -281,12 +296,12 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "Ist der Kosinus des Winkels.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "Ist der Sinus des Winkels.";
 /** @export */ Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "Ist der Tangens des Winkels.";
-/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Create colour variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Create number variable...";  // untranslated
-/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Create string variable...";  // untranslated
+/** @export */ Blockly.Msg.NEW_COLOUR_VARIABLE = "Farbvariable erstellen …";
+/** @export */ Blockly.Msg.NEW_NUMBER_VARIABLE = "Zahlenvariable erstellen …";
+/** @export */ Blockly.Msg.NEW_STRING_VARIABLE = "Zeichenfolgenvariable erstellen …";
 /** @export */ Blockly.Msg.NEW_VARIABLE = "Variable erstellen …";
 /** @export */ Blockly.Msg.NEW_VARIABLE_TITLE = "Name der neuen Variable:";
-/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "New variable type:";  // untranslated
+/** @export */ Blockly.Msg.NEW_VARIABLE_TYPE_TITLE = "Neuer Variablentyp:";
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = ".";
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "Anweisungen erlauben";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "mit:";
@@ -397,7 +412,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://de.wikipedia.org/wiki/Variable_%28Programmierung%29";
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "Setzt den Wert einer Variable.";
 /** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS = "Eine Variable namens „%1“ ist bereits vorhanden.";
-/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Eine Variable namens „%1“ ist bereits für eine andere Variable des Typs „%2“ vorhanden.";
+/** @export */ Blockly.Msg.VARIABLE_ALREADY_EXISTS_FOR_ANOTHER_TYPE = "Eine Variable namens „%1“ ist bereits für einen anderen Typ vorhanden: „%2“.";
 /** @export */ Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE;
 /** @export */ Blockly.Msg.CONTROLS_IF_IF_TITLE_IF = Blockly.Msg.CONTROLS_IF_MSG_IF;
 /** @export */ Blockly.Msg.CONTROLS_WHILEUNTIL_INPUT_DO = Blockly.Msg.CONTROLS_REPEAT_INPUT_DO;

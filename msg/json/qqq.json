@@ -390,5 +390,20 @@
 	"PROCEDURES_CREATE_DO": "context menu - This appears on the context menu for function definitions. Selecting it creates a block to call the function.\n\nParameters:\n* %1 - the name of the function.\n{{Identical|Create}}",
 	"PROCEDURES_IFRETURN_TOOLTIP": "tooltip - If the first value is true, this causes the second value to be returned immediately from the enclosing function.",
 	"PROCEDURES_IFRETURN_HELPURL": "{{Optional}} url - Information about guard clauses.",
-	"PROCEDURES_IFRETURN_WARNING": "warning - This appears if the user tries to use this block outside of a function definition."
+	"PROCEDURES_IFRETURN_WARNING": "warning - This appears if the user tries to use this block outside of a function definition.",
+	"ACTION_LIGHT_SELECT_ALL": "",
+	"ACTION_LIGHT_SELECT_LEFT": "",
+	"ACTION_LIGHT_SELECT_RIGHT": "",
+	"ACTION_SOUND_BEAT_ONE_EIGHTH": "",
+	"ACTION_SOUND_BEAT_ONE_FOURTH": "",
+	"ACTION_SOUND_BEAT_A_HALF": "",
+	"ACTION_SOUND_BEAT_ONE": "",
+	"ACTION_SOUND_BEAT_DOUBLE": "",
+	"ACTION_DIRECTION_LEFT": "",
+	"ACTION_DIRECTION_RIGHT": "",
+	"ACTION_COLOR_BLACK": "",
+	"ACTION_COLOR_WHITE": "",
+	"ACTION_HUE": "",
+	"CONTROLS_HUE": "",
+	"MATH_LOGIC_HUE": ""
 }

@@ -7,21 +7,42 @@
     <script src="../../blockly_compressed.js"></script>
     <script src="../../blocks_compressed.js"></script>
     <script src="../../python_compressed.js"></script>
-    <!--<script src="../../msg/js/en.js"></script>-->
+
     <script src="../../msg/js/zh-hans.js"></script>
 
-    <script src="blocks/mathAndLogicBlock.js"></script>
-    <script src="python/mathAndLogicPython.js"></script>
+    <!-- <script src="../../core/field_telecontrol_select.js"></script>
+    <script src="../../core/field_tune_select.js"></script>
+    <script src="../../core/field_draw.js"></script> -->
 
-    <script src="blocks/actionBlock.js"></script>
-    <script src="python/actionPython.js"></script>
+    <!-- <script src="core/function.js"></script> -->
+
+    <!-- <script src="../../blocks/mathAndLogicBlock.js"></script>
+    <script src="../../blocks/actionBlock.js"></script>
+    <script src="../../blocks/controlsBlock.js"></script>
+    <script src="../../blocks/functionBlock.js"></script>
+    <script src="blocks/blocks.js"></script>
+
+    <script src="../../generators/python/mathAndLogicPython.js"></script>
+    <script src="../../generators/python/actionPython.js"></script>
+    <script src="../../generators/python/controlsPython.js"></script>
+    <script src="../../generators/python/functionPython.js"></script> -->
     
-    <script src="blocks/controlsBlock.js"></script>
-    <script src="python/controlsPython.js"></script>
-    <script src="blocks/functionBlock.js"></script>
-    <script src="python/functionPython.js"></script>
-    <script src="core/function.js"></script>
     <style>
+        * {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+
+        button {
+            background-color: transparent;
+            outline: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
         html, body {
             height: 100%;
             margin: 0;
@@ -36,10 +57,6 @@
             font-weight: normal;
             font-size: 140%;
         }
-        table {
-            height: 100%;
-            width: 100%;
-        }
         #blocklyDiv {
             height: 100%;
             background: #fc9;
@@ -47,18 +64,105 @@
         }
 
         #generateButton {
+            width: 76.5px;
+            height: 76.5px;
+            background-image: url("../../media/res/run.png");
+            background-size: 76.5px 76.5px;
+        }
+
+        #saveButton {
+            width: 46.5px;
+            height: 46.5px;
+            background-image: url("../../media/res/save.png");
+            background-size: 46.5px 46.5px;
+        }
+
+        #listButton {
+            width: 46.5px;
+            height: 46.5px;
+            background-image: url("../../media/res/list.png");
+            background-size: 46.5px 46.5px;
+        }
+
+        .menu {
             position: absolute;
-            bottom: 150px;
+            right: 10px;
+            top: 10px;
+            width: 200px;
+            z-index: 100;
+        }
+        
+        .menu button {
+            display: inline;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .zoom {
+            width: 140px;
+            position: absolute;
+            bottom: 10px;
             right: 10px;
             z-index: 100;
-            width: 100px;
-            height: 50px;
+        }
+
+        .zoom button {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 40px;
+            color: #ffab40;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            line-height: 40px;
+            position: relative;
+        }
+
+        .zoom button:nth-child(1) {
+            border-radius: 20px 0 0 20px;
+        }
+
+        .zoom button:nth-child(3) {
+            border-radius: 0 20px 20px 0;
+        }
+
+        .zoom button:nth-child(1)::after{
+            content: "-";
+            display: block;
+            position: absolute;
+            left: 13px;
+            top: -3px;
+        }
+
+        .zoom button:nth-child(2)::after{
+            content: "=";
+            display: block;
+            position: absolute;
+            left: 8px;
+            top: -3px;
+        }
+
+        .zoom button:nth-child(3)::after{
+            content: "+";
+            display: block;
+            position: absolute;
+            left: 6px;
+            top: -3px;
         }
     </style>
 </head>
 <body>
-<button id="generateButton">运行</button>
-<table style="border-spacing: 0">
+<div class="menu">
+    <button id="generateButton"></button>
+    <button id="saveButton"></button>
+    <button id="listButton"></button>
+</div>
+<div class="zoom">
+        <button id="zoomMinus"></button>
+        <button id="zoomEqual"></button>
+        <button id="zoomPlus"></button>
+</div>
+<table style="border-spacing: 0;width: 100%;height: 100%;">
     <tr style="height: 100%;">
         <td>
             <div id="blocklyDiv"></div>
@@ -91,11 +195,6 @@
             </value>
         </block>
         <block type="screen_show_picture">
-            <value name="NUMBER">
-                <shadow type="math_number">
-                    <field name="NUM">0</field>
-                </shadow>
-            </value>
         </block>
         <block type="ultrasonic"></block>
         <block type="volume"></block>
@@ -111,7 +210,7 @@
             </value>
         </block>
         <block type="controls_wait_until"></block>
-        <block type="controls_repeat_ext">
+        <block type="tq_controls_repeat_ext">
             <value name="TIMES">
                 <block type="math_number">
                     <field name="NUM">10</field>
@@ -120,8 +219,8 @@
         </block>
         <block type="controls_repeat_forever"></block>
         <block type="controls_repeat_until"></block>
-        <block type="controls_if"></block>
-        <block type="controls_ifelse"></block>
+        <block type="tq_controls_if"></block>
+        <block type="tq_controls_ifelse"></block>
     </category>
     <category name="数字和逻辑运算">
         <block type="math_arithmetic_add">
@@ -250,10 +349,15 @@
             </value>
         </block>
     </category>
-    <category name="新建指令" custom="Functions"></category>
+    <!-- <category name="新建指令" custom="Functions"></category> -->
+    <!-- <category name="test">
+        <block type="colour_picker"></block>
+        <block type="play_sound_by_beat"></block>
+    </category> -->
 </xml>
 <xml id="startBlocks" style="display: none">
-    <block type="turn_on_on_board_light" x="200" y="10"></block>
+        <block x="200" y="10" type="screen_show_picture"></block>
+    <!-- <block type="turn_on_on_board_light" x="200" y="10"></block> -->
     <!-- <block type="play_sound_by_beat"></block> -->
     <!-- <block type="controls_if" inline="false" x="67" y="10">
         <mutation else="1"></mutation>
@@ -302,9 +406,51 @@
         </statement>
     </block> -->
 </xml>
+<div id="dialog">
+    <div id="dialogBg"></div>
+    <div id="cell">
+            <!-- <div id="teleController" class="dialog hide">
+                    <table cellpadding=0 cellspacing=0 border="0">
+                        <tr>
+                            <td><button></button></td>
+                            <td><button></button></td>
+                            <td><button></button></td>
+                        </tr>
+                        
+                    </table>
+            </div> -->
+        <div id="drawingBoard" class="dialog hide">
+                <p class="title">表情面板</p>
+                <div class="drawTool">
+                    <button id="drawPen">画笔</button>
+                    <button id="drawEraser">橡皮擦</button>
+                    <button id="drawTrashcan">清除</button>
+                </div>
+                <table id="drawContent" cellpadding=0 cellspacing=5 border="1">
+                </table>
+                <button class="close" onclick="DemoApp.hideDialog('drawingBoard')"></button>
+                <div class="drawMenu">
+                    <button id="drawCancel" onclick="DemoApp.hideDialog('drawingBoard')">取消</button>
+                    <button id="drawConfirm">确定</button>
+                </div>
+        </div>
+        <div id="programDialog" class="dialog hide">
+            <button id="resetProgram">恢复出场程序</button>
+            <button id="addProgram"><img src="../../media/res/add_program.png" alt="" width="40"></button>
+            <div>
+                <ul id="programList">
+                    <li>
+                        <span>文件1</span>
+                        <button class="modify_program"><img src="../../media/res/pen.png" alt="" width="40"></button>
+                        <button class="delete_program"><img src="../../media/res/trashcan.png" alt="" width="40"></button>
+                    </li>
+                </ul>
+            </div>
+            <button class="close" onclick="DemoApp.hideDialog('programDialog')"></button>
+        </div>
+    </div>
+</div>
+<script src="jquery-3.3.1.min.js"></script>
 <script src="DemoTry.js"></script>
-<script>
-
-</script>
 </body>
 </html>

@@ -1,3 +1,22 @@
+Blockly.Blocks['field_tune'] = {
+    // Colour input.
+    init: function() {
+        console.log("999")
+      this.setColour(160);
+      this.appendDummyInput()
+          .appendField('colour')
+          .appendField(new Blockly.FieldTune('#ff0000'), 'COLOUR')
+          .appendField(',')
+          .appendField(new Blockly.FieldTextInput('NAME'), 'FIELDNAME');
+      this.setPreviousStatement(true, 'Field');
+      this.setNextStatement(true, 'Field');
+      this.setTooltip('Colour input field.');
+      this.setHelpUrl('https://www.youtube.com/watch?v=s2_xaEvcVI0#t=495');
+    },
+    onchange: function() {
+    //   fieldNameCheck(this);
+    }
+  };
 Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
     // 电机转速
     {
@@ -123,31 +142,9 @@ Blockly.defineBlocksWithJsonArray([  // BEGIN JSON EXTRACT
                 "alt": "*"
             },
             {
-                "type": "field_dropdown",
+                "type": "field_tune",
                 "name": "NAME",
-                "options": [
-                    ["C1", "C1"],
-                    ["D1", "D1"],
-                    ["E1", "E1"],
-                    ["F1", "F1"],
-                    ["G1", "G1"],
-                    ["A1", "A1"],
-                    ["B1", "B1"],
-                    ["C2", "C2"],
-                    ["D2", "D2"],
-                    ["E2", "E2"],
-                    ["F2", "F2"],
-                    ["G2", "G2"],
-                    ["A2", "A2"],
-                    ["B2", "B2"],
-                    ["C3", "C3"],
-                    ["D3", "D3"],
-                    ["E3", "E3"],
-                    ["F3", "F3"],
-                    ["G3", "G3"],
-                    ["A3", "A3"],
-                    ["B3", "B3"],
-                ]
+                "colour": "#ff0000"
             },
             {
                 "type": "field_dropdown",

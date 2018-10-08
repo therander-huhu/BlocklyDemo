@@ -6,6 +6,19 @@ goog.provide('Blockly.Msg.lb');
 
 goog.require('Blockly.Msg');
 
+/** @export */ Blockly.Msg.ACTION_COLOR_BLACK = "黑色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_COLOR_WHITE = "白色";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_LEFT = "左边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_DIRECTION_RIGHT = "右边";  // untranslated
+/** @export */ Blockly.Msg.ACTION_HUE = "#5ECAB8";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_ALL = "全部";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_LEFT = "左";  // untranslated
+/** @export */ Blockly.Msg.ACTION_LIGHT_SELECT_RIGHT = "右";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_A_HALF = "二分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_DOUBLE = "双拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE = "整拍";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_EIGHTH = "八分之一";  // untranslated
+/** @export */ Blockly.Msg.ACTION_SOUND_BEAT_ONE_FOURTH = "四分之一";  // untranslated
 /** @export */ Blockly.Msg.ADD_COMMENT = "Bemierkung derbäisetzen";
 /** @export */ Blockly.Msg.CANNOT_DELETE_VARIABLE_PROCEDURE = "Can't delete the variable '%1' because it's part of the definition of the function '%2'";  // untranslated
 /** @export */ Blockly.Msg.CHANGE_VALUE_TITLE = "Wäert änneren:";
@@ -41,6 +54,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.CONTROLS_FOR_HELPURL = "https://github.com/google/blockly/wiki/Loops#count-with";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_FOR_TITLE = "zielt mat %1 vun %2 bis %3 mat %4";
 /** @export */ Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Have the variable '%1' take on the values from the start number to the end number, counting by the specified interval, and do the specified blocks.";  // untranslated
+/** @export */ Blockly.Msg.CONTROLS_HUE = "#FF839E";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "Add a condition to the if block.";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "Add a final, catch-all condition to the if block.";  // untranslated
 /** @export */ Blockly.Msg.CONTROLS_IF_HELPURL = "https://github.com/google/blockly/wiki/IfElse";  // untranslated
@@ -81,7 +95,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.IOS_PROCEDURES_ALLOW_STATEMENTS = "Allow statements";  // untranslated
 /** @export */ Blockly.Msg.IOS_PROCEDURES_DUPLICATE_INPUTS_ERROR = "This function has duplicate inputs.";  // untranslated
 /** @export */ Blockly.Msg.IOS_PROCEDURES_INPUTS = "INPUTS";  // untranslated
-/** @export */ Blockly.Msg.IOS_VARIABLES_ADD_BUTTON = "Dobäisetzen";
+/** @export */ Blockly.Msg.IOS_VARIABLES_ADD_BUTTON = "Derbäisetzen";
 /** @export */ Blockly.Msg.IOS_VARIABLES_ADD_VARIABLE = "+ Variabel derbäisetzen";
 /** @export */ Blockly.Msg.IOS_VARIABLES_DELETE_BUTTON = "Läschen";
 /** @export */ Blockly.Msg.IOS_VARIABLES_EMPTY_NAME_ERROR = "Dir kënnt keen eidelen Numm fir eng Variabel benotzen.";
@@ -152,7 +166,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = "Inserts the item at the start of a list.";  // untranslated
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_FROM = "Inserts the item at the specified position in a list.";  // untranslated
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_LAST = "Setzt d'Element um Enn vun enger Lëscht derbäi.";
-/** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_RANDOM = "Setzt d'Element op eng zoufälleg Plaz an d'Lëscht dobäi.";
+/** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_INSERT_RANDOM = "Setzt d'Element op eng zoufälleg Plaz an d'Lëscht derbäi.";
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FIRST = "Sets the first item in a list.";  // untranslated
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_FROM = "Sets the item at the specified position in a list.";  // untranslated
 /** @export */ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_LAST = "Sets the last item in a list.";  // untranslated
@@ -222,6 +236,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_IS_PRIME = "ass eng Primzuel";
 /** @export */ Blockly.Msg.MATH_IS_TOOLTIP = "Check if a number is an even, odd, prime, whole, positive, negative, or if it is divisible by certain number. Returns true or false.";  // untranslated
 /** @export */ Blockly.Msg.MATH_IS_WHOLE = "ass eng ganz Zuel";
+/** @export */ Blockly.Msg.MATH_LOGIC_HUE = "#72D572";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_HELPURL = "https://en.wikipedia.org/wiki/Modulo_operation";  // untranslated
 /** @export */ Blockly.Msg.MATH_MODULO_TITLE = "Rescht vu(n) %1 ÷ %2";
 /** @export */ Blockly.Msg.MATH_MODULO_TOOLTIP = "Return the remainder from dividing the two numbers.";  // untranslated
