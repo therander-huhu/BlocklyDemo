@@ -173,7 +173,7 @@ DemoApp.initDialog = function () {
                 btn.innerHTML = beeps[i][j];
                 td.appendChild(btn);
     
-                btn.addEventListener("click", self.onBeepClick)
+                btn.addEventListener("touchend", self.onBeepClick)
             }
     
             tb.appendChild(tr);
@@ -249,7 +249,7 @@ DemoApp.initDialog = function () {
                 btn.innerHTML = content;
                 td.appendChild(btn);
     
-                btn.addEventListener("click", self.onTeleControlClick)
+                btn.addEventListener("touchend", self.onTeleControlClick)
             }
     
             tb.appendChild(tr);
@@ -293,20 +293,20 @@ DemoApp.drawBoard = {
         drawContent.addEventListener("touchstart", this.onPixelClick);
         drawContent.addEventListener("touchmove", this.onPixelClick);
         let confirmBtn = document.getElementById("drawConfirm");
-        confirmBtn.addEventListener("click", this.onConfirm);
+        confirmBtn.addEventListener("touchend", this.onConfirm);
 
         let pen = document.getElementById("drawPen");
-        pen.addEventListener("click", function(){
+        pen.addEventListener("touchend", function(){
             DemoApp.drawBoard.changemode(1);
         });
 
         let eraser = document.getElementById("drawEraser");
-        eraser.addEventListener("click", function(){
+        eraser.addEventListener("touchend", function(){
             DemoApp.drawBoard.changemode(0);
         });
 
         let drawTrashcan = document.getElementById("drawTrashcan");
-        drawTrashcan.addEventListener("click", function(){
+        drawTrashcan.addEventListener("touchend", function(){
             DemoApp.drawBoard.clear();
         });
     },
