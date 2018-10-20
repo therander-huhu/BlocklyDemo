@@ -1,21 +1,7 @@
-// function showCode() {
-//     Blockly.Python.INFINITE_LOOP_TRAP = null;
-//     var code = Blockly.Python.workspaceToCode(demoWorkspace);
-//     alert(code);
-// }
-//
-// function runCode() {
-//     window.LoopTrap = 1000;
-//     Blockly.Python.INFINITE_LOOP_TRAP =
-//         'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
-//     var code = Blockly.Python.workspaceToCode(demoWorkspace);
-//     Blockly.Python.INFINITE_LOOP_TRAP = null;
-//     console.log(code)
-// };
-
+'use strict';
 var currentBlock;
 var DemoApp = {};
-
+DemoApp.startScale = 0.9;
 DemoApp.initApplication = function () {
     var demoWorkspace = Blockly.inject('blocklyDiv',
         {
@@ -25,7 +11,7 @@ DemoApp.initApplication = function () {
             zoom: {
                 controls: false,
                 wheel: false,
-                startScale: 1.2,
+                startScale: DemoApp.startScale,
                 maxScale: 3,
                 minScale: 0.3,
                 scaleSpeed: 1.2,
@@ -51,7 +37,6 @@ DemoApp.addEventListener = function () {
     function showCode () {
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
-        console.log(code);
         window.android.writeToDevice(code);
     }
     var generateButton = document.getElementById("generateButton");
@@ -102,7 +87,6 @@ DemoApp.initCustomBlocks = function(){
 DemoApp.showDialog = function (id, block) {
     var dialog = document.getElementById("dialog");
     dialog.style.display = "table";
-console.log("showDialog" + id);
     dialog = document.getElementById(id);
     dialog.className = "dialog show";
 
@@ -119,23 +103,18 @@ DemoApp.hideDialog = function (id) {
 
 DemoApp.onBeepClick = function () {
     let beep = this.getAttribute("beep");
-    console.log(beep);
     let color = this.getAttribute("color");
-    console.log(color);
     let dialog = document.getElementById("beepSelect");
     let block = dialog.block;
     block.setFieldValue(beep, "NAME")
-    // console.log(dialog.block);
     DemoApp.hideDialog("beepSelect");
 }
 
 DemoApp.onTeleControlClick = function () {
     let key = this.getAttribute("key");
-    console.log(key);
     let dialog = document.getElementById("teleControlSelect");
     let block = dialog.block;
     block.setFieldValue(key, "NAME")
-    // console.log(dialog.block);
     DemoApp.hideDialog("teleControlSelect");
 }
 
@@ -149,9 +128,7 @@ DemoApp.initDialog = function () {
         div.className = "dialog hide";
         cell.appendChild(div);
     
-        let tb = document.createElement("table");
-        tb.setAttribute("cellpadding", 0);
-        tb.setAttribute("cellspacing", "5");
+        let tb = document.createElement("ul");
         div.appendChild(tb);
     
         let model = [3, 7];
@@ -162,18 +139,16 @@ DemoApp.initDialog = function () {
         ["C2", "D2", "E2", "F2", "G2", "A2", "B2"],
         ["C3", "D3", "E3", "F3", "G3", "A3", "B3"]]
         for(let i=0; i<model[0]; i++) {
-            let tr = document.createElement("tr");
+            let tr = document.createElement("li");
             for(let j=0; j<model[1]; j++) {
-                let td = document.createElement("td");
+                let td = document.createElement("a");
                 tr.appendChild(td);
-                let btn = document.createElement("button");
-                btn.style = "background: " + colors[i][j];
-                btn.setAttribute("beep", beeps[i][j]);
-                btn.setAttribute("color", colors[i][j]);
-                btn.innerHTML = beeps[i][j];
-                td.appendChild(btn);
+                td.style = "background: " + colors[i][j];
+                td.setAttribute("beep", beeps[i][j]);
+                td.setAttribute("color", colors[i][j]);
+                td.innerHTML = beeps[i][j];
     
-                btn.addEventListener("touchend", self.onBeepClick)
+                td.addEventListener("touchend", self.onBeepClick)
             }
     
             tb.appendChild(tr);
@@ -187,9 +162,7 @@ DemoApp.initDialog = function () {
         div.id = "teleControlSelect";
         div.className = "dialog hide";
         cell.appendChild(div);
-        let tb = document.createElement("table");
-        tb.setAttribute("cellpadding", 0);
-        tb.setAttribute("cellspacing", "20");
+        let tb = document.createElement("ul");
         div.appendChild(tb);
 
         let model = [7, 3];
@@ -223,11 +196,10 @@ DemoApp.initDialog = function () {
             {key: "9", type: "number"}]
         ];
         for(let i=0; i<model[0]; i++) {
-            let tr = document.createElement("tr");
+            let tr = document.createElement("li");
             for(let j=0; j<model[1]; j++) {
-                let td = document.createElement("td");
+                let td = document.createElement("a");
                 tr.appendChild(td);
-                let btn = document.createElement("button");
                 let key = config[i][j].key;
                 let content = key;
                 if (content == "上") {
@@ -244,12 +216,11 @@ DemoApp.initDialog = function () {
                 let type = config[i][j].type;
                 let color = colors[type];
                 
-                btn.style = "background: " + color;
-                btn.setAttribute("key", key);
-                btn.innerHTML = content;
-                td.appendChild(btn);
+                td.style = "background: " + color;
+                td.setAttribute("key", key);
+                td.innerHTML = content;
     
-                btn.addEventListener("touchend", self.onTeleControlClick)
+                td.addEventListener("touchend", self.onTeleControlClick)
             }
     
             tb.appendChild(tr);
@@ -272,6 +243,9 @@ DemoApp.init = function () {
     this.initDialog();
     this.addEventListener();
     this.initCustomBlocks();
+    console.log( window.clientZoom*this.startScale)
+    let clientWidth = document.documentElement.clientWidth;
+    this.workSpace.zoom(-clientWidth/2+1.5*clientWidth/720*100, 0, window.clientZoom*this.startScale)
 };
 
 DemoApp.init();
@@ -281,9 +255,9 @@ DemoApp.drawBoard = {
     init: function (){
         let drawContent = document.getElementById("drawContent");
         for(let i=0; i<8; i++) {
-            let tr = document.createElement("tr");
+            let tr = document.createElement("li");
             for(let j=0; j<16; j++) {
-                let td = document.createElement("td");
+                let td = document.createElement("a");
                 td.setAttribute("index", i*16 + j);
                 tr.appendChild(td);
             }
@@ -315,9 +289,8 @@ DemoApp.drawBoard = {
         let target = event.target;
         let touchX = event.touches[0].clientX;
         let touchY = event.touches[0].clientY;
-        console.log("touchmove" , );
         let drawContent = document.getElementById("drawContent");
-        let tds = drawContent.getElementsByTagName("td");
+        let tds = drawContent.getElementsByTagName("a");
 
         for(let i=0; i<tds.length; i++) {
             let $td = $(tds[i]);
@@ -332,17 +305,15 @@ DemoApp.drawBoard = {
                 }
             }
         }
-        // console.log(target.getElementsByTagName("tr"))
 
     },
 
     setData: function (data) {
-        console.log("drawBoard setData", data);
         let drawContent = document.getElementById("drawContent");
-        let trs = drawContent.getElementsByTagName("tr");
+        let trs = drawContent.getElementsByTagName("li");
         for(let i=0; i<trs.length; i++) {
             let tr = trs[i];
-            let tds = tr.getElementsByTagName("td");
+            let tds = tr.getElementsByTagName("a");
             for(let j=0; j<tds.length; j++) {
                 let td = tds[j];
                 if (data[i][j] == 1) {
@@ -358,10 +329,10 @@ DemoApp.drawBoard = {
 
     clear: function () {
         let drawContent = document.getElementById("drawContent");
-        let trs = drawContent.getElementsByTagName("tr");
+        let trs = drawContent.getElementsByTagName("li");
         for(let i=0; i<trs.length; i++) {
             let tr = trs[i];
-            let tds = tr.getElementsByTagName("td");
+            let tds = tr.getElementsByTagName("a");
             for(let j=0; j<tds.length; j++) {
                 let td = tds[j];
                 td.style.background = "#cbcbcb";
@@ -378,10 +349,10 @@ DemoApp.drawBoard = {
         let data = [];
         
         let drawContent = document.getElementById("drawContent");
-        let trs = drawContent.getElementsByTagName("tr");
+        let trs = drawContent.getElementsByTagName("li");
         for(let i=0; i<trs.length; i++) {
             let tr = trs[i];
-            let tds = tr.getElementsByTagName("td");
+            let tds = tr.getElementsByTagName("a");
             let data_ = [];
             for(let j=0; j<tds.length; j++) {
                 let td = tds[j];
@@ -393,7 +364,6 @@ DemoApp.drawBoard = {
         let dialog = document.getElementById("drawingBoard");
         let block = dialog.block;
         block.setFieldValue(data, "EMOJI")
-        // console.log(dialog.block);
         DemoApp.hideDialog("drawingBoard");
     },
 }

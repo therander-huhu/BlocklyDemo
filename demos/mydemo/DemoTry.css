@@ -1,24 +1,24 @@
 .blocklyToolboxDiv {
-    width: 200px;
+    width: 1.5rem;
     background-color: #95e2ec;
 }
 
 .blocklyToolboxDiv .blocklyTreeRoot{
-    padding: 0 5px 0 5px;
+    padding: 0 0.05rem 0 0.05rem;
 }
 
 .blocklyTreeRoot div[role=group]>div{
-    margin: 0 0 5px 0;
+    margin: 0 0 0.05rem 0;
     background: #ffffff;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px #5f5d5d;
-    padding-left: 10px;
+    border-radius: 0.05rem;
+    box-shadow: 0.02rem 0.02rem 0.02rem #5f5d5d;
+    padding-left: 0.1rem;
 
 }
 
 .blocklyToolboxDiv .blocklyTreeRow {
-    height: 50px;
-    padding: 0 0 0 10px !important;
+    height: 0.5rem;
+    padding: 0 0 0 0.1rem !important;
     margin: 0;
     position: relative;
     text-align: left;
@@ -32,10 +32,10 @@
 }
 
 .blocklyToolboxDiv .blocklyTreeLabel {
-    font-size: 16px;
-    line-height: 50px;
+    font-size: 0.16rem;
+    line-height: 0.5rem;
     position: relative;
-    padding-left: 40px;
+    padding-left: 0.4rem;
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@
      top: 0;
      left: 0;
      height: 100%;
-     width:7px;
+     width: 0.07rem;
      background-image: none;
  }
 
@@ -84,12 +84,12 @@
 
 .blocklyToolboxDiv div[role="treeitem"] .blocklyTreeIcon{
     position: absolute;
-    left: 15px;
-    top: 10px;
-    width: 30px;
-    height: 30px;
+    left: 0.15rem;
+    top: 0.1rem;
+    width: 0.3rem;
+    height: 0.3rem;
     background-position: 0 0;
-    background-size: 30px 30px;
+    background-size: 0.3rem 0.3rem;
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(1) .blocklyTreeIcon {
@@ -124,8 +124,8 @@
 
 @keyframes menuItemShow
 {
-    from {width:10px;}
-    to {width:100%;border-radius: 0 5px 5px 0}
+    from {width: 0.07rem;}
+    to {width:100%;border-radius: 0 0.05rem 0.05rem 0}
 }
 
 .blocklyFlyoutButton {
@@ -172,45 +172,58 @@
 }
 
 #drawingBoard {
-    width: 565px;
+    width: 4.75rem;
     margin: 0 auto;
-    height: 400px;
-    padding: 10px 50px;
+    height: 3rem;
+    padding: 0.1rem 0.6rem;
     background-color: #e1f7ff;
-    border: 5px solid white;
-    border-radius: 10px;
+    border: 0.055rem solid white;
+    border-radius: 0.1rem;
     position: relative;
 }
 
 #drawingBoard .title {
     text-align: center;
     margin: 0;
+    font-size: 0.16rem;
 }
 
-#drawingBoard table {
+#drawingBoard ul {
     text-align: center;
     margin: 0;
 }
 
-#drawingBoard td {
-    width: 30px;
-    height: 30px;
+#drawingBoard li {
+    overflow: hidden;
+    margin: 0.05rem 0;
+}
+
+#drawingBoard ul li a {
+    display: block;
+    float: left;
+    width: 0.25rem;
+    height: 0.25rem;
+    margin-right: 0.05rem;
+}
+
+#drawingBoard ul li a:last-child {
+    margin-right: 0rem;
 }
 
 .drawTool {
     position: absolute;
     right: 0;
-    top: 32px;
-    width: 50px;
+    top: 0.32rem;
+    width: 0.5rem;
 }
 
 .drawTool button {
     display: block;
-    width: 50px;
-    height: 25px;
-    margin: 10px 0;
+    width: 0.50rem;
+    height: 0.25rem;
+    margin: 0.1rem 0;
     border: 1px solid #e0e0e1;
-    border-radius: 5px;
+    border-radius: 0.05rem;
     background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
@@ -218,15 +231,15 @@
 }
 
 .drawMenu {
-    width: 300px;
-    margin: 50px auto 0;
+    width: 3rem;
+    margin: 0.12rem auto 0;
 }
 
 .drawMenu button {
-    width: 140px;
-    height: 25px;
+    width: 1.4rem;
+    height: 0.25rem;
     border: 1px solid #e0e0e1;
-    border-radius: 5px;
+    border-radius: 0.05rem;
     background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
@@ -243,64 +256,97 @@
 
 #beepSelect {
     background: #ffffff;
-    width: 600px;
+    width: 6.2rem;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 0.1rem;
+    padding: 0.2rem;
 }
 
-#beepSelect table {
-    
+#beepSelect li {
+    overflow: hidden;
+    margin: 0 0 0.1rem 0;
 }
 
-#beepSelect td button {
-    width: 80px;
-    height: 80px;
+#beepSelect li:last-child {
+    margin-bottom: 0;
+}
+
+#beepSelect li a {
+    width: 0.8rem;
+    height: 0.80rem;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 0.1rem;
     border: none;
     display: block;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 0.30rem;
     color: #ffffff;
+    float: left;
+    margin-right: 0.1rem;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+#beepSelect li a:last-child {
+    margin-right: 0;
 }
 
 .logo {
-    margin: 10px auto 0;
+    margin: 0.1rem auto 0;
     display: block;
-    width: 170px;
+    width: 90%;
 }
 
 #teleControlSelect {
     background: #ffffff;
-    width: 200px;
+    width: 1.4rem;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 0.1rem;
+    padding: 0.1rem;
 }
 
-#teleControlSelect button {
+#teleControlSelect li {
+    overflow: hidden;
+    margin-bottom: 0.1rem;
+}
+
+#teleControlSelect li:last-child {
+    margin-bottom: 0;
+}
+
+#teleControlSelect a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 0.4rem;
+    height: 0.4rem;
     border: none;
-    border-radius: 20px;
-    font-size: 20px;
+    border-radius: 0.2rem;
+    font-size: 0.20rem;
     font-weight: bold;
     padding: 0;
+    float: left;
+    margin-right: 0.1rem;
+    line-height: 0.4rem;
+    text-align: center;
 }
 
-#teleControlSelect button img {
+#teleControlSelect a:last-child {
+    margin-right: 0;
+}
+
+#teleControlSelect a img {
     display: block;
-    margin: 0 auto;
+    margin: 0.05rem auto 0;
+    width: 0.3rem;
 }
 
 #programDialog {
-    width: 400px;
+    width: 4rem;
     margin: 0 auto;
-    height: 400px;
-    padding: 10px 100px;
+    height: 3rem;
+    padding: 0.1rem 0.2rem;
     background-color: #e1f7ff;
     border: 5px solid white;
-    border-radius: 10px;
+    border-radius: 0.1rem;
     position: relative;
 }
 
@@ -308,43 +354,49 @@
     display: block;
     margin: 0 auto;
     border: 5px solid #0ab5ff;
-    width: 400px;
+    width: 4rem;
     color: white;
     font-weight: bold;
-    font-size: 26px;
-    border-radius: 10px;
+    font-size: 0.26rem;
+    border-radius: 0.1rem;
     background-color: #6ad2ff;
 }
 
 #addProgram {
     display: block;
-    width: 400px;
-    height: 60px;
+    width: 4rem;
+    height: 0.6rem;
     border: 5px dotted #000000;
-    margin: 10px auto;
+    margin: 0.1rem auto;
+}
+
+#addProgram img{
+    display: block;
+    margin: 0 auto;
+    width: 0.4rem;
 }
 
 #programList li {
     border: 5px solid #677172;
-    height: 60px;
-    font-size: 28px;
+    height: 0.6rem;
+    font-size: 0.28rem;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 0.6rem;
     position: relative;
 }
 
 #programList li span {
-    padding-left: 10px;
+    padding-left: 0.1rem;
 }
 
 #programList li button {
-    width: 60px;
+    width: 0.6rem;
     height: 100%;
     position: absolute;
 }
 
 #programList li button.modify_program {
-    right: 60px;
+    right: 0.6rem;
 }
 
 #programList li button.delete_program {
@@ -353,15 +405,16 @@
 
 #programList li button img {
     vertical-align: middle;
+    width: 0.4rem;
 }
 
 button.close {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 0.4rem;
+    height: 0.4rem;
     background-image: url("../../media/res/close.png");
-    background-size: 40px 40px;
+    background-size: 0.4rem 0.4rem;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -0.2rem;
+    top: -0.2rem;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <title>Title</title>
     <link rel="stylesheet" href="DemoTry.css">
     <script src="../../blockly_compressed.js"></script>
@@ -10,9 +11,9 @@
 
     <script src="../../msg/js/zh-hans.js"></script>
 
-    <!-- <script src="../../core/field_telecontrol_select.js"></script>
-    <script src="../../core/field_tune_select.js"></script>
-    <script src="../../core/field_draw.js"></script> -->
+    <!-- <script src="../../core/field_telecontrol_select.js"></script> -->
+    <!-- <script src="../../core/field_tune_select.js"></script> -->
+    <!-- <script src="../../core/field_draw.js"></script> -->
 
     <!-- <script src="core/function.js"></script> -->
 
@@ -43,6 +44,10 @@
             list-style: none;
         }
 
+        html {
+            font-size: 625%;
+        }
+
         html, body {
             height: 100%;
             margin: 0;
@@ -64,103 +69,113 @@
         }
 
         #generateButton {
-            width: 76.5px;
-            height: 76.5px;
+            width: 0.7rem;
+            height: 0.7rem;
             background-image: url("../../media/res/run.png");
-            background-size: 76.5px 76.5px;
+            background-size: 0.7rem 0.7rem;
         }
 
         #saveButton {
-            width: 46.5px;
-            height: 46.5px;
+            width: 0.4rem;
+            height: 0.4rem;
             background-image: url("../../media/res/save.png");
-            background-size: 46.5px 46.5px;
+            background-size: 0.4rem 0.4rem;
         }
 
         #listButton {
-            width: 46.5px;
-            height: 46.5px;
+            width: 0.4rem;
+            height: 0.4rem;
             background-image: url("../../media/res/list.png");
-            background-size: 46.5px 46.5px;
+            background-size: 0.4rem 0.4rem;
         }
 
         .menu {
             position: absolute;
-            right: 10px;
-            top: 10px;
-            width: 200px;
+            right: 0.1rem;
+            top: 0.1rem;
+            width: 1.6rem;
             z-index: 100;
         }
         
-        .menu button {
-            display: inline;
-            vertical-align: middle;
-            margin-right: 5px;
+        .menu a {
+            display: block;
+            margin-right: 0.05rem;
+            float: left;
+        }
+
+        .menu a:nth-child(2) {
+            margin-top: 0.15rem;
+        }
+
+        .menu a:nth-child(3) {
+            margin-top: 0.15rem;
+            margin-right: 0;
         }
 
         .zoom {
-            width: 140px;
+            width: 1.4rem;
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 0.1rem;
+            right: 0.1rem;
             z-index: 100;
         }
 
-        .zoom button {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 40px;
+        .zoom a {
+            display: block;
+            font-size: 0.4rem;
             color: #ffab40;
-            width: 40px;
-            height: 40px;
+            width: 0.4rem;
+            height: 0.4rem;
             background-color: white;
-            line-height: 40px;
+            line-height: 0.4rem;
             position: relative;
+            float: left;
+            margin-right: 0.05rem;
         }
 
-        .zoom button:nth-child(1) {
-            border-radius: 20px 0 0 20px;
+        .zoom a:nth-child(1) {
+            border-radius: 0.2rem 0 0 0.2rem;
         }
 
-        .zoom button:nth-child(3) {
-            border-radius: 0 20px 20px 0;
+        .zoom a:nth-child(3) {
+            border-radius: 0 0.2rem  0.2rem  0;
         }
 
-        .zoom button:nth-child(1)::after{
+        .zoom a:nth-child(1)::after{
             content: "-";
             display: block;
             position: absolute;
-            left: 13px;
-            top: -3px;
+            left: 0.13rem;
+            top: -0.03rem;
         }
 
-        .zoom button:nth-child(2)::after{
+        .zoom a:nth-child(2)::after{
             content: "=";
             display: block;
             position: absolute;
-            left: 8px;
-            top: -3px;
+            left: 0.08rem;
+            top: -0.03rem;
         }
 
-        .zoom button:nth-child(3)::after{
+        .zoom a:nth-child(3)::after{
             content: "+";
             display: block;
             position: absolute;
-            left: 6px;
-            top: -3px;
+            left: 0.06rem;
+            top: -0.03rem;
         }
     </style>
 </head>
 <body>
 <div class="menu">
-    <button id="generateButton"></button>
-    <button id="saveButton"></button>
-    <button id="listButton"></button>
+    <a id="generateButton"></a>
+    <a id="saveButton"></a>
+    <a id="listButton"></a>
 </div>
 <div class="zoom">
-        <button id="zoomMinus"></button>
-        <button id="zoomEqual"></button>
-        <button id="zoomPlus"></button>
+        <a id="zoomMinus"></a>
+        <a id="zoomEqual"></a>
+        <a id="zoomPlus"></a>
 </div>
 <table style="border-spacing: 0;width: 100%;height: 100%;">
     <tr style="height: 100%;">
@@ -171,7 +186,7 @@
 </table>
 
 <xml id="toolbox" style="display: none">
-    <category name="机器人模块">
+    <category name="机器人">
         <block type="d_c_generator_roll_with_speed"></block>
         <block type="turn_on_on_board_light"></block>
         <block type="play_sound_by_beat"></block>
@@ -201,7 +216,7 @@
         <block type="line_patrol"></block>
         <block type="telecontroller"></block>
     </category>
-    <category name="控制模块">
+    <category name="流程">
         <block type="controls_wait">
             <value name="TIME">
                 <shadow type="math_number">
@@ -222,7 +237,7 @@
         <block type="tq_controls_if"></block>
         <block type="tq_controls_ifelse"></block>
     </category>
-    <category name="数字和逻辑运算">
+    <category name="数字">
         <block type="math_arithmetic_add">
             <value name="A">
                 <shadow type="math_number">
@@ -356,7 +371,7 @@
     </category> -->
 </xml>
 <xml id="startBlocks" style="display: none">
-        <block x="200" y="10" type="screen_show_picture"></block>
+        <block x="160" y="10" type="telecontroller"></block>
     <!-- <block type="turn_on_on_board_light" x="200" y="10"></block> -->
     <!-- <block type="play_sound_by_beat"></block> -->
     <!-- <block type="controls_if" inline="false" x="67" y="10">
@@ -426,8 +441,8 @@
                     <button id="drawEraser">橡皮擦</button>
                     <button id="drawTrashcan">清除</button>
                 </div>
-                <table id="drawContent" cellpadding=0 cellspacing=5 border="1">
-                </table>
+                <ul id="drawContent">
+                </ul>
                 <button class="close" onclick="DemoApp.hideDialog('drawingBoard')"></button>
                 <div class="drawMenu">
                     <button id="drawCancel" onclick="DemoApp.hideDialog('drawingBoard')">取消</button>
@@ -436,7 +451,7 @@
         </div>
         <div id="programDialog" class="dialog hide">
             <button id="resetProgram">恢复出场程序</button>
-            <button id="addProgram"><img src="../../media/res/add_program.png" alt="" width="40"></button>
+            <button id="addProgram"><img src="../../media/res/add_program.png" alt=""></button>
             <div>
                 <ul id="programList">
                     <li>
@@ -451,6 +466,47 @@
     </div>
 </div>
 <script src="jquery-3.3.1.min.js"></script>
+<script>
+'use strict';
+(function(_D){
+        var _self = {};
+        _self.resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        _self.Html = _D.getElementsByTagName("html")[0];
+        _self.widthProportion = function(){
+            var p = Number((_D.body&&_D.body.clientWidth||_self.Html.offsetWidth)/720).toFixed(3);
+            return p>1.067?1.067:p<0.444?0.444:p;
+        };
+        _self.changePage = function(){
+            _self.Html.setAttribute("style","font-size:"+_self.widthProportion()*100+"px");
+            _self.correctPx();
+        };
+        _self.correctPx = function(){
+            var docEl = document.documentElement;
+            var clientWidth = docEl.clientWidth;
+            // console.log(clientWidth)
+            if (!clientWidth || clientWidth > 768) return;
+            var div = document.createElement('div');
+            div.style.width = '1.4rem';
+            div.style.height = '0';
+            document.body.appendChild(div);
+            var ideal = 140 * clientWidth / 720;
+            var rmd = (div.clientWidth / ideal);
+            // console.log(rmd);
+            if(rmd > 1.2 || rmd < 0.8){
+                docEl.style.fontSize = 100 * (clientWidth / 720) / rmd + 'px';
+                document.body.removeChild(div);
+            }
+
+        };
+        _self.changePage();
+        if (!document.addEventListener) return;
+        window.addEventListener(_self.resizeEvt,_self.changePage,false);
+        document.addEventListener('DOMContentLoaded', _self.changePage, false);
+})(document);
+
+    var p = Number((document.body&&document.body.clientWidth)/720).toFixed(3);
+    window.clientZoom = p>1.067?1.067:p<0.444?0.444:p;
+</script>
 <script src="DemoTry.js"></script>
 </body>
 </html>
