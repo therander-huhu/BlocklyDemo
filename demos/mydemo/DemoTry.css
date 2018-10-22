@@ -34,7 +34,7 @@
 .blocklyToolboxDiv .blocklyTreeLabel {
     font-size: 0.16rem;
     line-height: 0.5rem;
-    position: relative;
+    position: absolute;
     padding-left: 0.4rem;
     font-weight: bold;
 }
@@ -172,10 +172,10 @@
 }
 
 #drawingBoard {
-    width: 4.75rem;
+    width: 4.59rem;
     margin: 0 auto;
     height: 3rem;
-    padding: 0.1rem 0.6rem;
+    padding: 0rem 0.6rem;
     background-color: #e1f7ff;
     border: 0.055rem solid white;
     border-radius: 0.1rem;
@@ -201,8 +201,8 @@
 #drawingBoard ul li a {
     display: block;
     float: left;
-    width: 0.25rem;
-    height: 0.25rem;
+    width: 0.24rem;
+    height: 0.24rem;
     margin-right: 0.05rem;
 }
 
@@ -214,16 +214,19 @@
     position: absolute;
     right: 0;
     top: 0.32rem;
-    width: 0.5rem;
+    width: 0.55rem;
 }
 
-.drawTool button {
+.drawTool a {
     display: block;
-    width: 0.50rem;
+    width: 0.55rem;
     height: 0.25rem;
     margin: 0.1rem 0;
     border: 1px solid #e0e0e1;
     border-radius: 0.05rem;
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.25rem;
     background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
@@ -235,11 +238,14 @@
     margin: 0.12rem auto 0;
 }
 
-.drawMenu button {
+.drawMenu a {
     width: 1.4rem;
     height: 0.25rem;
     border: 1px solid #e0e0e1;
     border-radius: 0.05rem;
+    font-size: 0.16rem;
+    line-height: 0.25rem;
+    text-align: center;
     background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
@@ -299,7 +305,7 @@
 
 #teleControlSelect {
     background: #ffffff;
-    width: 1.4rem;
+    width: 1.25rem;
     margin: 0 auto;
     border-radius: 0.1rem;
     padding: 0.1rem;
@@ -316,16 +322,16 @@
 
 #teleControlSelect a {
     display: block;
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.35rem;
+    height: 0.35rem;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.175rem;
     font-size: 0.20rem;
     font-weight: bold;
     padding: 0;
     float: left;
     margin-right: 0.1rem;
-    line-height: 0.4rem;
+    line-height: 0.35rem;
     text-align: center;
 }
 
@@ -336,7 +342,7 @@
 #teleControlSelect a img {
     display: block;
     margin: 0.05rem auto 0;
-    width: 0.3rem;
+    width: 0.25rem;
 }
 
 #programDialog {

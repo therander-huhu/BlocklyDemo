@@ -1,7 +1,7 @@
 'use strict';
 var currentBlock;
 var DemoApp = {};
-DemoApp.startScale = 0.9;
+DemoApp.startScale = window.clientZoom*0.9;
 DemoApp.initApplication = function () {
     var demoWorkspace = Blockly.inject('blocklyDiv',
         {
@@ -28,7 +28,12 @@ DemoApp.initData = function () {
 };
 
 DemoApp.initStartBlocks = function () {
-    Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
+    // Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
+    //     this.workSpace);
+
+    let dom = Blockly.Xml.textToDom('<xml id="startBlocks" style="display: none">'+
+    '<block x="200" y="10" type="telecontroller"></block></xml>');
+    Blockly.Xml.domToWorkspace(dom,
         this.workSpace);
 };
 
@@ -37,6 +42,7 @@ DemoApp.addEventListener = function () {
     function showCode () {
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
+        // console.log(code)
         window.android.writeToDevice(code);
     }
     var generateButton = document.getElementById("generateButton");
@@ -45,8 +51,7 @@ DemoApp.addEventListener = function () {
     let zoomEqual = document.getElementById("zoomEqual");
     Blockly.bindEventWithChecks_(zoomEqual, 'mousedown', null, function(e) {
         self.workSpace.markFocused();
-        self.workSpace.setScale(self.workSpace.options.zoomOptions.startScale);
-        self.workSpace.scrollCenter();
+        self.workSpace.setScale(self.startScale);
         Blockly.Touch.clearTouchIdentifier();  // Don't block future drags.
         e.stopPropagation();  // Don't start a workspace scroll.
         e.preventDefault();  // Stop double-clicking from selecting text.
@@ -69,12 +74,22 @@ DemoApp.addEventListener = function () {
       });
 
       let programListButton = document.getElementById("listButton");
-      programListButton.addEventListener("click", function(){
+      programListButton.addEventListener("touchend", function(){
         DemoApp.showDialog("programDialog")
+      });
+
+      let programSaveButton = document.getElementById("saveButton");
+      programSaveButton.addEventListener("touchend", function(){
+        DemoApp.showDialog("programNameDialog")
       });
 
       let dialogBg = document.getElementById("dialogBg");
       dialogBg.addEventListener("click", function () {});
+
+      let drawCancel = document.getElementById("drawCancel");
+      drawCancel.addEventListener("touchend", function(){
+        DemoApp.hideDialog('drawingBoard');
+      });
 };
 
 DemoApp.initCustomBlocks = function(){
@@ -89,7 +104,6 @@ DemoApp.showDialog = function (id, block) {
     dialog.style.display = "table";
     dialog = document.getElementById(id);
     dialog.className = "dialog show";
-
     dialog.block = block;
 }
 
@@ -236,6 +250,11 @@ DemoApp.initDialog = function () {
     initDrawBoard();
 };
 
+DemoApp.exportXml = function () {
+    let xml = Blockly.Xml.workspaceToDom(this.workSpace);
+    return xml;
+},
+
 DemoApp.init = function () {
     this.initData();
     this.workSpace = this.initApplication();
@@ -243,9 +262,6 @@ DemoApp.init = function () {
     this.initDialog();
     this.addEventListener();
     this.initCustomBlocks();
-    console.log( window.clientZoom*this.startScale)
-    let clientWidth = document.documentElement.clientWidth;
-    this.workSpace.zoom(-clientWidth/2+1.5*clientWidth/720*100, 0, window.clientZoom*this.startScale)
 };
 
 DemoApp.init();
