@@ -539,6 +539,9 @@ DemoApp.programList = {
     },
 
     getKey: function (key) {
+        if (key !=  "tqProgramNames") {
+            key = "tqProgram" + key;
+        }
         window.android.getStr(key);
         // var value;
         // if (key == "tqProgramNames") {
@@ -547,8 +550,7 @@ DemoApp.programList = {
         //     value = '<xml id="startBlocks" style="display: none">'+
         //     '<block x="200" y="10" type="telecontroller"><field name="NAME">2</field></block></xml>'
         // }
-        
-        // this.onGetKey(key, value);
+        this.onGetKey(key, value);
     },
 
     onGetKey: function (key, value) {
