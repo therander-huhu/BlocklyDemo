@@ -403,17 +403,24 @@
         </div>
         <div id="programDialog" class="dialog hide">
             <button id="resetProgram">恢复出场程序</button>
-            <button id="addProgram"><img src="../../media/res/add_program.png" alt=""></button>
+            <button id="newProgram"><img src="../../media/res/add_program.png" alt=""></button>
             <div>
                 <ul id="programList">
-                    <li>
+                    <!-- <li>
                         <span>文件1</span>
                         <button class="modify_program"><img src="../../media/res/pen.png" alt="" width="40"></button>
                         <button class="delete_program"><img src="../../media/res/trashcan.png" alt="" width="40"></button>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <button class="close" onclick="DemoApp.hideDialog('programDialog')"></button>
+        </div>
+
+        <div id="programNameDialog" class="dialog hide">
+            <p class="title">请输入名称</p>
+            <input id="newProgramName" type="text">
+            <a id="addProgram">确定</a>
+            <button class="close" onclick="DemoApp.hideDialog('programNameDialog')"></button>
         </div>
     </div>
 </div>
