@@ -546,6 +546,7 @@ DemoApp.programList = {
         if (key !=  "tqProgramNames") {
             key = "tqProgram" + key;
         }
+
         if (window.os == "iOS") {
             window.webkit.messageHandlers.getStr.postMessage({key: key})
         } else if (window.os == "AndroidOS") {
