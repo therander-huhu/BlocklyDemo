@@ -2,6 +2,9 @@
 var currentBlock;
 var DemoApp = {};
 DemoApp.startScale = window.clientZoom*0.9;
+DemoApp.startProgram = '<xml id="startBlocks" style="display: none">'+
+'<block x="200" y="10" type="telecontroller"></block></xml>';
+DemoApp.startProgramName = "initialProgram";
 DemoApp.initApplication = function () {
     var demoWorkspace = Blockly.inject('blocklyDiv',
         {
@@ -28,11 +31,9 @@ DemoApp.initData = function () {
 };
 
 DemoApp.initStartBlocks = function () {
-    // Blockly.Xml.domToWorkspace(document.getElementById('startBlocks'),
-    //     this.workSpace);
+    let dom = Blockly.Xml.textToDom(this.startProgram);
+    this.currentProgram = "";
 
-    let dom = Blockly.Xml.textToDom('<xml id="startBlocks" style="display: none">'+
-    '<block x="200" y="10" type="telecontroller"></block></xml>');
     Blockly.Xml.domToWorkspace(dom,
         this.workSpace);
 };
@@ -43,7 +44,11 @@ DemoApp.addEventListener = function () {
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
         // console.log(code)
-        window.android.writeToDevice(code);
+        if (window.os == "iOS") {
+            window.webkit.messageHandlers.writeToDevice.postMessage({code: code})
+        } else if (window.os == "AndroidOS") {
+            window.android.writeToDevice(code);
+        }
     }
     var generateButton = document.getElementById("generateButton");
     generateButton.addEventListener("click", showCode);
@@ -73,13 +78,12 @@ DemoApp.addEventListener = function () {
         e.preventDefault();  // Stop double-clicking from selecting text.
       });
 
-      let programListButton = document.getElementById("listButton");
-      programListButton.addEventListener("touchend", function(){
-        DemoApp.showDialog("programDialog")
-      });
-
       let programSaveButton = document.getElementById("saveButton");
       programSaveButton.addEventListener("touchend", function(){
+        if (DemoApp.currentProgram && DemoApp.currentProgram != "") {
+            var newProgramName = document.getElementById("newProgramName");
+            newProgramName.value = DemoApp.currentProgram;
+        }
         DemoApp.showDialog("programNameDialog")
       });
 
@@ -382,6 +386,210 @@ DemoApp.drawBoard = {
         block.setFieldValue(data, "EMOJI")
         DemoApp.hideDialog("drawingBoard");
     },
+};
+
+DemoApp.programList = {
+    init: function () {
+        var self = this;
+        var programListButton = document.getElementById("listButton");
+        programListButton.addEventListener("touchend", function(){
+            self.showList(); 
+        });
+
+        var addProgram = document.getElementById("addProgram");
+        addProgram.addEventListener("touchend", function(){
+            var newProgramName = document.getElementById("newProgramName");
+            var name = newProgramName.value;
+            self.saveProgram(name);
+        });
+
+        var resetProgram = document.getElementById("resetProgram");
+        resetProgram.addEventListener("touchend", function(){
+            self.initStartBlocks();
+        });
+
+        var newProgram = document.getElementById("newProgram");
+        newProgram.addEventListener("touchend", function(){
+            self.newProgram();
+        });
+    },
+
+    showList: function () {
+        this.onGetKeyCallback = function (key, value) {
+            this.initList(value);
+            DemoApp.showDialog("programDialog");
+        }
+        
+        this.getProgramNames();
+    },
+
+    initList: function (data) {
+        var self = this;
+        var programList = document.getElementById("programList");
+        programList.innerHTML = "";
+        for(var i=0; i<data.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("programName", data[i]);
+            programList.appendChild(li);
+            var span = document.createElement("span");
+            span.innerText = "文件" + data[i];
+            li.appendChild(span);
+            var modifyButton = document.createElement("button");
+            modifyButton.className = "modify_program";
+            li.appendChild(modifyButton);
+            var modifyIcon = document.createElement("img");
+            modifyIcon.setAttribute("src", "../../media/res/pen.png");
+            modifyIcon.setAttribute("width", 40);
+            modifyButton.appendChild(modifyIcon);
+
+            var deleteButton = document.createElement("button");
+            deleteButton.className = "delete_program";
+            li.appendChild(deleteButton);
+            var deleteIcon = document.createElement("img");
+            deleteIcon.setAttribute("src", "../../media/res/trashcan.png");
+            deleteIcon.setAttribute("width", 40);
+            deleteButton.appendChild(deleteIcon);
+
+            modifyButton.addEventListener("touchend", function () {
+                    var name = this.parentElement.getAttribute("programName");
+                    self.onModifity(name);
+                }
+            );
+
+            deleteButton.addEventListener("touchend", function () {
+                    var name = this.parentElement.getAttribute("programName");
+                    self.onDelete(name);
+                }
+            )
+        }  
+    },
+
+    onModifity: function (name) {
+        DemoApp.workSpace.clear();
+
+        this.onGetKeyCallback = function (key, value) {
+            var dom = Blockly.Xml.textToDom(value);
+            Blockly.Xml.domToWorkspace(dom,
+                DemoApp.workSpace);
+            DemoApp.currentProgram = key;
+            DemoApp.hideDialog("programDialog");
+        };
+        
+        this.getProgram(name);
+    },
+
+    onDelete: function (name) {
+        this.onGetKeyCallback = function (key, value) {
+            var matchIndex;
+            var matchValue;
+            for(var i=0; i<value.length; i++) {
+                if (value[i] == name) {
+                    matchIndex = i;
+                    matchValue = value[i];
+                    break;
+                }
+            }
+
+            if (matchIndex >= 0) {
+                value.splice(matchIndex, 1);
+                var namesStr = "";
+                for(var i=0; i<value.length; i++) {
+                    var nameStr = i == value.length - 1 ? value[i] : value[i] + ";";
+                    namesStr += nameStr;
+                }
+                this.saveKey("tqProgramNames", namesStr);
+                this.deleteKey("tqProgram"+matchValue);
+                this.initList(value);
+            }
+        }
+
+        this.getProgramNames();
+    },
+
+    saveProgram: function (name) {
+        if (name) {
+            var program = Blockly.Xml.workspaceToDom(DemoApp.workSpace, true);
+            var text = Blockly.Xml.domToText(program);
+            // console.log("saveProgram" + Blockly.Xml.domToText(program));
+
+            this.onGetKeyCallback = function (key, value) {
+                value.push(name);
+                var namesStr = "";
+                for(var i=0; i<value.length; i++) {
+                    var nameStr = i == value.length - 1 ? value[i] : value[i] + ";";
+                    namesStr += nameStr;
+                }
+                this.saveKey("tqProgramNames", namesStr);
+
+                this.saveKey("tqProgram" + name, text);
+                DemoApp.hideDialog("programNameDialog");
+            },
+
+            this.getProgramNames();    
+        }
+    },
+
+    newProgram: function () {
+        DemoApp.workSpace.clear();
+        DemoApp.hideDialog("programDialog");
+    },
+
+    getProgramNames: function () {
+        this.getKey("tqProgramNames");
+    },
+
+    getProgram: function (key) {
+        this.getKey(key);
+    },
+
+    getKey: function (key) {
+        if (key !=  "tqProgramNames") {
+            key = "tqProgram" + key;
+        }
+        if (window.os == "iOS") {
+            window.webkit.messageHandlers.getStr.postMessage({key: key})
+        } else if (window.os == "AndroidOS") {
+            window.android.getStr(key);
+        }
+        // var value;
+        // if (key == "tqProgramNames") {
+        //     value = "hello;1;2;3;4;5";
+        // } else {
+        //     value = '<xml id="startBlocks" style="display: none">'+
+        //     '<block x="200" y="10" type="telecontroller"><field name="NAME">2</field></block></xml>'
+        // }
+        this.onGetKey(key, value);
+    },
+
+    onGetKey: function (key, value) {
+        if (key == "tqProgramNames") {
+            if (value && value != "") {
+                value = value.split(";");
+            } else {
+                value = [];
+            }
+        }
+        if (this.onGetKeyCallback) {
+            this.onGetKeyCallback.call(this, key, value);
+        }
+    },
+
+    saveKey: function (key, value) {
+        if (window.os == "iOS") {
+            window.webkit.messageHandlers.saveStr.postMessage({key: key, value: value})
+        } else if (window.os == "AndroidOS") {
+            window.android.saveStr(key, value);
+        }
+    },
+
+    deleteKey: function (key) {
+        if (window.os == "iOS") {
+            window.webkit.messageHandlers.deleteStr.postMessage({key: key})
+        } else if (window.os == "AndroidOS") {
+            window.android.deleteStr(key);
+        }
+    }
 }
 
 DemoApp.drawBoard.init();
+DemoApp.programList.init();

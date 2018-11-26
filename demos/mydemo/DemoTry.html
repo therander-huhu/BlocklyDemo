@@ -16,6 +16,7 @@
     <!-- <script src="../../core/field_draw.js"></script> -->
 
     <!-- <script src="core/function.js"></script> -->
+     <!-- <script src="../../core/command.js"></script> -->
 
     <!-- <script src="../../blocks/mathAndLogicBlock.js"></script> -->
     <!-- <script src="../../blocks/actionBlock.js"></script> -->
@@ -364,11 +365,13 @@
             </value>
         </block>
     </category>
-    <!-- <category name="新建指令" custom="Functions"></category> -->
     <!-- <category name="test">
         <block type="colour_picker"></block>
         <block type="play_sound_by_beat"></block>
     </category> -->
+    <!-- <category name="变量" custom="VARIABLE"></category> -->
+    <!-- <category name="函数" custom="PROCEDURE"></category> -->
+    <!-- <category name="新建命令" custom="COMMAND"></category> -->
 </xml>
 <xml id="startBlocks" style="display: none">
         <block x="160" y="10" type="telecontroller"></block>
@@ -403,21 +406,29 @@
         </div>
         <div id="programDialog" class="dialog hide">
             <button id="resetProgram">恢复出场程序</button>
-            <button id="addProgram"><img src="../../media/res/add_program.png" alt=""></button>
-            <div>
+            <button id="newProgram"><img src="../../media/res/add_program.png" alt=""></button>
+            <div class="programBox">
                 <ul id="programList">
-                    <li>
+                    <!-- <li>
                         <span>文件1</span>
                         <button class="modify_program"><img src="../../media/res/pen.png" alt="" width="40"></button>
                         <button class="delete_program"><img src="../../media/res/trashcan.png" alt="" width="40"></button>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <button class="close" onclick="DemoApp.hideDialog('programDialog')"></button>
         </div>
+
+        <div id="programNameDialog" class="dialog hide">
+            <p class="title">请输入名称</p>
+            <input id="newProgramName" type="text">
+            <a id="addProgram">确定</a>
+            <button class="close" onclick="DemoApp.hideDialog('programNameDialog')"></button>
+        </div>
     </div>
 </div>
 <script src="jquery-3.3.1.min.js"></script>
+<script src="mobile-detect.min.js"></script>
 <script>
 'use strict';
 (function(_D){
@@ -458,6 +469,8 @@
 
     var p = Number((document.body&&document.body.clientWidth)/720).toFixed(3);
     window.clientZoom = p<0.444?0.444:p;
+    var md = new MobileDetect(window.navigator.userAgent);
+    window.os = md.os();
 </script>
 <script src="DemoTry.js"></script>
 </body>
