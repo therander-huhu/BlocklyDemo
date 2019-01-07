@@ -380,6 +380,10 @@
     margin: 0.1rem auto;
 }
 
+#addProgram {
+    box-sizing: content-box;
+}
+
 #newProgram img{
     display: block;
     margin: 0 auto;
