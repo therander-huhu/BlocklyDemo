@@ -185,7 +185,8 @@
 .title {
     text-align: center;
     margin: 0;
-    font-size: 0.16rem;
+    font-size: 0.2rem;
+    color: rgb(252, 176, 83)
 }
 
 #drawingBoard ul {
@@ -419,7 +420,7 @@
     width: 0.4rem;
 }
 
-#programNameDialog {
+#programNameDialog, #FunctionNameDialog, #modifyProgramNameDialog  {
     width: 4rem;
     margin: 0 auto;
     height: 2.5rem;
@@ -430,27 +431,26 @@
     position: relative;
 }
 
-#programNameDialog input {
+#programNameDialog input, #FunctionNameDialog input, #modifyProgramNameDialog input{
     display: block;
     width: 2rem;
     height: 0.3rem;
     margin: 0.5rem auto 0;
+    border: 3px solid rgb(8, 9, 9);
+    font-size: 20px;
 }
 
-#programNameDialog a {
+#programNameDialog a, #FunctionNameDialog a, #modifyProgramNameDialog a {
     display: block;
     width: 1.4rem;
     height: 0.25rem;
     margin: 1rem auto 0;
-    border: 1px solid #e0e0e1;
+    border: 3px solid rgb(27, 183, 250);
     border-radius: 0.05rem;
     font-size: 0.16rem;
     line-height: 0.25rem;
     text-align: center;
-    background: -webkit-linear-gradient(#f8f8f8, #dedede); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#f8f8f8, #dedede); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#f8f8f8, #dedede); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#f8f8f8, #dedede); /* 标准的语法 */
+    background: rgb(105, 208, 252)
 }
 
 button.close {
@@ -462,4 +462,27 @@ button.close {
     position: absolute;
     right: -0.2rem;
     top: -0.2rem;
+}
+
+.buttonScale {
+    transition: transform 0.2s;
+    -moz-transition: transform 0.2s;	/* Firefox 4 */
+    -webkit-transition: transform 0.2s;	/* Safari 和 Chrome */
+    -o-transition: transform 0.2s;	/* Opera */
+}
+
+.buttonsStart{
+    transform: scale(0.9);
+    -ms-ttransform: scale(0.9);;		/* IE 9 */
+    -webkit-ttransform: scale(0.9);;	/* Safari and Chrome */
+    -o-ttransform: scale(0.9);;		/* Opera */
+    -moz-ttransform: scale(0.9);;
+}
+
+.buttonsEnd{
+    transform: scale(1);
+    -ms-ttransform: scale(1);;		/* IE 9 */
+    -webkit-ttransform: scale(1);;	/* Safari and Chrome */
+    -o-ttransform: scale(1);;		/* Opera */
+    -moz-ttransform: scale(1);;
 }

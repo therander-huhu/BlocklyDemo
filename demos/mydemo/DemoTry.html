@@ -17,12 +17,14 @@
 
     <!-- <script src="core/function.js"></script> -->
      <!-- <script src="../../core/command.js"></script> -->
+     <!-- <script src="../../core/variables.js"></script> -->
 
     <!-- <script src="../../blocks/mathAndLogicBlock.js"></script> -->
     <!-- <script src="../../blocks/actionBlock.js"></script> -->
     <!-- <script src="../../blocks/controlsBlock.js"></script> -->
     <!-- <script src="../../blocks/functionBlock.js"></script> -->
     <!-- <script src="blocks/blocks.js"></script> -->
+    <!-- <script src="../../blocks/procedures.js"></script> -->
 
     <!-- <script src="../../generators/python/mathAndLogicPython.js"></script> -->
     <!-- <script src="../../generators/python/actionPython.js"></script> -->
@@ -69,7 +71,7 @@
             text-align: center;
         }
 
-        #generateButton {
+        #generateButton, #debugButton {
             width: 0.7rem;
             height: 0.7rem;
             background-image: url("../../media/res/run.png");
@@ -94,7 +96,7 @@
             position: absolute;
             right: 0.1rem;
             top: 0.1rem;
-            width: 1.6rem;
+            width: 2.4rem;
             z-index: 100;
         }
         
@@ -104,11 +106,11 @@
             float: left;
         }
 
-        .menu a:nth-child(2) {
+        .menu a:nth-child(3) {
             margin-top: 0.15rem;
         }
 
-        .menu a:nth-child(3) {
+        .menu a:nth-child(4) {
             margin-top: 0.15rem;
             margin-right: 0;
         }
@@ -169,9 +171,10 @@
 </head>
 <body>
 <div class="menu">
-    <a id="generateButton"></a>
-    <a id="saveButton"></a>
-    <a id="listButton"></a>
+    <a id="debugButton" class="buttonScale"></a>
+    <a id="generateButton" class="buttonScale"></a>
+    <a id="saveButton" class="buttonScale"></a>
+    <a id="listButton" class="buttonScale"></a>
 </div>
 <div class="zoom">
         <a id="zoomMinus"></a>
@@ -188,14 +191,36 @@
 
 <xml id="toolbox" style="display: none">
     <category name="机器人">
-        <block type="d_c_generator_roll_with_speed"></block>
-        <block type="turn_on_on_board_light"></block>
+        <block type="d_c_generator_roll_with_speed">
+            <value name="SPEED">
+                <block type="math_number">
+                    <field name="NUM">0</field>
+                </block>
+            </value>
+        </block>
+        <block type="turn_on_on_board_light">
+            <value name="COLOR_RED">
+                <block type="math_number">
+                    <field name="NUM">0</field>
+                </block>
+            </value>
+            <value name="COLOR_GREEN">
+                <block type="math_number">
+                    <field name="NUM">0</field>
+                </block>
+            </value>
+            <value name="COLOR_BLUE">
+                <block type="math_number">
+                    <field name="NUM">0</field>
+                </block>
+            </value>
+        </block>
         <block type="play_sound_by_beat"></block>
         <block type="screen_show_number">
             <value name="NUMBER">
-                <shadow type="math_number">
+                <block type="math_number">
                     <field name="NUM">0</field>
-                </shadow>
+                </block>
             </value>
         </block>
         <block type="screen_show_time">
@@ -220,9 +245,9 @@
     <category name="流程">
         <block type="controls_wait">
             <value name="TIME">
-                <shadow type="math_number">
+                <block type="math_number">
                     <field name="NUM">1</field>
-                </shadow>
+                </block>
             </value>
         </block>
         <!-- <block type="controls_wait_until"></block> -->
@@ -371,7 +396,7 @@
     </category> -->
     <!-- <category name="变量" custom="VARIABLE"></category> -->
     <!-- <category name="函数" custom="PROCEDURE"></category> -->
-    <!-- <category name="新建命令" custom="COMMAND"></category> -->
+    <category name="新建命令" custom="COMMAND"></category>
 </xml>
 <xml id="startBlocks" style="display: none">
         <block x="160" y="10" type="telecontroller"></block>
@@ -425,6 +450,20 @@
             <a id="addProgram">确定</a>
             <button class="close" onclick="DemoApp.hideDialog('programNameDialog')"></button>
         </div>
+
+        <div id="FunctionNameDialog" class="dialog hide">
+            <p class="title">请输入名称</p>
+            <input id="newFunctionName" type="text">
+            <a id="addFunction">确定</a>
+            <button class="close" onclick="DemoApp.hideDialog('FunctionNameDialog')"></button>
+        </div>
+
+        <div id="modifyProgramNameDialog" class="dialog hide">
+                <p class="title">请输入名称</p>
+                <input type="text">
+                <a id="modifyProgramName">确定</a>
+                <button class="close" onclick="DemoApp.hideDialog('modifyProgramNameDialog');DemoApp.showDialog('programDialog');"></button>
+            </div>
     </div>
 </div>
 <script src="jquery-3.3.1.min.js"></script>
@@ -471,6 +510,21 @@
     window.clientZoom = p<0.444?0.444:p;
     var md = new MobileDetect(window.navigator.userAgent);
     window.os = md.os();
+
+    var buttonScales = document.getElementsByClassName("buttonScale");
+    for(let i=0; i<buttonScales.length; i++) {
+        buttonScales[i].addEventListener("touchstart", function(){
+            this.className = "buttonScale buttonsStart";
+        })
+
+        buttonScales[i].addEventListener("touchend", function(){
+            this.className = "buttonScale buttonsEnd";
+        })
+
+        buttonScales[i].addEventListener("touchcancel", function(){
+            this.className = "buttonScale buttonsEnd";
+        })
+    }
 </script>
 <script src="DemoTry.js"></script>
 </body>
