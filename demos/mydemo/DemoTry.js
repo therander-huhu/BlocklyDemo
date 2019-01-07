@@ -1,5 +1,22 @@
 'use strict';
 var currentBlock;
+var renderer
+var nedb
+var db
+if (ifInPcClient()) {
+    renderer = nodeRequire('../../../renderer.js')
+    nedb = nodeRequire('nedb')
+    db = new nedb({
+        filename:'/data/save.db',
+        autoload: true
+    })
+}
+if (!ifInPcClient()) {
+    $(".serialport").css({ "display": "none" })
+} else {
+    $(".serialport").css({ "display": "block" })
+}
+const clickOrTouch = ifInPcClient() ? "click" : "touchend"
 var DemoApp = {};
 DemoApp.startScale = window.clientZoom*0.9;
 DemoApp.startProgram = '<xml id="startBlocks" style="display: none">'+
@@ -48,6 +65,9 @@ DemoApp.addEventListener = function () {
             window.webkit.messageHandlers.writeToDevice.postMessage({code: code})
         } else if (window.os == "AndroidOS") {
             window.android.writeToDevice(code);
+        } else {
+            //pc
+            renderer.writeOperation(code)
         }
     }
     var generateButton = document.getElementById("generateButton");
@@ -79,7 +99,7 @@ DemoApp.addEventListener = function () {
       });
 
       let programSaveButton = document.getElementById("saveButton");
-      programSaveButton.addEventListener("touchend", function(){
+      programSaveButton.addEventListener(clickOrTouch, function(){
         if (DemoApp.currentProgram && DemoApp.currentProgram != "") {
             var newProgramName = document.getElementById("newProgramName");
             newProgramName.value = DemoApp.currentProgram;
@@ -91,7 +111,7 @@ DemoApp.addEventListener = function () {
       dialogBg.addEventListener("click", function () {});
 
       let drawCancel = document.getElementById("drawCancel");
-      drawCancel.addEventListener("touchend", function(){
+      drawCancel.addEventListener(clickOrTouch, function(){
         DemoApp.hideDialog('drawingBoard');
       });
 
@@ -187,7 +207,7 @@ DemoApp.initDialog = function () {
                 td.setAttribute("color", colors[i][j]);
                 td.innerHTML = beeps[i][j];
     
-                td.addEventListener("touchend", self.onBeepClick)
+                td.addEventListener(clickOrTouch, self.onBeepClick)
             }
     
             tb.appendChild(tr);
@@ -259,7 +279,7 @@ DemoApp.initDialog = function () {
                 td.setAttribute("key", key);
                 td.innerHTML = content;
     
-                td.addEventListener("touchend", self.onTeleControlClick)
+                td.addEventListener(clickOrTouch, self.onTeleControlClick)
             }
     
             tb.appendChild(tr);
@@ -308,28 +328,35 @@ DemoApp.drawBoard = {
         drawContent.addEventListener("touchstart", this.onPixelClick);
         drawContent.addEventListener("touchmove", this.onPixelClick);
         let confirmBtn = document.getElementById("drawConfirm");
-        confirmBtn.addEventListener("touchend", this.onConfirm);
+        confirmBtn.addEventListener(clickOrTouch, this.onConfirm);
 
         let pen = document.getElementById("drawPen");
-        pen.addEventListener("touchend", function(){
+        pen.addEventListener(clickOrTouch, function(){
             DemoApp.drawBoard.changemode(1);
         });
 
         let eraser = document.getElementById("drawEraser");
-        eraser.addEventListener("touchend", function(){
+        eraser.addEventListener(clickOrTouch, function(){
             DemoApp.drawBoard.changemode(0);
         });
 
         let drawTrashcan = document.getElementById("drawTrashcan");
-        drawTrashcan.addEventListener("touchend", function(){
+        drawTrashcan.addEventListener(clickOrTouch, function(){
             DemoApp.drawBoard.clear();
         });
     },
 
     onPixelClick: function (event) {
         let target = event.target;
-        let touchX = event.touches[0].clientX;
-        let touchY = event.touches[0].clientY;
+        let touchX
+        let touchY
+        if (ifInPcClient()) {
+            touchX = event.clientX;
+            touchY = event.clientY;
+        } else {
+            touchX = event.touches[0].clientX;
+            touchY = event.touches[0].clientY;
+        }
         let drawContent = document.getElementById("drawContent");
         let tds = drawContent.getElementsByTagName("a");
 
@@ -413,24 +440,24 @@ DemoApp.programList = {
     init: function () {
         var self = this;
         var programListButton = document.getElementById("listButton");
-        programListButton.addEventListener("touchend", function(){
+        programListButton.addEventListener(clickOrTouch, function(){
             self.showList(); 
         });
 
         var addProgram = document.getElementById("addProgram");
-        addProgram.addEventListener("touchend", function(){
+        addProgram.addEventListener(clickOrTouch, function(){
             var newProgramName = document.getElementById("newProgramName");
             var name = newProgramName.value;
             self.saveProgram(name);
         });
 
         var resetProgram = document.getElementById("resetProgram");
-        resetProgram.addEventListener("touchend", function(){
+        resetProgram.addEventListener(clickOrTouch, function(){
             self.initStartBlocks();
         });
 
         var newProgram = document.getElementById("newProgram");
-        newProgram.addEventListener("touchend", function(){
+        newProgram.addEventListener(clickOrTouch, function(){
             self.newProgram();
         });
     },
@@ -476,7 +503,7 @@ DemoApp.programList = {
                 }
             );
 
-            li.addEventListener("touchend", function () {
+            li.addEventListener(clickOrTouch, function () {
                     if (this.emitEvent) {
                         var name = this.parentElement.getAttribute("programName");
                         self.onModifity(name);
@@ -498,7 +525,7 @@ DemoApp.programList = {
                 } 
             );
 
-            modifyButton.addEventListener("touchend", function (event) {
+            modifyButton.addEventListener(clickOrTouch, function (event) {
                     if (this.emitEvent) {
                         DemoApp.hideDialog("programDialog");
                         DemoApp.showDialog("modifyProgramNameDialog", null, function(text){
@@ -521,7 +548,7 @@ DemoApp.programList = {
                 } 
             );
 
-            deleteButton.addEventListener("touchend", function () {
+            deleteButton.addEventListener(clickOrTouch, function () {
                     if (this.emitEvent) {
                         var name = this.parentElement.getAttribute("programName");
                         self.onDelete(name);
@@ -652,6 +679,8 @@ DemoApp.programList = {
             window.webkit.messageHandlers.getStr.postMessage({key: key})
         } else if (window.os == "AndroidOS") {
             window.android.getStr(key);
+        } else {
+            getStr(key)
         }
         // var value;
         // if (key == "tqProgramNames") {
@@ -681,6 +710,8 @@ DemoApp.programList = {
             window.webkit.messageHandlers.saveStr.postMessage({key: key, value: value})
         } else if (window.os == "AndroidOS") {
             window.android.saveStr(key, value);
+        } else {
+            saveStr(key, value)
         }
     },
 
@@ -689,9 +720,61 @@ DemoApp.programList = {
             window.webkit.messageHandlers.deleteStr.postMessage({key: key})
         } else if (window.os == "AndroidOS") {
             window.android.deleteStr(key);
+        } else {
+            deleteStr(key)
         }
     }
 }
 
 DemoApp.drawBoard.init();
 DemoApp.programList.init();
+
+function ifInPcClient() {
+    return window.os !== "iOS" && window.os !== "AndroidOS"
+}
+
+function getStr(key) {
+    db.findOne({
+        db_key: key
+    }, (err, ret) => {
+        if (!err) {
+            DemoApp.programList.onGetKey(key, ret && ret.hasOwnProperty('db_value') ? ret.db_value : "")
+        } else {
+            DemoApp.programList.onGetKey(key, "")
+        }
+    })
+}
+
+function saveStr(mKey, mValue) {
+    db.findOne({
+        db_key: mKey
+    }, (err, ret) =>{
+        if (ret && ret.hasOwnProperty('db_value')) {
+            db.update({
+                db_key: mKey
+            }, {
+                $set: {db_value: mValue}
+            }, {
+                multi: true
+            }, function (err, numReplaced) {
+                if (!err) {
+                    console.log(`numReplaced ${numReplaced}`)
+                }
+            })
+        } else {
+            db.insert({
+                db_key: mKey,
+                db_value: mValue
+            }, (err, ret) => {
+            })
+        }
+    })
+}
+
+function deleteStr(key) {
+    db.remove({
+        db_key: key
+    }, {
+        multi: true
+    }, (err, ret) =>{})
+}

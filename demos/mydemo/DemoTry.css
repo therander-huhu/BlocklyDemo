@@ -180,6 +180,7 @@
     border: 0.055rem solid white;
     border-radius: 0.1rem;
     position: relative;
+    box-sizing: content-box;
 }
 
 .title {
@@ -310,6 +311,7 @@
     margin: 0 auto;
     border-radius: 0.1rem;
     padding: 0.1rem;
+    box-sizing: content-box;
 }
 
 #teleControlSelect li {
@@ -355,6 +357,7 @@
     border: 5px solid white;
     border-radius: 0.1rem;
     position: relative;
+    box-sizing: content-box;
 }
 
 #resetProgram {
@@ -395,6 +398,7 @@
     font-weight: bold;
     line-height: 0.6rem;
     position: relative;
+    box-sizing: content-box;
 }
 
 #programList li span {
@@ -429,6 +433,7 @@
     border: 5px solid white;
     border-radius: 0.1rem;
     position: relative;
+    box-sizing: content-box;
 }
 
 #programNameDialog input, #FunctionNameDialog input, #modifyProgramNameDialog input{
@@ -453,7 +458,7 @@
     background: rgb(105, 208, 252)
 }
 
-button.close {
+button.btn_close {
     display: block;
     width: 0.4rem;
     height: 0.4rem;
