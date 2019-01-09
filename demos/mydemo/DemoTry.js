@@ -19,8 +19,7 @@ if (!ifInPcClient()) {
 const clickOrTouch = ifInPcClient() ? "click" : "touchend"
 var DemoApp = {};
 DemoApp.startScale = window.clientZoom*0.9;
-DemoApp.startProgram = '<xml id="startBlocks" style="display: none">'+
-'<block x="200" y="10" type="telecontroller"></block></xml>';
+DemoApp.startProgram = '';
 DemoApp.startProgramName = "initialProgram";
 DemoApp.initApplication = function () {
     var demoWorkspace = Blockly.inject('blocklyDiv',

@@ -220,7 +220,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_MULTIPLY = "返回两个数字的乘积。";
 /** @export */ Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_POWER = "返回第一个数的第二个数次幂。";
 /** @export */ Blockly.Msg.MATH_CHANGE_HELPURL = "https://zh.wikipedia.org/wiki/加法";
-/** @export */ Blockly.Msg.MATH_CHANGE_TITLE = "更改 %1 从 %2";
+/** @export */ Blockly.Msg.MATH_CHANGE_TITLE = "将 %1 的值增加 %2";
 /** @export */ Blockly.Msg.MATH_CHANGE_TOOLTIP = "将一个数添加到变量“%1”。";
 /** @export */ Blockly.Msg.MATH_CONSTANT_HELPURL = "https://zh.wikipedia.org/wiki/数学常数";
 /** @export */ Blockly.Msg.MATH_CONSTANT_TOOLTIP = "返回一个常见常量：π (3.141…)、e (2.718…)、φ (1.618…)、平方根 (1.414…)、开平方根 (0.707…)或∞ (infinity)。";
