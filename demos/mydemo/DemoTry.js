@@ -504,7 +504,7 @@ DemoApp.programList = {
 
             li.addEventListener(clickOrTouch, function () {
                     if (this.emitEvent) {
-                        var name = this.parentElement.getAttribute("programName");
+                        var name = this.getAttribute("programName");
                         self.onModifity(name);
                     }
                 }     
@@ -529,7 +529,7 @@ DemoApp.programList = {
 
                 li.addEventListener("mouseup", function () {
                     if (this.emitEvent) {
-                        var name = this.parentElement.getAttribute("programName");
+                        var name = this.getAttribute("programName");
                         self.onModifity(name);
                     }
                 })
