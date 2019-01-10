@@ -551,6 +551,8 @@ DemoApp.programList = {
 
             modifyButton.addEventListener(clickOrTouch, function (event) {
                     if (this.emitEvent) {
+                        var name = this.parentElement.getAttribute("programname");
+                        document.getElementById("newModifyProgramName").value = name;
                         DemoApp.hideDialog("programDialog");
                         DemoApp.showDialog("modifyProgramNameDialog", null, function(text){
                             console.log(text);
@@ -577,6 +579,8 @@ DemoApp.programList = {
 
                 modifyButton.addEventListener("mouseup", function () {
                     if (this.emitEvent) {
+                        var name = this.parentElement.getAttribute("programname");
+                        document.getElementById("newModifyProgramName").value = name;
                         DemoApp.hideDialog("programDialog");
                         DemoApp.showDialog("modifyProgramNameDialog", null, function(text){
                             console.log(text);
