@@ -515,6 +515,31 @@ DemoApp.programList = {
                 } 
             );
 
+            if (ifInPcClient()) {
+                li.addEventListener("mousedown", function () {
+                    this.emitEvent = true;
+                    this.isClickStart = true;
+                })
+
+                li.addEventListener("mousemove", function () {
+                    if (this.isClickStart) {
+                        this.emitEvent = false;
+                    }
+                })
+
+                li.addEventListener("mouseup", function () {
+                    if (this.emitEvent) {
+                        var name = this.parentElement.getAttribute("programName");
+                        self.onModifity(name);
+                    }
+                })
+
+                li.addEventListener("mouseleave", function () {
+                    this.emitEvent = false;
+                    this.isClickStart = false;
+                })
+            }
+
             modifyButton.addEventListener("touchstart", function () {
                 this.emitEvent = true;
                 }
@@ -538,6 +563,37 @@ DemoApp.programList = {
                 }
             )
 
+            if (ifInPcClient()) {
+                modifyButton.addEventListener("mousedown", function () {
+                    this.emitEvent = true;
+                    this.isClickStart = true;
+                })
+
+                modifyButton.addEventListener("mousemove", function () {
+                    if (this.isClickStart) {
+                        this.emitEvent = false;
+                    }
+                })
+
+                modifyButton.addEventListener("mouseup", function () {
+                    if (this.emitEvent) {
+                        DemoApp.hideDialog("programDialog");
+                        DemoApp.showDialog("modifyProgramNameDialog", null, function(text){
+                            console.log(text);
+                            let oldName = this.parentElement.getAttribute("programname");
+                            let newName = text;
+                            DemoApp.programList.onModifityName(oldName, newName);
+                        }, this);
+                        event.stopImmediatePropagation();
+                    }
+                })
+
+                modifyButton.addEventListener("mouseleave", function () {
+                    this.emitEvent = false;
+                    this.isClickStart = false;
+                })
+            }
+
             deleteButton.addEventListener("touchstart", function () {
                     this.emitEvent = true;
                 }
@@ -555,6 +611,33 @@ DemoApp.programList = {
                     }  
                 }
             )
+
+            if (ifInPcClient()) {
+                deleteButton.addEventListener("mousedown", function () {
+                    this.emitEvent = true;
+                    this.isClickStart = true;
+                })
+
+                deleteButton.addEventListener("mousemove", function () {
+                    if (this.isClickStart) {
+                        this.emitEvent = false;
+                    }
+                })
+
+                deleteButton.addEventListener("mouseup", function () {
+                    if (this.emitEvent) {
+                        var name = this.parentElement.getAttribute("programName");
+                        self.onDelete(name);
+                        event.stopImmediatePropagation();
+                    }  
+                })
+
+                deleteButton.addEventListener("mouseleave", function () {
+                    this.emitEvent = false;
+                    this.isClickStart = false;
+                })
+            }
+
         }  
     },
 
