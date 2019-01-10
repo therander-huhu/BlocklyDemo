@@ -115,14 +115,14 @@ DemoApp.addEventListener = function () {
       });
 
       let addFunction = document.getElementById("addFunction");
-      addFunction.addEventListener("touchend", function(){
+      addFunction.addEventListener(clickOrTouch, function(){
         let text = document.getElementById("newFunctionName").value;
         if (text == "") return;
         DemoApp.hideDialog('FunctionNameDialog', text);
       });
 
       let modifyProgramName = document.getElementById("modifyProgramName");
-      modifyProgramName.addEventListener("touchend", function(){
+      modifyProgramName.addEventListener(clickOrTouch, function(){
         let text = this.parentElement.getElementsByTagName("input")[0].value;
         if (text == "") return;
         DemoApp.hideDialog('modifyProgramNameDialog', text);
@@ -664,14 +664,16 @@ DemoApp.programList = {
                     var nameStr = i == value.length - 1 ? value[i] : value[i] + ";";
                     namesStr += nameStr;
                 }
+                console.log("onModifityName: ", namesStr);
                 this.saveKey("tqProgramNames", namesStr);
-                this.onGetKeyCallback = function (key, value) {
-                    this.saveKey("tqProgram"+newProgram, value);
+                this.onGetKeyCallback = function (key1, value1) {
+                    console.log("onModifityName: ", key1, value1);
+                    this.saveKey("tqProgram"+newName, value1);
                     this.deleteKey("tqProgram"+matchValue);
                     this.initList(value);
                     DemoApp.showDialog("programDialog");
                 };
-                this.getProgram(name);
+                this.getProgram(oldName);
                 
             }
         }
