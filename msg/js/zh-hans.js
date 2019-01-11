@@ -407,7 +407,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.VARIABLES_GET_CREATE_SET = "创建“设定%1”";
 /** @export */ Blockly.Msg.VARIABLES_GET_HELPURL = "https://github.com/google/blockly/wiki/Variables#get";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_GET_TOOLTIP = "返回此变量的值。";
-/** @export */ Blockly.Msg.VARIABLES_SET = "赋值 %1 为 %2";
+/** @export */ Blockly.Msg.VARIABLES_SET = "将变量 %1 设置为 %2";
 /** @export */ Blockly.Msg.VARIABLES_SET_CREATE_GET = "创建“获得%1”";
 /** @export */ Blockly.Msg.VARIABLES_SET_HELPURL = "https://github.com/google/blockly/wiki/Variables#set";  // untranslated
 /** @export */ Blockly.Msg.VARIABLES_SET_TOOLTIP = "设置此变量，以使它和输入值相等。";
