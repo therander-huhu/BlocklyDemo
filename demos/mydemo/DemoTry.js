@@ -748,6 +748,7 @@ DemoApp.programList = {
 
     newProgram: function () {
         DemoApp.workSpace.clear();
+        DemoApp.currentProgram = "";
         DemoApp.hideDialog("programDialog");
     },
 
