@@ -57,6 +57,8 @@ DemoApp.initStartBlocks = function () {
 DemoApp.addEventListener = function () {
     let self = this;
     function showCode () {
+        let has = hasStartBlock();
+        if(!has) return;
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
         // console.log(code)
@@ -866,4 +868,16 @@ function deleteStr(key) {
     }, {
         multi: true
     }, (err, ret) =>{})
+}
+
+function hasStartBlock() {
+    let allBlocks = DemoApp.workSpace.getAllBlocks();
+    // console.log(allBlocks)
+    for(let i=0; i<allBlocks.length; i++) {
+        if (allBlocks[i].getNextBlock() && allBlocks[i].type == "start_block") {
+            return true;
+        }
+    }
+
+    return false;
 }
