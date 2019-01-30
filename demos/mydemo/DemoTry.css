@@ -79,7 +79,7 @@
 }
 
 .blocklyToolboxDiv div[role="treeitem"]:nth-child(4) span:nth-child(1) {
-    background-color: #8AD27D;
+    background-color: #F29C38;
 }
 
 .blocklyToolboxDiv div[role="treeitem"] .blocklyTreeIcon{
@@ -129,7 +129,7 @@
 }
 
 .blocklyFlyoutButton {
-    fill: #57BEF6;
+    fill: #F29C38;
 }
 
 #dialog {

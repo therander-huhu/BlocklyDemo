@@ -82,6 +82,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.DELETE_X_BLOCKS = "删除 %1 块";
 /** @export */ Blockly.Msg.DISABLE_BLOCK = "禁用块";
 /** @export */ Blockly.Msg.DUPLICATE_BLOCK = "复制";
+/** @export */ Blockly.Msg.DUPLICATE_BLOCK_WITH_CONNECTION = "复制当前及以下块";
 /** @export */ Blockly.Msg.ENABLE_BLOCK = "启用块";
 /** @export */ Blockly.Msg.EXPAND_ALL = "展开块";
 /** @export */ Blockly.Msg.EXPAND_BLOCK = "展开块";
