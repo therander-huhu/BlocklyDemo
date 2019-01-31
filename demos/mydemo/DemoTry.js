@@ -104,7 +104,7 @@ DemoApp.addEventListener = function () {
 
       let programSaveButton = document.getElementById("saveButton");
       programSaveButton.addEventListener(clickOrTouch, function(){
-        if (DemoApp.currentProgram && DemoApp.currentProgram != "") {
+        if (DemoApp.currentProgram || DemoApp.currentProgram == "") {
             var newProgramName = document.getElementById("newProgramName");
             newProgramName.value = DemoApp.currentProgram;
         }
@@ -511,7 +511,7 @@ DemoApp.programList = {
                 }
             );
 
-            li.addEventListener(clickOrTouch, function () {
+            li.addEventListener("touchend", function () {
                     if (this.emitEvent) {
                         var name = this.getAttribute("programName");
                         self.onModifity(name);
@@ -697,7 +697,7 @@ DemoApp.programList = {
             var dom = Blockly.Xml.textToDom(value);
             Blockly.Xml.domToWorkspace(dom,
                 DemoApp.workSpace);
-            DemoApp.currentProgram = key;
+            DemoApp.currentProgram = key.split("tqProgram")[1];
             DemoApp.hideDialog("programDialog");
         };
         
