@@ -133,7 +133,11 @@ DemoApp.addEventListener = function () {
         DemoApp.hideDialog('modifyProgramNameDialog', text);
         DemoApp.showDialog("programDialog");
       });
-      
+
+      let commonTipOk = document.getElementById("commonTipOk");
+      commonTipOk.addEventListener(clickOrTouch, function(){
+        DemoApp.hideDialog('commonTip');
+      });
 };
 
 DemoApp.initCustomBlocks = function(){
