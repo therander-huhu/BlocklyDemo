@@ -429,7 +429,7 @@
     width: 0.4rem;
 }
 
-#programNameDialog, #FunctionNameDialog, #modifyProgramNameDialog  {
+#programNameDialog, #FunctionNameDialog, #modifyProgramNameDialog, #commonTip  {
     width: 4rem;
     margin: 0 auto;
     height: 2.5rem;
@@ -451,7 +451,7 @@
     box-sizing: content-box;
 }
 
-#programNameDialog a, #FunctionNameDialog a, #modifyProgramNameDialog a {
+#programNameDialog a, #FunctionNameDialog a, #modifyProgramNameDialog a, #commonTip a{
     display: block;
     width: 1.4rem;
     height: 0.25rem;
@@ -497,4 +497,10 @@ button.btn_close {
     -webkit-ttransform: scale(1);;	/* Safari and Chrome */
     -o-ttransform: scale(1);;		/* Opera */
     -moz-ttransform: scale(1);;
+}
+
+.tipContent {
+    text-align: center;
+    font-size: 0.2rem;
+    margin: 0.5rem auto 0;
 }

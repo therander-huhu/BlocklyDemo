@@ -58,7 +58,10 @@ DemoApp.addEventListener = function () {
     let self = this;
     function showCode () {
         let has = hasStartBlock();
-        if(!has) return;
+        if(!has) {
+            showCommonTip("请拖入启动块，并保证启动块下有流程块");
+            return
+        }
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
         // console.log(code)
@@ -880,4 +883,11 @@ function hasStartBlock() {
     }
 
     return false;
+}
+
+function showCommonTip (text) {
+    DemoApp.showDialog("commonTip");
+    let dialog = document.getElementById("commonTip");
+    let p = dialog.getElementsByClassName("tipContent");
+    p[0].innerText = text; 
 }
