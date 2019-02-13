@@ -56,6 +56,26 @@ DemoApp.initStartBlocks = function () {
 
 DemoApp.addEventListener = function () {
     let self = this;
+
+    function showDebugCode() {
+      let has = hasStartBlock();
+      if(!has) {
+        showCommonTip("请拖入启动块，并保证启动块下有流程块");
+        return
+      }
+      Blockly.Python.INFINITE_LOOP_TRAP = null;
+      var code = Blockly.Python.workspaceToCode(DemoApp.workSpace);
+      // console.log(code)
+      if (window.os == "iOS") {
+        window.webkit.messageHandlers.writeDebugStrToDevice.postMessage({code: code})
+      } else if (window.os == "AndroidOS") {
+        window.android.writeDebugStrToDevice(code);
+      } else {
+        //pc
+        renderer.writeDebugStrOperation(code)
+      }
+    }
+
     function showCode () {
         let has = hasStartBlock();
         if(!has) {
