@@ -97,6 +97,9 @@ DemoApp.addEventListener = function () {
     var generateButton = document.getElementById("generateButton");
     generateButton.addEventListener("click", showCode);
 
+    var debugButton = document.getElementById("debugButton");
+    debugButton.addEventListener("click", showDebugCode);
+
     let zoomEqual = document.getElementById("zoomEqual");
     Blockly.bindEventWithChecks_(zoomEqual, 'mousedown', null, function(e) {
         self.workSpace.markFocused();
