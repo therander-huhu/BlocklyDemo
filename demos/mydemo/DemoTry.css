@@ -504,3 +504,48 @@ button.btn_close {
     font-size: 0.2rem;
     margin: 0.5rem auto 0;
 }
+
+.systemDialog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 100001;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.sysD{
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 0 0;
+}
+
+.sysD p {
+    text-align: center;
+    margin: 0;
+}
+
+.sysD div {
+    position: relative;
+    text-align: right;
+    padding: 10px 20px 10px;
+}
+
+.sysD a {
+    margin-left: 15px;
+}
+
+.sysD input {
+    width: 100%;
+    text-indent: 10px;
+    border-bottom: 1px solid #979797;
+    outline: none;
+}

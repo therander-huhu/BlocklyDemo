@@ -16,12 +16,14 @@
     <!-- <script src="../../core/field_tune_select.js"></script> -->
     <!-- <script src="../../core/field_draw.js"></script> -->
 
-    <!-- <script src="core/blockly.js"></script> -->
+    <!-- <script src="../../core/blockly.js"></script> -->
     <!-- <script src="../../core/block_svg.js"></script> -->
     <!-- <script src="core/function.js"></script> -->
      <!-- <script src="../../core/command.js"></script> -->
      <!-- <script src="../../core/variables.js"></script> -->
      <!-- <script src="../../core/contextmenu.js"></script> -->
+     <!-- <script src="../../core/scrollbar.js"></script> -->
+     <!-- <script src="../../core/block_render_svg.js"></script> -->
 
     <!-- <script src="../../blocks/mathAndLogicBlock.js"></script> -->
     <!-- <script src="../../blocks/actionBlock.js"></script> -->
@@ -74,7 +76,7 @@
         #blocklyDiv {
             height: 100%;
             background: #fc9;
-            text-align: center;
+            /* text-align: center; */
         }
 
         #generateButton {
@@ -521,7 +523,7 @@
                 </div>
         </div>
         <div id="programDialog" class="dialog hide">
-            <button id="resetProgram">恢复出场程序</button>
+            <button id="resetProgram">恢复出厂程序</button>
             <button id="newProgram"><img src="../../media/res/add_program.png" alt=""></button>
             <div class="programBox">
                 <ul id="programList">
@@ -546,7 +548,7 @@
             <p class="title">请输入名称</p>
             <input id="newFunctionName" type="text">
             <a id="addFunction">确定</a>
-            <button class="close" onclick="DemoApp.hideDialog('FunctionNameDialog')"></button>
+            <button class="btn_close" onclick="DemoApp.hideDialog('FunctionNameDialog')"></button>
         </div>
 
         <div id="modifyProgramNameDialog" class="dialog hide">
@@ -561,6 +563,25 @@
                 <a id="commonTipOk">好的</a>
                 <button class="btn_close" onclick="DemoApp.hideDialog('commonTip');"></button>
             </div>
+    </div>
+</div>
+<div id="systemDialog" class="systemDialog" style="display: none">
+    <div class="cell">
+        <div id="sysAlert" class="sysD hide">
+            <p></p>
+            <div>
+                <a href="javascript:DemoApp.hideAlert()">确定</a>
+            </div>
+        </div>
+
+        <div id="sysPrompt" class="sysD hide">
+            <p></p>
+            <input type="text">
+            <div>
+                <a href="javascript:DemoApp.hidePrompt(0)">取消</a>
+                <a href="javascript:DemoApp.hidePrompt(1)">确定</a>
+            </div>
+        </div>
     </div>
 </div>
 <script src="mobile-detect.min.js"></script>
