@@ -24,6 +24,8 @@
      <!-- <script src="../../core/contextmenu.js"></script> -->
      <!-- <script src="../../core/scrollbar.js"></script> -->
      <!-- <script src="../../core/block_render_svg.js"></script> -->
+     <!-- <script src="../../core/contextmenu.js"></script> -->
+     <script src="../../core/xml.js"></script>
 
     <!-- <script src="../../blocks/mathAndLogicBlock.js"></script> -->
     <!-- <script src="../../blocks/actionBlock.js"></script> -->
@@ -175,8 +177,8 @@
         .zoom {
             width: 1.4rem;
             position: absolute;
-            bottom: 0.1rem;
-            right: 0.1rem;
+            bottom: 0.3rem;
+            right: 0.2rem;
             z-index: 100;
         }
 
@@ -202,27 +204,38 @@
         }
 
         .zoom a:nth-child(1)::after{
-            content: "-";
+            content: "";
             display: block;
             position: absolute;
-            left: 0.13rem;
-            top: -0.03rem;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: url("../../media/res/symbol.png");
+            background-position: -6px -4px;
         }
 
         .zoom a:nth-child(2)::after{
-            content: "=";
+            content: "";
             display: block;
             position: absolute;
-            left: 0.08rem;
-            top: -0.03rem;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: url("../../media/res/symbol.png");
+            background-position: -8px -146px;
         }
 
         .zoom a:nth-child(3)::after{
-            content: "+";
+            content: "";
             display: block;
-            position: absolute;
-            left: 0.06rem;
-            top: -0.03rem;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: url("../../media/res/symbol.png");
+            background-position: -11px -75px;
         }
         #loading {
             width: 100%;
@@ -289,24 +302,24 @@
     <category name="机器人">
         <block type="d_c_generator_roll_with_speed">
             <value name="SPEED">
-                <shadow type="math_number">
+                <shadow type="generator_math_number">
                     <field name="NUM">0</field>
                 </shadow>
             </value>
         </block>
         <block type="turn_on_on_board_light">
             <value name="COLOR_RED">
-                <shadow type="math_number">
+                <shadow type="color_math_number">
                     <field name="NUM">0</field>
                 </shadow>
             </value>
             <value name="COLOR_GREEN">
-                <shadow type="math_number">
+                <shadow type="color_math_number">
                     <field name="NUM">0</field>
                 </shadow>
             </value>
             <value name="COLOR_BLUE">
-                <shadow type="math_number">
+                <shadow type="color_math_number">
                     <field name="NUM">0</field>
                 </shadow>
             </value>

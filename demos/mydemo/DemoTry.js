@@ -19,7 +19,7 @@ if (!ifInPcClient()) {
 const clickOrTouch = ifInPcClient() ? "click" : "touchend"
 var DemoApp = {};
 DemoApp.startScale = window.clientZoom*0.9;
-DemoApp.startProgram = '';
+DemoApp.startProgram = '<xml><block type="start_block"></block></xml>';
 DemoApp.startProgramName = "initialProgram";
 DemoApp.initApplication = function () {
     var demoWorkspace = Blockly.inject('blocklyDiv',
@@ -197,7 +197,9 @@ DemoApp.onBeepClick = function () {
     let dialog = document.getElementById("beepSelect");
     let block = dialog.block;
     block.setFieldValue(beep, "NAME")
-    DemoApp.hideDialog("beepSelect");
+    setTimeout(function () {
+        DemoApp.hideDialog("beepSelect");
+    }, 1)
 }
 
 DemoApp.onTeleControlClick = function () {
@@ -511,7 +513,7 @@ DemoApp.programList = {
             li.setAttribute("programName", data[i]);
             programList.appendChild(li);
             var span = document.createElement("span");
-            span.innerText = "文件" + data[i];
+            span.innerText = data[i];
             li.appendChild(span);
             var modifyButton = document.createElement("button");
             modifyButton.className = "modify_program";
@@ -958,4 +960,8 @@ DemoApp.hidePrompt = function (hascallback) {
     if(prompt.callback && hascallback){
         prompt.callback(value);
     }
+}
+
+DemoApp.showLoadSuccess = function () {
+    showCommonTip("程序上传成功")
 }
