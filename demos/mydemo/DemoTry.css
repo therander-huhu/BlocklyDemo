@@ -549,3 +549,10 @@ button.btn_close {
     border-bottom: 1px solid #979797;
     outline: none;
 }
+#img_splash {
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+  position: absolute;
+  display: none;
+}

@@ -15,6 +15,7 @@ if (!ifInPcClient()) {
     $(".serialport").css({ "display": "none" })
 } else {
     $(".serialport").css({ "display": "block" })
+    displaySplash()
 }
 const clickOrTouch = ifInPcClient() ? "click" : "touchend"
 var DemoApp = {};
@@ -924,6 +925,13 @@ function showCommonTip (text) {
     let dialog = document.getElementById("commonTip");
     let p = dialog.getElementsByClassName("tipContent");
     p[0].innerText = text; 
+}
+
+function displaySplash () {
+    $("#img_splash").css("display", "block")
+    setTimeout(function () {
+        $("#img_splash").css("display", "none")
+    }, 2000)
 }
 
 DemoApp.alert = function (msg) {
