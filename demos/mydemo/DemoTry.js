@@ -233,9 +233,9 @@ DemoApp.initDialog = function () {
         let colors = [["#f36c60", "#ba68c8","#80d8ff","#64ffda","#5af158","#fbc02d","#bcaaa4"],
         ["#e84e40","#ab47bc","#40c4ff","#1decb8","#14e715","#f9a825","#a0877e"],
         ["#e51c23","#9c27b0","#0090ea","#00bfa5","#12c700","#f57f17","#8c6d62"]];
-        let beeps = [["C1", "D1", "E1", "F1", "G1", "A1", "B1"],
-        ["C2", "D2", "E2", "F2", "G2", "A2", "B2"],
-        ["C3", "D3", "E3", "F3", "G3", "A3", "B3"]]
+        let beeps = [["C3", "D3", "E3", "F3", "G3", "A3", "B3"],
+        ["C4", "D4", "E4", "F4", "G4", "A4", "B4"],
+        ["C5", "D5", "E5", "F5", "G5", "A5", "B5"]]
         for(let i=0; i<model[0]; i++) {
             let tr = document.createElement("li");
             for(let j=0; j<model[1]; j++) {
@@ -920,11 +920,15 @@ function hasStartBlock() {
     return false;
 }
 
-function showCommonTip (text) {
+function showCommonTip (text, btnText) {
     DemoApp.showDialog("commonTip");
     let dialog = document.getElementById("commonTip");
     let p = dialog.getElementsByClassName("tipContent");
     p[0].innerText = text; 
+    if (btnText) {
+        let btn = document.getElementById("commonTipOk");
+        btn.innerText = btnText;
+    }
 }
 
 function displaySplash () {
@@ -976,5 +980,5 @@ DemoApp.hidePrompt = function (hascallback) {
 }
 
 DemoApp.showLoadSuccess = function () {
-    showCommonTip("程序上传成功")
+    showCommonTip("程序上传成功", "确定")
 }
