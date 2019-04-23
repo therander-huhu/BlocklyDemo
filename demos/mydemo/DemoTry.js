@@ -61,7 +61,7 @@ DemoApp.addEventListener = function () {
     function showDebugCode() {
       let has = hasStartBlock();
       if(!has) {
-        showCommonTip("请拖入启动块，并保证启动块下有流程块");
+        showCommonTip("请拖入启动块，并保证启动块下有流程块", "确定");
         return
       }
       Blockly.Python.INFINITE_LOOP_TRAP = null;
@@ -80,7 +80,7 @@ DemoApp.addEventListener = function () {
     function showCode () {
         let has = hasStartBlock();
         if(!has) {
-            showCommonTip("请拖入启动块，并保证启动块下有流程块");
+            showCommonTip("请拖入启动块，并保证启动块下有流程块", "确定");
             return
         }
         Blockly.Python.INFINITE_LOOP_TRAP = null;
