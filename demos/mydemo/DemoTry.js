@@ -366,6 +366,7 @@ DemoApp.drawBoard = {
 
         drawContent.addEventListener("touchstart", this.onPixelClick);
         drawContent.addEventListener("touchmove", this.onPixelClick);
+        drawContent.addEventListener(clickOrTouch, this.onPixelClick)
         let confirmBtn = document.getElementById("drawConfirm");
         confirmBtn.addEventListener(clickOrTouch, this.onConfirm);
 
