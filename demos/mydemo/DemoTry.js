@@ -189,7 +189,7 @@ DemoApp.showDialog = function (id, block, callback, target) {
 DemoApp.hideDialog = function (id, data) {
     var dialog = document.getElementById("dialog");
     dialog.style.display = "none";
-    
+
     dialog = document.getElementById(id);
     dialog.className = "dialog hide";
     if (dialog.callback && data) {
@@ -225,10 +225,10 @@ DemoApp.initDialog = function () {
         div.id = "beepSelect";
         div.className = "dialog hide";
         cell.appendChild(div);
-    
+
         let tb = document.createElement("ul");
         div.appendChild(tb);
-    
+
         let model = [3, 7];
         let colors = [["#f36c60", "#ba68c8","#80d8ff","#64ffda","#5af158","#fbc02d","#bcaaa4"],
         ["#e84e40","#ab47bc","#40c4ff","#1decb8","#14e715","#f9a825","#a0877e"],
@@ -245,10 +245,10 @@ DemoApp.initDialog = function () {
                 td.setAttribute("beep", beeps[i][j]);
                 td.setAttribute("color", colors[i][j]);
                 td.innerHTML = beeps[i][j];
-    
+
                 td.addEventListener(clickOrTouch, self.onBeepClick)
             }
-    
+
             tb.appendChild(tr);
         }
     };
@@ -310,17 +310,17 @@ DemoApp.initDialog = function () {
                     content = '<img src="../../media/res/arrow_right.png">';
                 } else if (content == "设置") {
                     content = '<img src="../../media/res/setting.png">';
-                } 
+                }
                 let type = config[i][j].type;
                 let color = colors[type];
-                
+
                 td.style = "background: " + color;
                 td.setAttribute("key", key);
                 td.innerHTML = content;
-    
+
                 td.addEventListener(clickOrTouch, self.onTeleControlClick)
             }
-    
+
             tb.appendChild(tr);
         }
     }
@@ -328,7 +328,7 @@ DemoApp.initDialog = function () {
     initTeleControlSelect();
 
     function initDrawBoard () {
-       
+
     }
 
     initDrawBoard();
@@ -406,10 +406,10 @@ DemoApp.drawBoard = {
             && touchY <= tds[i].clientHeight + $td.offset().top && touchY >= $td.offset().top) {
                 if (DemoApp.drawBoard.mode == 1 && tds[i].getAttribute("select") != 1) {
                     tds[i].setAttribute("select", 1);
-                    tds[i].style.background = Blockly.FieldDraw.drawColor; 
+                    tds[i].style.background = Blockly.FieldDraw.drawColor;
                 } else if (DemoApp.drawBoard.mode == 0 && tds[i].getAttribute("select") != 0) {
                     tds[i].setAttribute("select", 0);
-                    tds[i].style.background = "#cbcbcb"; 
+                    tds[i].style.background = "#cbcbcb";
                 }
             }
         }
@@ -425,7 +425,7 @@ DemoApp.drawBoard = {
             for(let j=0; j<tds.length; j++) {
                 let td = tds[j];
                 if (data[i][j] == 1) {
-                    td.style.background = Blockly.FieldDraw.drawColor;  
+                    td.style.background = Blockly.FieldDraw.drawColor;
                 } else {
                     td.style.background = "#cbcbcb";
                 }
@@ -455,7 +455,7 @@ DemoApp.drawBoard = {
 
     onConfirm: function () {
         let data = [];
-        
+
         let drawContent = document.getElementById("drawContent");
         let trs = drawContent.getElementsByTagName("li");
         for(let i=0; i<trs.length; i++) {
@@ -481,7 +481,7 @@ DemoApp.programList = {
         var self = this;
         var programListButton = document.getElementById("listButton");
         programListButton.addEventListener(clickOrTouch, function(){
-            self.showList(); 
+            self.showList();
         });
 
         var addProgram = document.getElementById("addProgram");
@@ -507,7 +507,7 @@ DemoApp.programList = {
             this.initList(value);
             DemoApp.showDialog("programDialog");
         }
-        
+
         this.getProgramNames();
     },
 
@@ -548,12 +548,12 @@ DemoApp.programList = {
                         var name = this.getAttribute("programName");
                         self.onModifity(name);
                     }
-                }     
+                }
             );
 
             li.addEventListener("touchmove", function () {
                     this.emitEvent = false;
-                } 
+                }
             );
 
             if (ifInPcClient()) {
@@ -587,7 +587,7 @@ DemoApp.programList = {
             )
             modifyButton.addEventListener("touchmove", function () {
                     this.emitEvent = false;
-                } 
+                }
             );
 
             modifyButton.addEventListener(clickOrTouch, function (event) {
@@ -645,7 +645,7 @@ DemoApp.programList = {
             )
             deleteButton.addEventListener("touchmove", function () {
                     this.emitEvent = false;
-                } 
+                }
             );
 
             deleteButton.addEventListener(clickOrTouch, function () {
@@ -653,7 +653,7 @@ DemoApp.programList = {
                         var name = this.parentElement.getAttribute("programName");
                         self.onDelete(name);
                         event.stopImmediatePropagation();
-                    }  
+                    }
                 }
             )
 
@@ -674,7 +674,7 @@ DemoApp.programList = {
                         var name = this.parentElement.getAttribute("programName");
                         self.onDelete(name);
                         event.stopImmediatePropagation();
-                    }  
+                    }
                 })
 
                 deleteButton.addEventListener("mouseleave", function () {
@@ -683,7 +683,7 @@ DemoApp.programList = {
                 })
             }
 
-        }  
+        }
     },
 
     onModifityName: function (oldName, newName) {
@@ -715,7 +715,7 @@ DemoApp.programList = {
                     DemoApp.showDialog("programDialog");
                 };
                 this.getProgram(oldName);
-                
+
             }
         }
 
@@ -732,7 +732,7 @@ DemoApp.programList = {
             DemoApp.currentProgram = key.split("tqProgram")[1];
             DemoApp.hideDialog("programDialog");
         };
-        
+
         this.getProgram(name);
     },
 
@@ -783,7 +783,7 @@ DemoApp.programList = {
                 DemoApp.hideDialog("programNameDialog");
             },
 
-            this.getProgramNames();    
+            this.getProgramNames();
         }
     },
 
@@ -866,7 +866,7 @@ function ifInPcClient() {
 function getStr(key) {
     db.findOne({
         db_key: key
-    }, (err, ret) => {
+    }, function(err, ret) {
         if (!err) {
             DemoApp.programList.onGetKey(key, ret && ret.hasOwnProperty('db_value') ? ret.db_value : "")
         } else {
@@ -878,7 +878,7 @@ function getStr(key) {
 function saveStr(mKey, mValue) {
     db.findOne({
         db_key: mKey
-    }, (err, ret) =>{
+    }, function(err, ret) {
         if (ret && ret.hasOwnProperty('db_value')) {
             db.update({
                 db_key: mKey
@@ -895,7 +895,7 @@ function saveStr(mKey, mValue) {
             db.insert({
                 db_key: mKey,
                 db_value: mValue
-            }, (err, ret) => {
+            }, function(err, ret) {
             })
         }
     })
@@ -906,7 +906,7 @@ function deleteStr(key) {
         db_key: key
     }, {
         multi: true
-    }, (err, ret) =>{})
+    }, function(err, ret){})
 }
 
 function hasStartBlock() {
@@ -925,7 +925,7 @@ function showCommonTip (text, btnText) {
     DemoApp.showDialog("commonTip");
     let dialog = document.getElementById("commonTip");
     let p = dialog.getElementsByClassName("tipContent");
-    p[0].innerText = text; 
+    p[0].innerText = text;
     if (btnText) {
         let btn = document.getElementById("commonTipOk");
         btn.innerText = btnText;
@@ -950,7 +950,7 @@ DemoApp.alert = function (msg) {
 DemoApp.hideAlert = function (data) {
     let systemDialog = document.getElementById("systemDialog");
     systemDialog.style.display = "none";
-    
+
     let alert = document.getElementById("sysAlert");
     alert.className = "sysD hide";
     if (alert.callback && data) {
